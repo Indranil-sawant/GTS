@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GTS – Expert Visa & Travel Guidance You Can Trust. Certified immigration consultancy offering transparent, ethical visa processing for Canada, Australia, UK, Schengen, UAE and more." />
+  <meta name="author" content="GTS Travel Consultancy" />
+  <title>GTS – Expert Visa &amp; Travel Guidance You Can Trust</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/main.css" />
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈</text></svg>" />
+</head>
+<body data-theme="light">
+
+  <!-- ===== SKIP TO CONTENT (Accessibility) ===== -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ===== HEADER / NAVIGATION ===== -->
+  <header class="site-header" role="banner" id="site-header">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+
+        <!-- Logo -->
+        <a href="index.html" class="nav-logo" aria-label="GTS Home">
+          <img src="img/gts_main.png" alt="GTS - Globus Travel Services" class="logo-img" />
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <ul class="nav-links" role="list">
+          <li><a href="#hero"       class="nav-link active" aria-current="page">Home</a></li>
+          <li><a href="#about"      class="nav-link">About</a></li>
+          <li><a href="#services"   class="nav-link">Services</a></li>
+          <li><a href="#process"    class="nav-link">Process</a></li>
+          <li><a href="#promise"    class="nav-link">Our Promise</a></li>
+          <li><a href="#faq"        class="nav-link">FAQs</a></li>
+          <li><a href="#contact"    class="nav-link nav-cta">Contact Us</a></li>
+        </ul>
+
+        <!-- Controls: dark mode + mobile toggle -->
+        <div class="nav-controls">
+          <button id="dark-mode-toggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <button id="mobile-menu-toggle" class="icon-btn hamburger" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+        <ul class="mobile-nav-links" role="list">
+          <li><a href="#hero"     class="nav-link" onclick="closeMobileMenu()">Home</a></li>
+          <li><a href="#about"    class="nav-link" onclick="closeMobileMenu()">About</a></li>
+          <li><a href="#services" class="nav-link" onclick="closeMobileMenu()">Services</a></li>
+          <li><a href="#process"  class="nav-link" onclick="closeMobileMenu()">Process</a></li>
+          <li><a href="#promise"  class="nav-link" onclick="closeMobileMenu()">Our Promise</a></li>
+          <li><a href="#faq"      class="nav-link" onclick="closeMobileMenu()">FAQs</a></li>
+          <li><a href="#contact"  class="nav-link nav-cta" onclick="closeMobileMenu()">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main-content">
+
+    <!-- ===== SECTION 1: HERO ===== -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-heading">
+      <div class="hero-bg-image">
+        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=2074" alt="Airplane soaring in the sky" class="hero-bg-img" />
+        
+        <!-- Floating Destination Cards -->
+        <div class="floating-cards">
+          <div class="float-card card-left">
+            <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&q=80&w=200" alt="New York" />
+            <div class="card-info">
+              <h4>New York, USA</h4>
+              <p>⭐⭐⭐⭐⭐</p>
+            </div>
+          </div>
+          <div class="float-card card-right">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=200" alt="Dubai" />
+            <div class="card-info">
+              <h4>Dubai, UAE</h4>
+              <p>⭐⭐⭐⭐⭐</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Social floats -->
+        <div class="social-floats">
+          <a href="#" class="social-btn" aria-label="Share">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" /></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+          </a>
+        </div>
+        
+        <div class="hero-content">
+          <div class="hero-top-badge">
+            <span class="badge-line"></span> 🛂 Certified Immigration Consultancy
+          </div>
+          <div class="hero-avatars">
+            <div class="avatar-stack-container">
+              <img src="https://i.pravatar.cc/100?img=1" alt="User 1" class="avatar-circle" />
+              <img src="https://i.pravatar.cc/100?img=2" alt="User 2" class="avatar-circle" />
+              <img src="https://i.pravatar.cc/100?img=3" alt="User 3" class="avatar-circle" />
+              <img src="https://i.pravatar.cc/100?img=4" alt="User 4" class="avatar-circle" />
+            </div>
+            <span class="avatar-text">10,000+ Visas Successfully Processed</span>
+          </div>
+          <h1 id="hero-heading" class="hero-headline">
+            Expert Visa &amp; Travel<br/><span class="headline-accent">Guidance You Can Trust</span>
+          </h1>
+          <p class="hero-subheadline" style="font-size: 1.15rem; max-width: 600px; margin: 0 auto 2rem auto; color: rgba(255,255,255,0.9); text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+            Navigating complex immigration and travel procedures with <strong>100% transparency</strong>. We put your interests first.
+          </p>
+        </div>
+
+        <div class="search-widget">
+          <div class="search-tabs">
+            <button class="search-tab active">Visa Consultant</button>
+            <button class="search-tab">Travel Booking</button>
+          </div>
+          <form id="hero-form" class="search-form" onsubmit="handleHeroSubmit(event)">
+            <div class="search-field">
+              <label>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                Destination
+              </label>
+              <select name="destination" class="search-input" required aria-required="true">
+                <option value="" disabled selected>Canada, UK, UAE...</option>
+                <option value="canada">Canada</option>
+                <option value="uk">United Kingdom</option>
+                <option value="uae">UAE / Dubai</option>
+                <option value="aus">Australia</option>
+                <option value="schengen">Schengen Europe</option>
+              </select>
+            </div>
+            <div class="search-divider"></div>
+            <div class="search-field">
+              <label>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                Service Type
+              </label>
+              <select name="service" class="search-input" required aria-required="true">
+                <option value="" disabled selected>Tourist, PR, Study...</option>
+                <option value="tourist">Tourist Visa</option>
+                <option value="pr">PR Consultation</option>
+                <option value="study">Study Visa</option>
+                <option value="work">Work Permit</option>
+              </select>
+            </div>
+            <button type="submit" id="hero-submit-btn" class="btn btn-primary search-btn" style="padding: 14px 40px; position:relative;">
+              <span id="hero-btn-text">Get Consultation</span>
+            </button>
+          </form>
+
+          <script>
+            function handleHeroSubmit(e) {
+              e.preventDefault();
+              var btn = document.getElementById('hero-submit-btn');
+              var text = document.getElementById('hero-btn-text');
+              btn.disabled = true;
+              text.innerHTML = 'Processing... ⏳';
+              
+              // Simulate API delay
+              setTimeout(function() {
+                text.innerHTML = 'Request Sent! ✅';
+                setTimeout(function() {
+                  btn.disabled = false;
+                  text.innerHTML = 'Get Consultation';
+                  window.location.hash = '#contact';
+                }, 1500);
+              }, 1200);
+            }
+          </script>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- ===== SECTION 2: WHY CHOOSE US ===== -->
+    <section id="why-us" class="why-us-section section-pad" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Why GTS?</p>
+          <h2 id="why-heading" class="section-title">Why Choose Us?</h2>
+          <p class="section-subtitle">We put your interests first — always.</p>
+        </div>
+        <div class="features-grid">
+
+          <article class="feature-card" aria-label="Faster Processing">
+            <div class="feature-icon-wrap c1" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3 class="feature-title">Faster Processing</h3>
+            <p class="feature-desc">We streamline your visa applications to avoid unnecessary delays, using our proven processes and deep expertise.</p>
+          </article>
+
+          <article class="feature-card" aria-label="Accurate Guidance">
+            <div class="feature-icon-wrap c2" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="feature-title">Accurate Guidance</h3>
+            <p class="feature-desc">Our experts evaluate your profile truthfully and explain risks clearly — we never sell false hope.</p>
+          </article>
+
+          <article class="feature-card" aria-label="No Hidden Costs">
+            <div class="feature-icon-wrap c3" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3 class="feature-title">No Hidden Costs</h3>
+            <p class="feature-desc">Transparent pricing with clear distinctions between our consultancy fees and government application costs.</p>
+          </article>
+
+          <article class="feature-card" aria-label="Doorstep Service">
+            <div class="feature-icon-wrap c4" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="feature-title">Doorstep Service</h3>
+            <p class="feature-desc">Enjoy the convenience of document pickup and drop-off right from your home — no need to visit our office.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 3: ABOUT US ===== -->
+    <section id="about" class="about-section section-pad" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual" aria-hidden="true">
+            <div class="about-visual-card">
+              <div class="about-stat">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Transparency</span>
+              </div>
+            </div>
+            <div class="about-visual-card secondary">
+              <div class="about-stat">
+                <span class="stat-number">0</span>
+                <span class="stat-label">Hidden Fees</span>
+              </div>
+            </div>
+            <div class="about-visual-badge">
+              <span>🌍</span>
+              <span>Global Reach</span>
+            </div>
+          </div>
+          <div class="about-content">
+            <p class="section-label">About Us</p>
+            <h2 id="about-heading" class="section-title">Who We Are</h2>
+            <p class="about-lead">We are a certified travel and immigration consultancy dedicated to making your global aspirations a reality.</p>
+            <p class="about-body">Operating with the utmost integrity, we believe in providing ethical and realistic guidance. We never promise what we cannot deliver — and that honesty is what sets us apart.</p>
+
+            <div class="credentials-list">
+              <h3 class="credentials-heading">Our Credentials &amp; Compliance</h3>
+              <ul role="list">
+                <li class="credential-item">
+                  <span class="credential-icon" aria-hidden="true">🇨🇦</span>
+                  <div>
+                    <strong>CICC Compliant</strong>
+                    <p>College of Immigration and Citizenship Consultants — Canada</p>
+                  </div>
+                </li>
+                <li class="credential-item">
+                  <span class="credential-icon" aria-hidden="true">🇦🇺</span>
+                  <div>
+                    <strong>MARA Registered</strong>
+                    <p>Migration Agents Registration Authority — Australia</p>
+                  </div>
+                </li>
+                <li class="credential-item">
+                  <span class="credential-icon" aria-hidden="true">✈️</span>
+                  <div>
+                    <strong>IATA Approved</strong>
+                    <p>Required paid-up capital and IATA approvals maintained</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="ethical-pledge">
+              <span class="pledge-icon" aria-hidden="true">🤝</span>
+              <div>
+                <strong>Our Ethical Pledge</strong>
+                <p>Proud signatories of the <em>Pledge for Commitment Towards Safe &amp; Honourable Tourism</em>. Zero tolerance for illicit activities, full respect for social and cultural norms.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 4: OUR SERVICES ===== -->
+    <section id="services" class="services-section section-pad" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">What We Offer</p>
+          <h2 id="services-heading" class="section-title">Comprehensive Travel &amp; Visa Solutions</h2>
+          <p class="section-subtitle">From visa processing to airport assistance — we handle every step of your journey.</p>
+        </div>
+        <div class="services-grid">
+
+          <article class="service-card" aria-label="Visa Processing">
+            <div class="service-icon s1" aria-hidden="true">🛂</div>
+            <h3 class="service-title">Visa Processing</h3>
+            <p class="service-desc">Comprehensive assistance for Tourist, Business, Student, Transit, and Job Seeker visas.</p>
+            <ul class="service-destinations" aria-label="Destinations">
+              <li>🇨🇦 Canada</li>
+              <li>🇦🇺 Australia</li>
+              <li>🇬🇧 UK</li>
+              <li>🇪🇺 Schengen</li>
+              <li>🇦🇪 UAE</li>
+            </ul>
+            <button class="service-learn-btn" onclick="openModal('visa-modal')" aria-haspopup="dialog">Learn More →</button>
+          </article>
+
+          <article class="service-card" aria-label="OK To Board UAE">
+            <div class="service-icon s2" aria-hidden="true">📋</div>
+            <h3 class="service-title">OK To Board (UAE)</h3>
+            <p class="service-desc">Seamless airline verification processes for your UAE travel, handled swiftly and accurately.</p>
+            <button class="service-learn-btn" onclick="openModal('otb-modal')" aria-haspopup="dialog">Learn More →</button>
+          </article>
+
+          <article class="service-card" aria-label="Marhaba Meet and Greet">
+            <div class="service-icon s3" aria-hidden="true">🤝</div>
+            <h3 class="service-title">Marhaba (Meet &amp; Greet)</h3>
+            <p class="service-desc">Exclusive airport assistance services — be welcomed and guided through every terminal procedure.</p>
+            <button class="service-learn-btn" onclick="openModal('marhaba-modal')" aria-haspopup="dialog">Learn More →</button>
+          </article>
+
+          <article class="service-card" aria-label="Air Tickets and Hotels">
+            <div class="service-icon s4" aria-hidden="true">🏨</div>
+            <h3 class="service-title">Air Tickets &amp; Hotels</h3>
+            <p class="service-desc">Comprehensive booking solutions matching your budget and itinerary — flights, hotels, and more.</p>
+            <button class="service-learn-btn" onclick="openModal('booking-modal')" aria-haspopup="dialog">Learn More →</button>
+          </article>
+
+          <article class="service-card" aria-label="Travel Insurance">
+            <div class="service-icon s5" aria-hidden="true">🛡️</div>
+            <h3 class="service-title">Travel Insurance</h3>
+            <p class="service-desc">Policies to secure your trip against cashless medical emergencies, baggage loss, or flight delays.</p>
+            <button class="service-learn-btn" onclick="openModal('insurance-modal')" aria-haspopup="dialog">Learn More →</button>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 5: 5-STEP PROCESS ===== -->
+    <section id="process" class="process-section section-pad" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">How It Works</p>
+          <h2 id="process-heading" class="section-title">Our 5-Step Process</h2>
+          <p class="section-subtitle">Simple, transparent, and stress-free from start to finish.</p>
+        </div>
+        <div class="process-steps" role="list">
+
+          <div class="process-step" role="listitem">
+            <div class="step-number" aria-hidden="true">01</div>
+            <div class="step-icon" aria-hidden="true">📝</div>
+            <h3 class="step-title">Order Booking</h3>
+            <p class="step-desc">Select your service and complete a simple booking form. We'll confirm within 24 hours.</p>
+            <div class="step-connector" aria-hidden="true"></div>
+          </div>
+
+          <div class="process-step" role="listitem">
+            <div class="step-number" aria-hidden="true">02</div>
+            <div class="step-icon" aria-hidden="true">📂</div>
+            <h3 class="step-title">Document Collection</h3>
+            <p class="step-desc">We collect all required documents directly from your doorstep — no need to travel.</p>
+            <div class="step-connector" aria-hidden="true"></div>
+          </div>
+
+          <div class="process-step" role="listitem">
+            <div class="step-number" aria-hidden="true">03</div>
+            <div class="step-icon" aria-hidden="true">⚙️</div>
+            <h3 class="step-title">Visa Processing</h3>
+            <p class="step-desc">Our experts file your application accurately with the appropriate consulate or embassy.</p>
+            <div class="step-connector" aria-hidden="true"></div>
+          </div>
+
+          <div class="process-step" role="listitem">
+            <div class="step-number" aria-hidden="true">04</div>
+            <div class="step-icon" aria-hidden="true">✅</div>
+            <h3 class="step-title">Issuing of Visa</h3>
+            <p class="step-desc">Upon approval, the visa is issued and verified. You're officially cleared to travel!</p>
+            <div class="step-connector" aria-hidden="true"></div>
+          </div>
+
+          <div class="process-step" role="listitem">
+            <div class="step-number" aria-hidden="true">05</div>
+            <div class="step-icon" aria-hidden="true">🚀</div>
+            <h3 class="step-title">Passport Dispatch</h3>
+            <p class="step-desc">Your passport is returned safely to your doorstep — ready for your adventure to begin.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 6: OUR PROMISE / TRANSPARENCY ===== -->
+    <section id="promise" class="promise-section section-pad" aria-labelledby="promise-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Transparency &amp; Safety</p>
+          <h2 id="promise-heading" class="section-title">Our Promise to You</h2>
+          <p class="section-subtitle">In an industry where thousands lose money to fraudulent agents, we prioritize your safety and peace of mind.</p>
+        </div>
+        <div class="promise-grid">
+
+          <div class="promise-card">
+            <div class="promise-icon" aria-hidden="true">🚫</div>
+            <h3>No False Guarantees</h3>
+            <p>We will never promise "100% visa approval" or "guaranteed PR". Visa decisions are solely in the hands of foreign governments. If your profile is not eligible, we will tell you the truth.</p>
+          </div>
+
+          <div class="promise-card">
+            <div class="promise-icon" aria-hidden="true">📄</div>
+            <h3>Written Agreements</h3>
+            <p>Every client receives a written contract clearly detailing the services, government fees versus consultancy fees, and our refund policies — no ambiguity, ever.</p>
+          </div>
+
+          <div class="promise-card">
+            <div class="promise-icon" aria-hidden="true">🔒</div>
+            <h3>Document Security</h3>
+            <p>We only review and copy your documents with your permission. We will <strong>never</strong> hold your original passports or certificates hostage under any circumstances.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 7: FAQs ===== -->
+    <section id="faq" class="faq-section section-pad" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Common Questions</p>
+          <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Quick answers to the questions we hear most often.</p>
+        </div>
+        <div class="faq-list" role="list">
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1" id="faq-btn-1">
+              <span>How much is the Schengen visa fee?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-btn-1" hidden>
+              <p>For short-term visas (Tourism, Business, Transit), the fee is typically:</p>
+              <ul>
+                <li><strong>Adults:</strong> ₹7,100 (80 Euro) or ₹8,200 (90 Euro) depending on current exchange rates</li>
+                <li><strong>Children (6–12 years):</strong> ₹3,600</li>
+                <li><strong>Children (below 6):</strong> Free</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2" id="faq-btn-2">
+              <span>How much bank balance is required for a Singapore tourist visa?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-btn-2" hidden>
+              <p>For a 1-week trip, the minimum average bank balance requirement is approximately <strong>₹50,000 per person</strong>.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3" id="faq-btn-3">
+              <span>What is the cost of a Dubai single entry tourist visa?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-btn-3" hidden>
+              <p>
+                <strong>30-day single entry:</strong> Approximately ₹7,300<br/>
+                <strong>60-day single entry:</strong> Approximately ₹12,000
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4" id="faq-btn-4">
+              <span>Do you guarantee visa approval?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-btn-4" hidden>
+              <p>No — and that's a good thing. Any agent claiming 100% approval is being dishonest. Visa decisions rest solely with foreign governments. We provide honest profile assessments and the best possible application to maximize your chances.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 8: CONTACT ===== -->
+    <section id="contact" class="contact-section section-pad" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Get In Touch</p>
+          <h2 id="contact-heading" class="section-title">Let's Start Your Journey</h2>
+          <p class="section-subtitle">Reach out today for a free, honest profile assessment.</p>
+        </div>
+        <div class="contact-grid">
+
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <div class="info-card">
+              <div class="info-icon" aria-hidden="true">📍</div>
+              <div>
+                <h3>Office Address</h3>
+                <address>
+                  GTS Travel &amp; Visa Consultancy<br/>
+                  Mira Road, Mumbai,<br/>
+                  Maharashtra – 401107
+                </address>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon" aria-hidden="true">📧</div>
+              <div>
+                <h3>Email</h3>
+                <a href="mailto:info@youragency.com" class="info-link">info@youragency.com</a>
+                <p class="info-note">Always verify office presence and credentials before booking.</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon" aria-hidden="true">🕐</div>
+              <div>
+                <h3>Working Hours</h3>
+                <p>Monday – Saturday: 9:00 AM – 6:00 PM</p>
+                <p>Sunday: Closed</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <form id="contact-form" class="contact-form" novalidate aria-label="Contact form">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Full Name <span class="required" aria-label="required">*</span></label>
+              <input type="text" id="form-name" name="name" class="form-input" placeholder="Enter your full name" autocomplete="name" required aria-required="true" />
+              <span class="form-error" id="name-error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="form-email" class="form-label">Email Address <span class="required" aria-label="required">*</span></label>
+              <input type="email" id="form-email" name="email" class="form-input" placeholder="Enter your email" autocomplete="email" required aria-required="true" />
+              <span class="form-error" id="email-error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="form-phone" class="form-label">Phone Number</label>
+              <input type="tel" id="form-phone" name="phone" class="form-input" placeholder="Enter your phone number" autocomplete="tel" />
+            </div>
+            <div class="form-group">
+              <label for="form-visa" class="form-label">Visa Type / Destination <span class="required" aria-label="required">*</span></label>
+              <select id="form-visa" name="visa_type" class="form-input form-select" required aria-required="true">
+                <option value="" disabled selected>Select destination / visa type</option>
+                <option value="canada">Canada</option>
+                <option value="australia">Australia</option>
+                <option value="uk">UK</option>
+                <option value="schengen">Schengen / Europe</option>
+                <option value="uae">UAE / Dubai</option>
+                <option value="singapore">Singapore</option>
+                <option value="other">Other</option>
+              </select>
+              <span class="form-error" id="visa-error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="form-message" class="form-label">Message</label>
+              <textarea id="form-message" name="message" class="form-input form-textarea" placeholder="Tell us about your travel plans or any questions you have..." rows="4"></textarea>
+            </div>
+            <button type="submit" id="form-submit" class="btn btn-primary btn-full">
+              <span class="btn-text">Send Enquiry</span>
+              <span class="btn-loader" aria-hidden="true" hidden>Sending…</span>
+            </button>
+            <div class="form-success" id="form-success" role="alert" aria-live="polite" hidden>
+              <span>✅ Thank you! We'll get back to you within 24 hours.</span>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- end #main-content -->
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" aria-label="GTS Home">
+            <img src="img/gts_main.png" alt="GTS - Globus Travel Services" class="footer-logo-img" />
+          </a>
+          <p class="footer-tagline">Expert Visa &amp; Travel Guidance You Can Trust. Operating with 100% transparency and ethical integrity.</p>
+          <div class="footer-pledge" aria-label="Ethical pledge badge">
+            <span aria-hidden="true">🤝</span>
+            <span>Signatory: Safe &amp; Honourable Tourism Pledge</span>
+          </div>
+        </div>
+
+        <div class="footer-links-group">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Our Process</a></li>
+            <li><a href="#promise">Our Promise</a></li>
+            <li><a href="#faq">FAQs</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4 class="footer-heading">Our Services</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="#services">Visa Processing</a></li>
+            <li><a href="#services">OK To Board (UAE)</a></li>
+            <li><a href="#services">Marhaba Meet &amp; Greet</a></li>
+            <li><a href="#services">Air Tickets &amp; Hotels</a></li>
+            <li><a href="#services">Travel Insurance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4 class="footer-heading">Destinations</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="#services">🇨🇦 Canada</a></li>
+            <li><a href="#services">🇦🇺 Australia</a></li>
+            <li><a href="#services">🇬🇧 United Kingdom</a></li>
+            <li><a href="#services">🇪🇺 Schengen / Europe</a></li>
+            <li><a href="#services">🇦🇪 UAE / Dubai</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="footer-copy">&copy; <span id="footer-year"></span> GTS Travel &amp; Visa Consultancy. All rights reserved.</p>
+        <p class="footer-legal">Mira Road, Mumbai, Maharashtra 401107 &nbsp;|&nbsp; <a href="mailto:info@youragency.com">info@youragency.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MODALS ===== -->
+  <!-- Visa Modal -->
+  <div id="visa-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="visa-modal-title" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('visa-modal')" aria-label="Close modal">&times;</button>
+      <div class="modal-icon" aria-hidden="true">🛂</div>
+      <h2 id="visa-modal-title" class="modal-title">Visa Processing</h2>
+      <p>We provide end-to-end assistance for the following visa categories:</p>
+      <ul class="modal-list">
+        <li><strong>Tourist Visa</strong> – For leisure and sightseeing</li>
+        <li><strong>Business Visa</strong> – For trade, meetings, and conferences</li>
+        <li><strong>Student Visa</strong> – For academic programs abroad</li>
+        <li><strong>Transit Visa</strong> – For layovers and connections</li>
+        <li><strong>Job Seeker Visa</strong> – For employment opportunities abroad</li>
+      </ul>
+      <p>Destinations include <strong>Canada, Australia, UK, Europe (Schengen),</strong> and <strong>UAE</strong>.</p>
+      <a href="#contact" class="btn btn-primary" onclick="closeModal('visa-modal')">Enquire Now</a>
+    </div>
+  </div>
+
+  <!-- OK To Board Modal -->
+  <div id="otb-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="otb-modal-title" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('otb-modal')" aria-label="Close modal">&times;</button>
+      <div class="modal-icon" aria-hidden="true">📋</div>
+      <h2 id="otb-modal-title" class="modal-title">OK To Board (UAE)</h2>
+      <p>The <strong>OK To Board (OTB)</strong> is a mandatory airline verification process for certain nationals travelling to the UAE. We handle this seamlessly so you can travel without any last-minute hurdles.</p>
+      <p>Our team coordinates directly with the airlines to ensure your OTB status is confirmed well before your departure date.</p>
+      <a href="#contact" class="btn btn-primary" onclick="closeModal('otb-modal')">Enquire Now</a>
+    </div>
+  </div>
+
+  <!-- Marhaba Modal -->
+  <div id="marhaba-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="marhaba-modal-title" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('marhaba-modal')" aria-label="Close modal">&times;</button>
+      <div class="modal-icon" aria-hidden="true">🤝</div>
+      <h2 id="marhaba-modal-title" class="modal-title">Marhaba – Meet &amp; Greet</h2>
+      <p><strong>Marhaba</strong> is an exclusive airport assistance service available at select UAE airports. Our dedicated agents meet you at the airport for:</p>
+      <ul class="modal-list">
+        <li>Priority immigration &amp; customs clearance</li>
+        <li>Luggage handling &amp; porter services</li>
+        <li>VIP lounge access (where available)</li>
+        <li>Limousine transfers</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary" onclick="closeModal('marhaba-modal')">Enquire Now</a>
+    </div>
+  </div>
+
+  <!-- Booking Modal -->
+  <div id="booking-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('booking-modal')" aria-label="Close modal">&times;</button>
+      <div class="modal-icon" aria-hidden="true">🏨</div>
+      <h2 id="booking-modal-title" class="modal-title">Air Tickets &amp; Hotels</h2>
+      <p>We provide comprehensive travel booking solutions tailored to your budget and itinerary, including:</p>
+      <ul class="modal-list">
+        <li>Domestic &amp; international flight bookings</li>
+        <li>Hotel reservations at competitive rates</li>
+        <li>Holiday packages and tour itineraries</li>
+        <li>Group travel arrangements</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary" onclick="closeModal('booking-modal')">Enquire Now</a>
+    </div>
+  </div>
+
+  <!-- Insurance Modal -->
+  <div id="insurance-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="insurance-modal-title" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('insurance-modal')" aria-label="Close modal">&times;</button>
+      <div class="modal-icon" aria-hidden="true">🛡️</div>
+      <h2 id="insurance-modal-title" class="modal-title">Travel Insurance</h2>
+      <p>Our travel insurance policies are designed to protect you against the unexpected:</p>
+      <ul class="modal-list">
+        <li>Cashless medical emergencies abroad</li>
+        <li>Baggage loss or delay</li>
+        <li>Flight delays and cancellations</li>
+        <li>Trip interruption or cancellation cover</li>
+        <li>Personal liability cover</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary" onclick="closeModal('insurance-modal')">Enquire Now</a>
+    </div>
+  </div>
+
+  <!-- Mobile Sticky CTA -->
+  <div class="mobile-sticky-cta">
+    <a href="#hero" class="btn btn-primary btn-full">Get Consultation</a>
+  </div>
+
+  <!-- ===== SCROLL TO TOP BUTTON ===== -->
+  <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Scroll back to top" title="Back to top" hidden>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
