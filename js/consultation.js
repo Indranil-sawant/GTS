@@ -7,15 +7,15 @@ function initConsultation() {
     const header = document.getElementById('consult-form-header');
     const successView = document.getElementById('consult-success-view');
     const submitBtn = document.getElementById('consult-submit-btn');
-    const closeBtn = document.getElementById('close-consult-modal');
+    const closeBtn = document.querySelector('.modal-close'); // Use class if ID is missing
     const closeSuccessBtn = document.getElementById('close-success-btn');
 
     // 2. Form Fields
-    const destInput = document.getElementById('consult-dest');
-    const svcInput = document.getElementById('consult-svc');
+    const destInput = document.getElementById('modal-destination');
+    const svcInput = document.getElementById('modal-service');
     
     // Hidden fields for data tracking (UTM & Page)
-    const pageInput = document.getElementById('consult-page');
+    const pageInput = document.getElementById('modal-page');
     const utmSourceInput = document.getElementById('consult-utm-source');
     const utmMediumInput = document.getElementById('consult-utm-medium');
     const utmCampaignInput = document.getElementById('consult-utm-campaign');
@@ -64,9 +64,9 @@ function initConsultation() {
         }
 
         // Show form & hide success
-        form.style.display = 'block';
-        header.style.display = 'block';
-        successView.style.display = 'none';
+        if (form) form.style.display = 'block';
+        if (header) header.style.display = 'block';
+        if (successView) successView.style.display = 'none';
 
         // Display modal
         modal.style.display = 'flex'; // Override potentially hidden CSS
@@ -82,7 +82,7 @@ function initConsultation() {
     }
 
     // 5. Handle Modal Closing
-    function closeConsultationModal() {
+    window.closeConsultationModal = function() {
         modal.classList.add('hidden');
         modal.setAttribute('aria-hidden', 'true');
         modal.style.display = ''; // Reverts to CSS default (none)
@@ -90,8 +90,11 @@ function initConsultation() {
         form.reset();
     }
 
-    if (closeBtn) closeBtn.addEventListener('click', closeConsultationModal);
-    if (closeSuccessBtn) closeSuccessBtn.addEventListener('click', closeConsultationModal);
+    // Expose openConsultationModal to window
+    window.openConsultationModal = openConsultationModal;
+
+    if (closeBtn) closeBtn.addEventListener('click', window.closeConsultationModal);
+    if (closeSuccessBtn) closeSuccessBtn.addEventListener('click', window.closeConsultationModal);
 
     // Prevent duplicate event listeners and setup outside click
     modal.addEventListener('click', (e) => {
@@ -152,33 +155,38 @@ function initConsultation() {
         submitBtn.disabled = true;
         submitBtn.innerText = 'Submitting... ⏳';
 
-        // Collect Form Data
+        // Collect Form Data safely
         const formData = {
-            name: document.getElementById('consult-name').value,
-            email: document.getElementById('consult-email').value,
-            phone: document.getElementById('consult-phone').value,
-            city: document.getElementById('consult-city').value,
-            destination: destInput.value,
-            service: svcInput.value,
-            message: document.getElementById('consult-msg').value,
-            page: pageInput.value,
-            utm_source: utmSourceInput.value,
-            utm_medium: utmMediumInput.value,
-            utm_campaign: utmCampaignInput.value
+            name: document.getElementById('consult-name')?.value || '',
+            email: document.getElementById('consult-email')?.value || '',
+            phone: document.getElementById('consult-phone')?.value || '',
+            city: document.getElementById('consult-city')?.value || '',
+            destination: destInput?.value || '',
+            service: svcInput?.value || '',
+            message: document.getElementById('consult-msg')?.value || '',
+            page: window.location.href, // Simplified page capture
+            utm_source: utmSourceInput ? utmSourceInput.value : '',
+            utm_medium: utmMediumInput ? utmMediumInput.value : '',
+            utm_campaign: utmCampaignInput ? utmCampaignInput.value : ''
         };
 
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyms4vgxnMg0bdcX_xj1AghQr19e6IvdNMpDx5Sk4ifKkgh7AJtQA73cAMygAWqoo_N/exec';
+        const MASTER_URL = 'https://script.google.com/macros/s/AKfycbzcPwNsL8XW0qWpWVsipIIN75pVp1ZzVnxh_xepIR2osT9HjJbThC2ztNzocw7kaJw/exec';
+        const typeField = document.getElementById('modal-type');
+        const SCRIPT_URL = MASTER_URL;
 
-        try {
-            await fetch(SCRIPT_URL, {
-                method: "POST",
-                mode: "no-cors",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(formData)
-            });
+        // Start the background request
+        fetch(SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+        }).catch(err => console.error("Background submission failed:", err));
 
+        // OPTIMISTIC UI: Show success after a tiny professional delay (800ms)
+        // This makes the form feel instant for the user.
+        setTimeout(() => {
             // Show Success State
             form.style.display = 'none';
             header.style.display = 'none';
@@ -187,51 +195,89 @@ function initConsultation() {
             // Auto Close after 2.5 seconds
             setTimeout(() => {
                 closeConsultationModal();
+                // Reset button state for next time
+                submitBtn.disabled = false;
+                submitBtn.innerText = originalBtnText;
             }, 2500);
-
-        } catch (error) {
-            console.error('Submission failed:', error);
-            alert('Could not submit the form. Please check your internet connection and try again.');
-        } finally {
-            submitBtn.disabled = false;
-            submitBtn.innerText = originalBtnText;
-        }
+        }, 800);
     });
 
-    // 8. Handle "Travel Booking" vs "Visa Consultant" tab switch correctly (since inline script was removed)
+    // 8. Handle "Travel Booking" vs "Visa Consultant" tab switch
     const tabs = document.querySelectorAll('.search-tab');
     if (tabs.length >= 2) {
         const visaTab = tabs[0];
         const ticketTab = tabs[1];
         
+        const destSelect = document.getElementById('hero-dest-select');
+        const svcSelect = document.getElementById('hero-svc-select');
+        const submitBtnText = document.getElementById('hero-btn-text');
+
+        const visaDestOptions = [
+            { val: "", text: "Canada, UK, UAE...", disabled: true, selected: true },
+            { val: "canada", text: "Canada" },
+            { val: "uk", text: "United Kingdom" },
+            { val: "uae", text: "UAE / Dubai" },
+            { val: "aus", text: "Australia" },
+            { val: "schengen", text: "Schengen Europe" }
+        ];
+
+        const visaSvcOptions = [
+            { val: "", text: "Tourist, PR, Study...", disabled: true, selected: true },
+            { val: "tourist", text: "Tourist Visa" },
+            { val: "pr", text: "PR Consultation" },
+            { val: "study", text: "Study Visa" },
+            { val: "work", text: "Work Permit" }
+        ];
+
+        const travelDestOptions = [
+            { val: "", text: "City of Arrival...", disabled: true, selected: true },
+            { val: "dubai", text: "Dubai, UAE" },
+            { val: "thailand", text: "Thailand" },
+            { val: "maldives", text: "Maldives" },
+            { val: "bali", text: "Bali, Indonesia" },
+            { val: "london", text: "London, UK" },
+            { val: "paris", text: "Paris, France" }
+        ];
+
+        const travelSvcOptions = [
+            { val: "", text: "Flight, Hotel...", disabled: true, selected: true },
+            { val: "flight", text: "Flight Only" },
+            { val: "hotel", text: "Hotel Booking" },
+            { val: "package", text: "Flight + Hotel" },
+            { val: "tour", text: "Custom Tour Package" }
+        ];
+
+        function updateOptions(select, options) {
+            if (!select) return;
+            select.innerHTML = '';
+            options.forEach(opt => {
+                const o = document.createElement('option');
+                o.value = opt.val;
+                o.text = opt.text;
+                if (opt.disabled) o.disabled = true;
+                if (opt.selected) o.selected = true;
+                select.appendChild(o);
+            });
+        }
+
         visaTab.addEventListener('click', (e) => {
-             e.preventDefault();
-             visaTab.classList.add('active');
-             ticketTab.classList.remove('active');
-             
-             const destSelect = document.getElementById('hero-dest-select');
-             const svcSelect = document.getElementById('hero-svc-select');
-             if(destSelect && destSelect.options[0]) {
-                 destSelect.options[0].text = 'Canada, UK, UAE...';
-             }
-             if(svcSelect && svcSelect.options[0]) {
-                 svcSelect.options[0].text = 'Tourist, PR, Study...';
-             }
+            e.preventDefault();
+            visaTab.classList.add('active');
+            ticketTab.classList.remove('active');
+            
+            updateOptions(destSelect, visaDestOptions);
+            updateOptions(svcSelect, visaSvcOptions);
+            if (submitBtnText) submitBtnText.innerText = 'Get Consultation';
         });
 
         ticketTab.addEventListener('click', (e) => {
-             e.preventDefault();
-             ticketTab.classList.add('active');
-             visaTab.classList.remove('active');
-             
-             const destSelect = document.getElementById('hero-dest-select');
-             const svcSelect = document.getElementById('hero-svc-select');
-             if(destSelect && destSelect.options[0]) {
-                 destSelect.options[0].text = 'City of Arrival...';
-             }
-             if(svcSelect && svcSelect.options[0]) {
-                 svcSelect.options[0].text = 'Flight Preference...';
-             }
+            e.preventDefault();
+            ticketTab.classList.add('active');
+            visaTab.classList.remove('active');
+            
+            updateOptions(destSelect, travelDestOptions);
+            updateOptions(svcSelect, travelSvcOptions);
+            if (submitBtnText) submitBtnText.innerText = 'Plan My Trip';
         });
     }
 }

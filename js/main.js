@@ -384,7 +384,7 @@ window.closeAllModals = closeAllModals;
       page: window.location.href
     };
 
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyms4vgxnMg0bdcX_xj1AghQr19e6IvdNMpDx5Sk4ifKkgh7AJtQA73cAMygAWqoo_N/exec';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzcPwNsL8XW0qWpWVsipIIN75pVp1ZzVnxh_xepIR2osT9HjJbThC2ztNzocw7kaJw/exec';
 
     fetch(SCRIPT_URL, {
       method: "POST",
@@ -393,8 +393,10 @@ window.closeAllModals = closeAllModals;
         "Content-Type": "application/json"
       },
       body: JSON.stringify(data)
-    })
-    .then(() => {
+    }).catch(err => console.error("Background error:", err));
+
+    // Show success after 600ms (Optimistic UI)
+    setTimeout(() => {
       submitBtn.disabled = false;
       btnText.hidden     = false;
       btnLoader.hidden   = true;
@@ -402,14 +404,7 @@ window.closeAllModals = closeAllModals;
       successMsg.hidden = false;
       successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       setTimeout(() => { successMsg.hidden = true; }, 8000);
-    })
-    .catch((err) => {
-      console.error("Submission error:", err);
-      submitBtn.disabled = false;
-      btnText.hidden     = false;
-      btnLoader.hidden   = true;
-      alert("Something went wrong. Please try again.");
-    });
+    }, 600);
   });
 })();
 
