@@ -167,7 +167,7 @@ function initConsultation() {
             utm_campaign: utmCampaignInput.value
         };
 
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzYO17T7dkI-zxJefUUvIK7-onV1JT7St6tFJ0E9w5oavipEBBkd2MJ02G1bzPwfTuHdA/exec';
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyms4vgxnMg0bdcX_xj1AghQr19e6IvdNMpDx5Sk4ifKkgh7AJtQA73cAMygAWqoo_N/exec';
 
         try {
             await fetch(SCRIPT_URL, {

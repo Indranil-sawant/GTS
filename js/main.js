@@ -370,24 +370,46 @@ window.closeAllModals = closeAllModals;
 
     if (!valid) return;
 
-    // --- Simulate submission (no backend) ---
+    // --- Real submission to Google Sheets ---
     submitBtn.disabled = true;
     btnText.hidden     = true;
     btnLoader.hidden   = false;
 
-    setTimeout(() => {
+    const data = {
+      name: document.getElementById('form-name').value,
+      email: document.getElementById('form-email').value,
+      phone: document.getElementById('form-phone').value,
+      service: document.getElementById('form-visa').value, // Mapping visa_type to service
+      message: document.getElementById('form-message').value,
+      page: window.location.href
+    };
+
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyms4vgxnMg0bdcX_xj1AghQr19e6IvdNMpDx5Sk4ifKkgh7AJtQA73cAMygAWqoo_N/exec';
+
+    fetch(SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+    .then(() => {
       submitBtn.disabled = false;
       btnText.hidden     = false;
       btnLoader.hidden   = true;
       form.reset();
       successMsg.hidden = false;
-
-      // Scroll success into view
       successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-      // Auto-hide success after 8s
       setTimeout(() => { successMsg.hidden = true; }, 8000);
-    }, 1500);
+    })
+    .catch((err) => {
+      console.error("Submission error:", err);
+      submitBtn.disabled = false;
+      btnText.hidden     = false;
+      btnLoader.hidden   = true;
+      alert("Something went wrong. Please try again.");
+    });
   });
 })();
 
