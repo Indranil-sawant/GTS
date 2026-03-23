@@ -1976,3 +1976,133 @@ button {
   .hero-section { background: hsl(214, 89%, 95%); min-height: auto; }
   .section-pad { padding-block: 2rem; }
 }
+
+/* --------------------------------------------------------------------------
+   Special Styling for Consultation Modal
+   -------------------------------------------------------------------------- */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+}
+
+.modal-box {
+  position: relative;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 420px;
+  animation: popup 0.3s ease;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+@keyframes popup {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-box h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--clr-text);
+  text-align: center;
+}
+
+.modal-box input,
+.modal-box textarea {
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  border: 1px solid var(--clr-border);
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  background: #f9fafb;
+  color: var(--clr-text);
+}
+
+[data-theme="dark"] .modal-box {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+}
+
+[data-theme="dark"] .modal-box input,
+[data-theme="dark"] .modal-box textarea {
+  background: var(--clr-bg);
+  border-color: var(--clr-border);
+}
+
+.modal-box input:focus,
+.modal-box textarea:focus {
+  outline: 2px solid var(--clr-primary);
+  border-color: transparent;
+}
+
+.modal-box button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background: var(--gradient-primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-box button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-box button[type="submit"]:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.modal-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--clr-text-muted);
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: var(--clr-text);
+}
+
+#modal-status {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}

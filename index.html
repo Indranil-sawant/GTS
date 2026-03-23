@@ -175,20 +175,24 @@
           <script>
             function handleHeroSubmit(e) {
               e.preventDefault();
-              var btn = document.getElementById('hero-submit-btn');
-              var text = document.getElementById('hero-btn-text');
-              btn.disabled = true;
-              text.innerHTML = 'Processing... ⏳';
-              
-              // Simulate API delay
-              setTimeout(function() {
-                text.innerHTML = 'Request Sent! ✅';
-                setTimeout(function() {
-                  btn.disabled = false;
-                  text.innerHTML = 'Get Consultation';
-                  window.location.hash = '#contact';
-                }, 1500);
-              }, 1200);
+
+              const form = document.getElementById('hero-form');
+              const destination = form.destination.value;
+              const service = form.service.value;
+
+              if (!destination || !service) {
+                alert("Please select destination and service");
+                return;
+              }
+
+              // Open modal
+              const modal = document.getElementById('consultation-modal');
+              modal.classList.remove('hidden');
+
+              // Autofill values
+              document.getElementById('modal-destination').value = destination;
+              document.getElementById('modal-service').value = service;
+              document.getElementById('modal-page').value = window.location.href;
             }
           </script>
         </div>
@@ -664,6 +668,40 @@
   </footer>
 
   <!-- ===== MODALS ===== -->
+  <!-- CONSULTATION MODAL -->
+  <div id="consultation-modal" class="modal hidden">
+    <div class="modal-overlay"></div>
+
+    <div class="modal-box">
+      <button class="modal-close">&times;</button>
+
+      <h2>Get Consultation</h2>
+
+      <form id="consultation-form">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <input type="text" name="city" placeholder="City" />
+
+        <!-- AUTO FILLED -->
+        <input type="text" name="destination" id="modal-destination" readonly />
+        <input type="text" name="service" id="modal-service" readonly />
+
+        <textarea name="message" placeholder="Your Query"></textarea>
+
+        <!-- Hidden -->
+        <input type="hidden" name="page" id="modal-page" />
+
+        <button type="submit" id="modal-submit-btn">
+          <span id="modal-btn-text">Submit</span>
+        </button>
+
+        <p id="modal-status"></p>
+      </form>
+    </div>
+  </div>
+
+
   <!-- Visa Modal -->
   <div id="visa-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="visa-modal-title" aria-hidden="true">
     <div class="modal-box">
@@ -756,6 +794,67 @@
   <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Scroll back to top" title="Back to top" hidden>
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
+
+  <!-- Modal Logic & Google Sheets Integration -->
+  <script>
+    (function() {
+      const modal = document.getElementById('consultation-modal');
+      const closeBtn = modal.querySelector('.modal-close');
+      const overlay = modal.querySelector('.modal-overlay');
+      const form = document.getElementById('consultation-form');
+
+      const closeModal = () => modal.classList.add('hidden');
+
+      closeBtn.onclick = closeModal;
+      overlay.onclick = closeModal;
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+      });
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const btn = document.getElementById('modal-submit-btn');
+        const text = document.getElementById('modal-btn-text');
+        const status = document.getElementById('modal-status');
+
+        btn.disabled = true;
+        text.innerHTML = "Sending... ⏳";
+
+        const data = Object.fromEntries(new FormData(form).entries());
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyXf5g9xL8FpMyX9ipOQIM67Pd5S1JZ8L-Jb7AQcWWh93nlARFErami2qGQMh_WmZmL0g/exec";
+
+        fetch(SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
+        })
+        .then(() => {
+          status.innerHTML = "✅ Request sent successfully!";
+          text.innerHTML = "Sent ✅";
+
+          form.reset();
+
+          setTimeout(() => {
+            closeModal();
+            btn.disabled = false;
+            text.innerHTML = "Submit";
+            status.innerHTML = "";
+          }, 2500);
+        })
+        .catch((err) => {
+          console.error("Submission error:", err);
+          status.innerHTML = "❌ Something went wrong";
+          btn.disabled = false;
+          text.innerHTML = "Submit";
+        });
+      });
+    })();
+  </script>
 
   <!-- Main JavaScript -->
   <script src="js/main.js"></script>
