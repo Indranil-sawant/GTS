@@ -447,3 +447,59 @@ document.addEventListener('keydown', (e) => {
     }
   }
 });
+
+/* ==========================================================================
+   12. HERO TEXT SWITCHER
+   ========================================================================== */
+(function initHeroTextSwitcher() {
+  const switcher = document.getElementById('hero-text-switcher');
+  if (!switcher) return;
+
+  const slides = switcher.querySelectorAll('.hero-slide');
+  if (slides.length <= 1) return;
+
+  let currentIndex = 0;
+  let intervalId;
+
+  function switchSlide() {
+    const currentSlide = slides[currentIndex];
+    
+    // Move to next index
+    currentIndex = (currentIndex + 1) % slides.length;
+    const nextSlide = slides[currentIndex];
+
+    // Out with the old
+    currentSlide.classList.remove('active');
+    currentSlide.classList.add('exit');
+
+    // Clean up exit class after transition completes (0.5s transition + some buffer)
+    setTimeout(() => {
+      if (currentSlide.classList.contains('exit')) {
+        currentSlide.classList.remove('exit');
+      }
+    }, 600);
+
+    // In with the new
+    nextSlide.classList.remove('exit');
+    nextSlide.classList.add('active');
+  }
+
+  // Start interval using the user's requested 2 seconds (2000ms)
+  function startInterval() {
+    intervalId = setInterval(switchSlide, 2000);
+  }
+
+  function pauseInterval() {
+    clearInterval(intervalId);
+  }
+
+  // Bonus: Add pause on hover
+  switcher.addEventListener('mouseenter', pauseInterval);
+  switcher.addEventListener('mouseleave', startInterval);
+
+  // Bonus/A11y: Pause when focused inside
+  switcher.addEventListener('focusin', pauseInterval);
+  switcher.addEventListener('focusout', startInterval);
+
+  startInterval();
+})();

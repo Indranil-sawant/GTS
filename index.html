@@ -152,19 +152,46 @@
         </div>
 
         <div class="hero-content"
-          style="padding-bottom: 220px; text-align: left; max-width: 1000px; margin: 0 auto; width: 100%;">
+          style="padding-bottom: 100px; text-align: left; max-width: 1000px; margin: 0 auto; width: 100%;">
           <div class="hero-top-badge new-hero-badge">
             VISA &middot; FLIGHTS &middot; ITINERARIES
           </div>
-          <h1 id="hero-heading" class="hero-headline new-hero-headline"
-            style="font-family: Georgia, serif; font-size: clamp(3.5rem, 6vw, 5.5rem); margin-bottom: 20px;">
-            Go where the map<br />still feels magical.
-          </h1>
-          <p class="hero-subheadline"
-            style="font-size: 1.25rem; max-width: 700px; color: rgba(255,255,255,0.95); text-shadow: 0 2px 4px rgba(0,0,0,0.3); line-height: 1.5; margin: 0;">
-            Human experts, clear timelines, and hand-built trips—so you spend less time on paperwork and more time
-            boarding.
-          </p>
+          <div id="hero-text-switcher" class="hero-text-switcher" aria-live="polite">
+            <!-- First slide (static for JS fallback and SEO) -->
+            <div class="hero-slide active">
+              <h1 id="hero-heading" class="hero-headline new-hero-headline"
+                style="font-family: Georgia, serif; font-size: clamp(3.5rem, 6vw, 5.5rem); margin-bottom: 20px;">
+                Go where the map<br />still feels magical.
+              </h1>
+              <p class="hero-subheadline"
+                style="font-size: 1.25rem; max-width: 700px; color: rgba(255,255,255,0.95); text-shadow: 0 2px 4px rgba(0,0,0,0.3); line-height: 1.5; margin: 0;">
+                Human experts, clear timelines, and hand-built trips—so you spend less time on paperwork and more time
+                boarding.
+              </p>
+            </div>
+            
+            <div class="hero-slide">
+              <h1 class="hero-headline new-hero-headline"
+                style="font-family: Georgia, serif; font-size: clamp(3.5rem, 6vw, 5.5rem); margin-bottom: 20px;">
+                Travel beyond<br />the ordinary.
+              </h1>
+              <p class="hero-subheadline"
+                style="font-size: 1.25rem; max-width: 700px; color: rgba(255,255,255,0.95); text-shadow: 0 2px 4px rgba(0,0,0,0.3); line-height: 1.5; margin: 0;">
+                Curated journeys crafted for unforgettable moments and seamless experiences.
+              </p>
+            </div>
+            
+            <div class="hero-slide">
+              <h1 class="hero-headline new-hero-headline"
+                style="font-family: Georgia, serif; font-size: clamp(3.5rem, 6vw, 5.5rem); margin-bottom: 20px;">
+                Your journey,<br />perfectly planned.
+              </h1>
+              <p class="hero-subheadline"
+                style="font-size: 1.25rem; max-width: 700px; color: rgba(255,255,255,0.95); text-shadow: 0 2px 4px rgba(0,0,0,0.3); line-height: 1.5; margin: 0;">
+                From booking to boarding, everything handled with precision.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div class="search-widget new-search-widget">
@@ -641,9 +668,9 @@
               <path d="M140 10 L 160 30 L 155 40 Z" fill="currentColor"/>
             </svg>
           </div>
-          <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?auto=format&fit=crop&q=80&w=400" alt="Travelers jumping" class="img-tall" />
-          <img src="https://images.unsplash.com/photo-1506744626753-1fa28f6e80b4?auto=format&fit=crop&q=80&w=400" alt="Beautiful landscape" class="img-wide" />
-          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80&w=400" alt="City view from above" class="img-float" />
+          <img src="img/slides/dxb.jpg" alt="Dubai Skyline" class="img-tall" />
+          <img src="img/slides/egypt.jpg" alt="Sphinx and Pyramids" class="img-wide" />
+          <img src="img/slides/1.jpg" alt="Travel Destinations" class="img-float" />
         </div>
 
         <!-- Content -->
@@ -1006,126 +1033,151 @@
     </section>
 
     <!-- ===== SECTION 8: CONTACT ===== -->
-    <section id="contact" class="contact-section section-pad" aria-labelledby="contact-heading">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-label">Get In Touch</p>
-          <h2 id="contact-heading" class="section-title">Let's Start Your Journey</h2>
-          <p class="section-subtitle">Reach out today for a free, honest profile assessment.</p>
-        </div>
-        <div class="contact-grid">
-
-          <!-- Contact Info -->
-          <div class="contact-info">
-            <div class="info-card">
-              <div class="info-icon" aria-hidden="true">📍</div>
-              <div>
-                <h3>Office Address</h3>
-                <address>
-                  GTS Travel &amp; Visa Consultancy<br />
-                  Mira Road, Mumbai,<br />
-                  Maharashtra – 401107
-                </address>
-              </div>
+    <section id="contact" class="contact-modern-section" aria-labelledby="contact-heading">
+      <div class="contact-modern-container">
+        <!-- Main Top Area -->
+        <div class="contact-modern-grid">
+          
+          <!-- Left Content -->
+          <div class="contact-modern-left">
+            <div class="contact-modern-pattern" aria-hidden="true">
+              <svg width="180" height="15" viewBox="0 0 180 15" fill="currentColor">
+                <path d="M5 7.5L0 2.5h10L5 7.5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5z" fill="#000" opacity="0.8"/>
+                <path d="M165 7.5l-3-3h6l-3 3zm10 0l-3-3h6l-3 3z" fill="none" stroke="#000" stroke-width="1.5" opacity="0.5"/>
+              </svg>
             </div>
-            <div class="info-card">
-              <div class="info-icon" aria-hidden="true">📧</div>
-              <div>
-                <h3>Email</h3>
-                <a href="mailto:info@youragency.com" class="info-link">info@youragency.com</a>
-                <p class="info-note">Always verify office presence and credentials before booking.</p>
-              </div>
-            </div>
-            <div class="info-card">
-              <div class="info-icon" aria-hidden="true">🕐</div>
-              <div>
-                <h3>Working Hours</h3>
-                <p>Monday – Saturday: 9:00 AM – 6:00 PM</p>
-                <p>Sunday: Closed</p>
-              </div>
-            </div>
+            
+            <h2 id="contact-heading" class="contact-modern-title">Manage customers across the Lifetime of the product cycle</h2>
+            <p class="contact-modern-desc">
+              Build rich, unified profiles with purchase history, preferences, support interactions, and more so you can personalize experiences and boost retention at every touchpoint.
+            </p>
+            
+            <a href="#" class="btn-modern-dark">Learn More</a>
           </div>
 
-          <!-- Contact Form -->
-          <form id="contact-form" class="contact-form" novalidate aria-label="Contact form">
-            <div class="form-group">
-              <label for="form-name" class="form-label">Full Name <span class="required"
-                  aria-label="required">*</span></label>
-              <input type="text" id="form-name" name="name" class="form-input" placeholder="Enter your full name"
-                autocomplete="name" required aria-required="true" />
-              <span class="form-error" id="name-error" role="alert" aria-live="polite"></span>
-            </div>
-            <div class="form-group">
-              <label for="form-email" class="form-label">Email Address <span class="required"
-                  aria-label="required">*</span></label>
-              <input type="email" id="form-email" name="email" class="form-input" placeholder="Enter your email"
-                autocomplete="email" required aria-required="true" />
-              <span class="form-error" id="email-error" role="alert" aria-live="polite"></span>
-            </div>
-            <div class="form-group">
-              <label for="form-phone" class="form-label">Phone Number</label>
-              <input type="tel" id="form-phone" name="phone" class="form-input" placeholder="Enter your phone number"
-                autocomplete="tel" />
-            </div>
-            <div class="form-group">
-              <label for="form-visa" class="form-label">Visa Type / Destination <span class="required"
-                  aria-label="required">*</span></label>
-              <select id="form-visa" name="visa_type" class="form-input form-select" required aria-required="true">
-                <option value="" disabled selected>Select destination / visa type</option>
-                <option value="egypt">Egypt</option>
-                <option value="azerbaijan">Azerbaijan</option>
-                <option value="sri-lanka">Sri Lanka</option>
-                <option value="malaysia">Malaysia (MDAC)</option>
-                <option value="thailand">Thailand (TDAC)</option>
-                <option value="oman">Oman</option>
-                <option value="vietnam">Vietnam</option>
-                <option value="turkey">Turkey (eVisa)</option>
-                <option value="russia">Russia (eVisa)</option>
-                <option value="indonesia">Indonesia</option>
-                <option value="qatar">Qatar</option>
-                <option value="kenya">Kenya ETA</option>
-                <option value="tanzania">Tanzania</option>
-                <option value="bahrain">Bahrain</option>
-                <option value="saudi">Saudi Arabia</option>
-                <option value="uae">UAE</option>
-                <option value="georgia-online">Georgia – Online (50% approval)</option>
-                <option value="georgia-vendor">Georgia – Vendor Online (80% approval)</option>
-                <option value="taiwan">Taiwan</option>
-                <option value="cambodia">Cambodia</option>
-                <option value="myanmar">Myanmar Approval Letter</option>
-                <option value="ethiopia">Ethiopia</option>
-                <option value="uzbekistan">Uzbekistan</option>
-                <option value="armenia">Armenia</option>
-                <option value="botswana">Botswana</option>
-                <option value="hong-kong">Hong Kong PAR</option>
-                <option value="india">India</option>
-                <option value="jordan">Jordan</option>
-                <option value="morocco">Morocco</option>
-                <option value="zambia">Zambia</option>
-                <option value="zimbabwe">Zimbabwe</option>
-                <option value="usa">USA</option>
-                <option value="uk">United Kingdom (UK)</option>
-                <option value="schengen">Schengen (Europe)</option>
-                <option value="canada">Canada</option>
-                <option value="other">Other</option>
-              </select>
-              <span class="form-error" id="visa-error" role="alert" aria-live="polite"></span>
-            </div>
-            <div class="form-group">
-              <label for="form-message" class="form-label">Message</label>
-              <textarea id="form-message" name="message" class="form-input form-textarea"
-                placeholder="Tell us about your travel plans or any questions you have..." rows="4"></textarea>
-            </div>
-            <button type="submit" id="form-submit" class="btn btn-primary btn-full">
-              <span class="btn-text">Send Enquiry</span>
-              <span class="btn-loader" aria-hidden="true" hidden>Sending…</span>
-            </button>
-            <div class="form-success" id="form-success" role="alert" aria-live="polite" hidden>
-              <span>✅ Thank you! We'll get back to you within 24 hours.</span>
-            </div>
-          </form>
+          <!-- Right Form -->
+          <div class="contact-modern-right">
+            <form id="contact-form" class="contact-modern-form" novalidate aria-label="Contact form">
+              
+              <div class="form-modern-row">
+                <div class="form-modern-group">
+                  <label for="form-fname" class="form-modern-label">First Name</label>
+                  <input type="text" id="form-fname" name="name" class="form-modern-input" placeholder="James..." required />
+                </div>
+                <div class="form-modern-group">
+                  <label for="form-lname" class="form-modern-label">Last Name</label>
+                  <input type="text" id="form-lname" name="lname" class="form-modern-input" placeholder="Smith..." required />
+                </div>
+              </div>
 
+              <div class="form-modern-row">
+                <div class="form-modern-group">
+                  <label for="form-email" class="form-modern-label">Email</label>
+                  <input type="email" id="form-email" name="email" class="form-modern-input" placeholder="robertapouros@gmail.com" required />
+                </div>
+                <div class="form-modern-group">
+                  <label for="form-country" class="form-modern-label">Country</label>
+                  <div class="form-modern-select-wrapper">
+                    <select id="form-country" name="country" class="form-modern-input select-icon">
+                      <option value="usa">🇺🇸 USA</option>
+                      <option value="canada">🇨🇦 Canada</option>
+                      <option value="uk">🇬🇧 UK</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-modern-group">
+                <label for="form-role" class="form-modern-label">Your Role</label>
+                <div class="form-modern-select-wrapper">
+                  <select id="form-role" name="role" class="form-modern-input">
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="management">Management</option>
+                    <option value="hr">HR</option>
+                    <option value="travelmgr">Travel Manager</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-modern-group">
+                <label for="form-message" class="form-modern-label">Message</label>
+                <textarea id="form-message" name="message" class="form-modern-input textarea" placeholder="enter message...." rows="3"></textarea>
+              </div>
+
+              <div class="form-modern-submit-wrapper">
+                <button type="submit" id="form-submit" class="btn-modern-orange">Contact Us</button>
+              </div>
+            </form>
+          </div>
+          
         </div>
+
+        <!-- Middle Band: Testimonials -->
+        <div class="contact-modern-testimonials">
+          <div class="cmod-testimonial">
+            <div class="cmod-test-avatar-wrapper">
+              <img src="https://i.pravatar.cc/100?img=11" alt="Avatar" class="cmod-test-avatar" />
+              <div class="cmod-test-badge badge-blue">
+                <svg viewBox="0 0 24 24" fill="white" width="10" height="10"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+              </div>
+            </div>
+            <p class="cmod-test-text">
+              We've gained a 360-degree view of our customers. The unified profiles allow us to personalize interactions, resulting in higher customer satisfaction and increased loyalty.
+            </p>
+          </div>
+          
+          <div class="cmod-testimonial">
+            <div class="cmod-test-avatar-wrapper">
+              <img src="https://i.pravatar.cc/100?img=68" alt="Avatar" class="cmod-test-avatar" />
+              <div class="cmod-test-badge badge-purple">
+                <svg viewBox="0 0 24 24" fill="white" width="10" height="10"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+              </div>
+            </div>
+            <p class="cmod-test-text">
+              Now, we truly understand our customers. These unified profiles enable personalized interactions, boosting satisfaction and strengthening loyalty.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom Band: Features -->
+        <div class="contact-modern-features">
+          <div class="cmod-feature">
+            <div class="cmod-feat-icon">
+              <!-- Customer History Icon -->
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke="white" stroke-width="2" fill="none"/></svg>
+            </div>
+            <h4>Customer History</h4>
+            <p>Analyze customer behavior across product lines</p>
+          </div>
+          
+          <div class="cmod-feature">
+            <div class="cmod-feat-icon">
+              <!-- Actionable Insights Icon -->
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="4" y="14" width="4" height="8"/><rect x="10" y="8" width="4" height="14"/><rect x="16" y="2" width="4" height="20"/></svg>
+            </div>
+            <h4>Actionable Insights</h4>
+            <p>Employ predictive analytics to optimize sales pipelines</p>
+          </div>
+          
+          <div class="cmod-feature">
+            <div class="cmod-feat-icon">
+              <!-- Identify Patterns Icon -->
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <h4>Identify Patterns</h4>
+            <p>Utilize live data to improve conversion rates</p>
+          </div>
+          
+          <div class="cmod-feature">
+            <div class="cmod-feat-icon">
+              <!-- Predictive Analysis Icon -->
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="9" cy="9" r="6"/><path d="M21 21l-7.5-7.5" stroke="white" stroke-width="2" fill="none"/></svg>
+            </div>
+            <h4>Predictive Analysis</h4>
+            <p>Employ real-time data to refine marketing strategies</p>
+          </div>
+        </div>
+
       </div>
     </section>
 

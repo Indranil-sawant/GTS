@@ -552,6 +552,12 @@ button {
   .card-left, .card-right {
     animation: none;
   }
+  .hero-bg-image {
+    min-height: auto;
+  }
+  .hero-content {
+    padding-bottom: 80px !important; /* override inline style on mobile */
+  }
 }
 
 @keyframes floatCardLeft {
@@ -2185,5 +2191,367 @@ button {
   margin-top: 10px;
   font-size: 0.9rem;
   font-weight: 600;
-  text-align: center;
+text-align: center;
 }
+
+/* --------------------------------------------------------------------------
+   21. MODERN CONTACT SECTION (As per Image)
+   -------------------------------------------------------------------------- */
+.contact-modern-section {
+  background: #f9f9f9;
+  padding: var(--space-4xl) 0;
+  border-top: 1px solid #eaeaea;
+  font-family: var(--font-body);
+}
+
+.contact-modern-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+
+/* Main Grid */
+.contact-modern-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 900px) {
+  .contact-modern-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* Left Content */
+.contact-modern-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-modern-pattern {
+  margin-bottom: 1rem;
+}
+
+.contact-modern-title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+  .contact-modern-title {
+    font-size: 2.5rem;
+  }
+}
+
+.contact-modern-desc {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+.btn-modern-dark {
+  display: inline-block;
+  background: #222;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  width: max-content;
+  transition: background 0.2s ease;
+  margin-top: 1rem;
+}
+
+.btn-modern-dark:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Right Form */
+.contact-modern-right {
+  background: transparent;
+  width: 100%;
+}
+
+.contact-modern-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-modern-row {
+  display: flex;
+  gap: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .form-modern-row {
+    flex-direction: column;
+  }
+}
+
+.form-modern-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.form-modern-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.form-modern-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #333;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-modern-input:focus {
+  border-color: #ea580c;
+}
+
+.form-modern-input::placeholder {
+  color: #999;
+}
+
+.form-modern-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-icon {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px;
+  padding-right: 2.5rem;
+}
+
+textarea.form-modern-input {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-modern-submit-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+.btn-modern-orange {
+  background: #ea580c;
+  color: #fff;
+  padding: 0.9rem 2.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 1rem;
+}
+
+.btn-modern-orange:hover {
+  background: #c2410c;
+}
+
+/* Testimonials Band */
+.contact-modern-testimonials {
+  display: flex;
+  gap: 2.5rem;
+  padding: 2.5rem 0;
+  margin-bottom: 2rem;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  background: linear-gradient(90deg, rgba(245,245,245,0.4) 0%, rgba(245,245,245,1) 50%, rgba(245,245,245,0.4) 100%);
+}
+
+@media (max-width: 768px) {
+  .contact-modern-testimonials {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.cmod-testimonial {
+  flex: 1;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.cmod-test-avatar-wrapper {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+}
+
+.cmod-test-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #eee;
+}
+
+.cmod-test-badge {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+}
+
+.badge-blue { background: #6366f1; }
+.badge-purple { background: #8b5cf6; }
+
+.cmod-test-text {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Features Band */
+.contact-modern-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .contact-modern-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-modern-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cmod-feature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cmod-feat-icon {
+  width: 32px;
+  height: 32px;
+  color: #ea580c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cmod-feature h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+.cmod-feature p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
+   22. HERO TEXT SWITCHER
+   -------------------------------------------------------------------------- */
+.hero-text-switcher {
+  position: relative;
+  /* Fixed min-height to prevent layout shift. Increase if subheadline wraps on mobile. */
+  min-height: 220px; 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .hero-text-switcher {
+    min-height: 260px; /* More room for mobile text wrap */
+  }
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+              visibility 0.5s;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.hero-slide.exit {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  z-index: 1;
+}
+
+/* Stagger the subtitle slightly for an elegant feel */
+.hero-slide .hero-subheadline {
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.hero-slide.active .hero-subheadline {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 150ms; /* Delay relative to heading */
+}
+
+.hero-slide.exit .hero-subheadline {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition-delay: 0ms;
+}
+
