@@ -28,6 +28,11 @@
   --gradient-hero: linear-gradient(135deg, var(--clr-primary-dark) 0%, var(--clr-primary) 50%, hsl(214, 65%, 15%) 100%);
   --gradient-primary: linear-gradient(135deg, var(--clr-primary) 0%, hsl(214, 50%, 36%) 100%);
   --gradient-accent: linear-gradient(135deg, var(--clr-accent) 0%, hsl(18, 50%, 68%) 100%);
+  
+  /* Premium Travel Gradients */
+  --gradient-sky: linear-gradient(135deg, hsl(210, 60%, 96%) 0%, hsl(200, 50%, 92%) 100%);
+  --gradient-dawn: radial-gradient(circle at top right, hsl(35, 60%, 96%) 0%, hsl(210, 60%, 97%) 40%, var(--clr-bg) 100%);
+  --gradient-horizon: linear-gradient(to bottom, hsl(214, 30%, 96%) 0%, hsl(216, 30%, 98%) 100%);
 
   /* Typography */
   --font-heading: 'Outfit', 'Inter', sans-serif;
@@ -101,6 +106,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -108,6 +114,8 @@ body {
   background-color: var(--clr-bg);
   color: var(--clr-text);
   line-height: 1.65;
+  overflow-x: hidden;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color var(--transition-slow), color var(--transition-slow);
@@ -486,7 +494,7 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.85) 100%);
+  background: radial-gradient(circle at 50% 40%, rgba(31, 120, 229, 0.15) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.85) 100%);
   border-radius: 0;
   z-index: 1;
 }
@@ -538,6 +546,12 @@ button {
   top: 45%;
   right: 5%;
   animation: floatCardRight 7s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .card-left, .card-right {
+    animation: none;
+  }
 }
 
 @keyframes floatCardLeft {
@@ -1873,6 +1887,73 @@ button {
 .reveal-delay-4 { transition-delay: 0.4s; }
 .reveal-delay-5 { transition-delay: 0.5s; }
 
+/* --------------------------------------------------------------------------
+   18. AMBIENT FLIGHT ANIMATIONS (Micro-interactions)
+   -------------------------------------------------------------------------- */
+.ambient-flight {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.12;
+  filter: blur(1px);
+  will-change: transform;
+}
+
+[data-theme="dark"] .ambient-flight {
+  opacity: 0.05;
+}
+
+.ambient-flight svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.flight-path-1 {
+  width: 80px;
+  height: 80px;
+  top: 10%;
+  left: -10%;
+  color: var(--clr-text-muted);
+  animation: flyRightSlow 40s linear infinite;
+}
+
+.flight-path-2 {
+  width: 50px;
+  height: 50px;
+  bottom: 15%;
+  right: -10%;
+  color: var(--clr-primary);
+  animation: flyLeftCurve 50s ease-in-out infinite;
+}
+
+.flight-path-3 {
+  width: 120px;
+  height: 120px;
+  top: 40%;
+  left: -15%;
+  color: #fff;
+  opacity: 0.05;
+  filter: blur(3px);
+  animation: flyRightSlow 60s linear infinite reverse;
+}
+
+@keyframes flyRightSlow {
+  0% { transform: translate(0, 0) rotate(10deg) scale(0.9); }
+  50% { transform: translate(60vw, -10vh) rotate(5deg) scale(1); }
+  100% { transform: translate(120vw, -15vh) rotate(15deg) scale(0.9); }
+}
+
+@keyframes flyLeftCurve {
+  0% { transform: translate(0, 0) rotate(-15deg) scale(0.9); }
+  50% { transform: translate(-50vw, -20vh) rotate(-25deg) scale(1.1); }
+  100% { transform: translate(-120vw, -10vh) rotate(-15deg) scale(0.9); }
+}
+
+@media (max-width: 768px) {
+  .ambient-flight { display: none !important; }
+}
+
 
 /* --------------------------------------------------------------------------
    18. RESPONSIVE – TABLET (≤ 900px)
@@ -1925,10 +2006,10 @@ button {
    -------------------------------------------------------------------------- */
 @media (max-width: 600px) {
   :root {
-    --space-4xl: 3rem;
-    --space-3xl: 2.5rem;
-    --space-2xl: 2rem;
-    --container-pad: 1rem;
+    --space-4xl: 4rem;
+    --space-3xl: 3rem;
+    --space-2xl: 2.5rem;
+    --container-pad: 1.25rem;
   }
 
   /* Hero */

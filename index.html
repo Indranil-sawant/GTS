@@ -18,6 +18,8 @@
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/destinations.css" />
+  <link rel="stylesheet" href="css/about-services.css" />
 
   <!-- Favicon placeholder -->
   <link rel="icon"
@@ -103,6 +105,11 @@
         <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=2074"
           alt="Airplane soaring in the sky" class="hero-bg-img" />
 
+        <!-- Subtle Ambient Flight Animation -->
+        <div class="ambient-flight flight-path-3" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+        </div>
+
         <!-- Floating Destination Cards -->
         <div class="floating-cards">
           <div class="float-card card-left">
@@ -144,74 +151,90 @@
           </a>
         </div>
 
-        <div class="hero-content">
-          <div class="hero-top-badge">
-            <span class="badge-line"></span> 🛂 Certified Immigration Consultancy
+        <div class="hero-content"
+          style="padding-bottom: 220px; text-align: left; max-width: 1000px; margin: 0 auto; width: 100%;">
+          <div class="hero-top-badge new-hero-badge">
+            VISA &middot; FLIGHTS &middot; ITINERARIES
           </div>
-          <div class="hero-avatars">
-            <div class="avatar-stack-container">
-              <img src="https://i.pravatar.cc/100?img=1" alt="User 1" class="avatar-circle" />
-              <img src="https://i.pravatar.cc/100?img=2" alt="User 2" class="avatar-circle" />
-              <img src="https://i.pravatar.cc/100?img=3" alt="User 3" class="avatar-circle" />
-              <img src="https://i.pravatar.cc/100?img=4" alt="User 4" class="avatar-circle" />
-            </div>
-            <span class="avatar-text">10,000+ Visas Successfully Processed</span>
-          </div>
-          <h1 id="hero-heading" class="hero-headline">
-            Expert Visa &amp; Travel<br /><span class="headline-accent">Guidance You Can Trust</span>
+          <h1 id="hero-heading" class="hero-headline new-hero-headline"
+            style="font-family: Georgia, serif; font-size: clamp(3.5rem, 6vw, 5.5rem); margin-bottom: 20px;">
+            Go where the map<br />still feels magical.
           </h1>
           <p class="hero-subheadline"
-            style="font-size: 1.15rem; max-width: 600px; margin: 0 auto 2rem auto; color: rgba(255,255,255,0.9); text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
-            Navigating complex immigration and travel procedures with <strong>100% transparency</strong>. We put your
-            interests first.
+            style="font-size: 1.25rem; max-width: 700px; color: rgba(255,255,255,0.95); text-shadow: 0 2px 4px rgba(0,0,0,0.3); line-height: 1.5; margin: 0;">
+            Human experts, clear timelines, and hand-built trips—so you spend less time on paperwork and more time
+            boarding.
           </p>
         </div>
 
-        <div class="search-widget">
-          <div class="search-tabs">
-            <button class="search-tab active">Visa Consultant</button>
-            <button class="search-tab">Travel Booking</button>
-          </div>
-          <form id="hero-form" class="search-form" onsubmit="handleHeroSubmit(event)">
-            <div class="search-field">
-              <label>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+        <div class="search-widget new-search-widget">
+          <div class="search-title">BUILD YOUR TRIP</div>
+          <form id="hero-form" class="search-form new-search-form" onsubmit="handleHeroSubmit(event)">
+            <div class="search-field new-search-field">
+              <label>Where to</label>
+              <div class="input-pill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
                 </svg>
-                Destination
-              </label>
-              <select name="destination" id="hero-dest-select" class="search-input" required aria-required="true">
-                <option value="" disabled selected>Canada, UK, UAE...</option>
-                <option value="canada">Canada</option>
-                <option value="uk">United Kingdom</option>
-                <option value="uae">UAE / Dubai</option>
-                <option value="aus">Australia</option>
-                <option value="schengen">Schengen Europe</option>
-              </select>
+                <select name="destination" id="hero-dest-select" class="search-input" required aria-required="true">
+                  <option value="" disabled selected>City, region, country</option>
+                  <option value="canada">Canada</option>
+                  <option value="uk">United Kingdom</option>
+                  <option value="uae">UAE / Dubai</option>
+                  <option value="aus">Australia</option>
+                  <option value="schengen">Schengen Europe</option>
+                </select>
+              </div>
             </div>
-            <div class="search-divider"></div>
-            <div class="search-field">
-              <label>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+
+            <div class="search-field new-search-field">
+              <label>Consultation</label>
+              <div class="input-pill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
                 </svg>
-                Service Type
-              </label>
-              <select name="service" id="hero-svc-select" class="search-input" required aria-required="true">
-                <option value="" disabled selected>Tourist, PR, Study...</option>
-                <option value="tourist">Tourist Visa</option>
-                <option value="pr">PR Consultation</option>
-                <option value="study">Study Visa</option>
-                <option value="work">Work Permit</option>
-              </select>
+                <select name="service" id="hero-svc-select" class="search-input" required aria-required="true">
+                  <option value="" disabled selected>What type? ( Visa / Tickets )</option>
+                  <option value="tourist">Tourist Visa</option>
+                  <option value="pr">PR Consultation</option>
+                  <option value="study">Study Visa</option>
+                  <option value="work">Work Permit</option>
+                </select>
+              </div>
             </div>
-            <button type="submit" id="hero-submit-btn" class="btn btn-primary search-btn consult-trigger"
-              style="padding: 14px 40px; position:relative;">
-              <span id="hero-btn-text">Get Consultation</span>
+
+            <div class="search-field new-search-field">
+              <label>Travelers</label>
+              <div class="input-pill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <select name="travelers" id="hero-travelers-select" class="search-input">
+                  <option value="1">1 adult</option>
+                  <option value="2" selected>2 adults</option>
+                  <option value="3">3 adults</option>
+                  <option value="group">Group</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" id="hero-submit-btn" class="btn btn-primary new-search-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Explore</span>
             </button>
           </form>
 
@@ -222,33 +245,237 @@
               const destSelect = document.getElementById('hero-dest-select');
               const svcSelect = document.getElementById('hero-svc-select');
 
-              const destinationText = destSelect.options[destSelect.selectedIndex].text;
-              const serviceText = svcSelect.options[svcSelect.selectedIndex].text;
-
               if (!destSelect.value || !svcSelect.value) {
-                alert("Please select destination and service");
+                alert("Please select destination and dates");
                 return;
               }
 
-              // Check which tab is active to set the correct backend routing
-              const tabs = document.querySelectorAll('.search-tab');
-              const isTravel = tabs.length >= 2 && tabs[1].classList.contains('active');
               const typeField = document.getElementById('modal-type');
-              if (typeField) typeField.value = isTravel ? 'travel' : 'visa';
+              if (typeField) typeField.value = 'visa';
 
-              // Open modal
               const modal = document.getElementById('consultation-modal');
               modal.classList.remove('hidden');
 
-              // Autofill values (using text for display)
-              document.getElementById('modal-destination').value = destinationText;
-              document.getElementById('modal-service').value = serviceText;
+              document.getElementById('modal-destination').value = destSelect.options[destSelect.selectedIndex].text;
+              document.getElementById('modal-service').value = svcSelect.options[svcSelect.selectedIndex].text;
               document.getElementById('modal-page').value = window.location.href;
             }
           </script>
         </div>
       </div>
 
+    </section>
+
+    <!-- ===== NEW SECTION: WHY CHOOSE US & DESTINATIONS ===== -->
+    <section id="why-wander" class="new-feature-section" aria-labelledby="why-wander-heading">
+      <div class="feature-container">
+        <!-- Left Side -->
+        <div class="feature-left">
+          <h2 id="why-wander-heading" class="feature-heading">
+            Why Thousands of Travelers Choose <br>
+            <span class="light">GTS for Their Global Adventures</span>
+          </h2>
+          <p class="feature-desc">
+            From pristine beaches to cultural hotspots, we make exploring the world easier, safer, and more exciting
+            with expert-crafted itineraries and round-the-clock support.
+          </p>
+
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                </path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                  <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                  <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                </svg>
+              </div>
+              <div class="stat-value">12k</div>
+              <div class="stat-label">Happy and Satisfied<br>Travelers</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 15l-3 3-5-2v-3.5L2 10.5 5 7l2-5 3.5 1L12 2l1.5-1L17 2l3.5-1 2 5-3 3.5v3.5l-5 2z"></path>
+                  <path d="M9 10l2 2 4-4"></path>
+                </svg>
+              </div>
+              <div class="stat-value">10yrs</div>
+              <div class="stat-label">Proven Travel<br>Industry Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="stat-value">50+</div>
+              <div class="stat-label">Global Destinations<br>Covered</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="feature-right">
+          <div class="feat-card">
+            <div class="feat-card-icon">
+              <!-- Outline Arrow Top Right / Map -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+              </svg>
+            </div>
+            <div class="feat-card-content">
+              <h4>Local Expertise</h4>
+              <p>Our global travel experts craft unique experiences with local knowledge you won't find in typical
+                tours.</p>
+            </div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-card-icon">
+              <!-- Calendar Check -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+                <path d="M9 16l2 2 4-4"></path>
+              </svg>
+            </div>
+            <div class="feat-card-content">
+              <h4>All-in-One Booking</h4>
+              <p>Book everything in one place—easy, fast, and hassle-free, whether for quick getaways or planned
+                vacations.</p>
+            </div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-card-icon">
+              <!-- Headphones -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                <path
+                  d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z">
+                </path>
+              </svg>
+            </div>
+            <div class="feat-card-content">
+              <h4>24/7 Support</h4>
+              <p>We're here anytime, anywhere. Get real-time help anytime you need it before, during, or after your
+                trip.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOP DESTINATIONS -->
+      <div class="destinations-section">
+        <div class="dest-header">
+          <div>
+            <h2>Top Destinations</h2>
+          </div>
+          <div>
+            <p>From island escapes to cool mountain towns, discover where your next journey will take you.</p>
+          </div>
+        </div>
+
+        <div class="dest-slider" id="dest-slider">
+          <div class="dest-card">
+            <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&q=80&w=400"
+              alt="El Nido" class="dest-card-img" />
+            <div class="dest-price-pill">starts at ₹4,999</div>
+            <div class="dest-info">
+              <h3>El Nido</h3>
+              <div class="dest-subinfo"><span>Beach paradise</span> | <span class="rating">⭐ 4.8 (1.2k)</span></div>
+              <div class="dest-location">📍 Palawan, Region</div>
+            </div>
+          </div>
+          <div class="dest-card">
+            <img src="https://images.unsplash.com/photo-1542158097-9e797ebafb94?auto=format&fit=crop&q=80&w=400"
+              alt="Baguio City" class="dest-card-img" />
+            <div class="dest-price-pill">starts at ₹3,200</div>
+            <div class="dest-info">
+              <h3>Baguio City</h3>
+              <div class="dest-subinfo"><span>Mount Getaway</span> | <span class="rating">⭐ 4.6 (950)</span></div>
+              <div class="dest-location">📍 Benguet, Region</div>
+            </div>
+          </div>
+          <div class="dest-card">
+            <img src="https://images.unsplash.com/photo-1513251461937-29bdc5dc8ee7?auto=format&fit=crop&q=80&w=400"
+              alt="Siargao" class="dest-card-img" />
+            <div class="dest-price-pill">starts at ₹5,500</div>
+            <div class="dest-info">
+              <h3>Siargao</h3>
+              <div class="dest-subinfo"><span>Surf &amp; Chill</span> | <span class="rating">⭐ 4.9 (2k)</span></div>
+              <div class="dest-location">📍 Surigao del Norte</div>
+            </div>
+          </div>
+          <div class="dest-card">
+            <img src="https://images.unsplash.com/photo-1506744626753-1fa28f6e80b4?auto=format&fit=crop&q=80&w=400"
+              alt="Vigan" class="dest-card-img" />
+            <div class="dest-price-pill">starts at ₹4,250</div>
+            <div class="dest-info">
+              <h3>Vigan</h3>
+              <div class="dest-subinfo"><span>Heritage City</span> | <span class="rating">⭐ 4.7 (780)</span></div>
+              <div class="dest-location">📍 Ilocos Sur, Region</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dest-footer">
+          <a href="#" class="btn-dark">View more</a>
+          <div class="slider-controls">
+            <button class="slider-btn"
+              onclick="document.getElementById('dest-slider').scrollBy({left: -300, behavior: 'smooth'})"
+              aria-label="Previous Destination">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button class="slider-btn"
+              onclick="document.getElementById('dest-slider').scrollBy({left: 300, behavior: 'smooth'})"
+              aria-label="Next Destination">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ===== SECTION 2: WHY CHOOSE US ===== -->
@@ -315,139 +542,128 @@
       </div>
     </section>
 
-    <!-- ===== SECTION 3: ABOUT US ===== -->
-    <section id="about" class="about-section section-pad" aria-labelledby="about-heading">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-visual" aria-hidden="true">
-            <div class="about-visual-card">
-              <div class="about-stat">
-                <span class="stat-number">100%</span>
-                <span class="stat-label">Transparency</span>
-              </div>
-            </div>
-            <div class="about-visual-card secondary">
-              <div class="about-stat">
-                <span class="stat-number">0</span>
-                <span class="stat-label">Hidden Fees</span>
-              </div>
-            </div>
-            <div class="about-visual-badge">
-              <span>🌍</span>
-              <span>Global Reach</span>
-            </div>
+    <!-- ===== SECTION 2: NEW FEATURE & DESTINATIONS ===== -->
+    <section id="feature" class="new-feature-section" style="background: var(--gradient-dawn); position: relative;">
+      
+      <!-- Subtle Ambient Flight Animation -->
+      <div class="ambient-flight flight-path-1" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+      </div>
+
+      <div class="feature-container">
+        <!-- Visual Collage -->
+        <div class="about-images-wrapper">
+          <div class="about-decoration" aria-hidden="true">
+            <svg viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 120 Q 50 150 100 100 T 150 20" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6" fill="none"/>
+              <path d="M140 10 L 160 30 L 155 40 Z" fill="currentColor"/>
+            </svg>
           </div>
-          <div class="about-content">
-            <p class="section-label">About Us</p>
-            <h2 id="about-heading" class="section-title">Who We Are</h2>
-            <p class="about-lead">We are a certified travel and immigration consultancy dedicated to making your global
-              aspirations a reality.</p>
-            <p class="about-body">Operating with the utmost integrity, we believe in providing ethical and realistic
-              guidance. We never promise what we cannot deliver — and that honesty is what sets us apart.</p>
+          <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?auto=format&fit=crop&q=80&w=400" alt="Travelers jumping" class="img-tall" />
+          <img src="https://images.unsplash.com/photo-1506744626753-1fa28f6e80b4?auto=format&fit=crop&q=80&w=400" alt="Beautiful landscape" class="img-wide" />
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80&w=400" alt="City view from above" class="img-float" />
+        </div>
 
-            <div class="credentials-list">
-              <h3 class="credentials-heading">Our Credentials &amp; Compliance</h3>
-              <ul role="list">
-                <li class="credential-item">
-                  <span class="credential-icon" aria-hidden="true">🇨🇦</span>
-                  <div>
-                    <strong>CICC Compliant</strong>
-                    <p>College of Immigration and Citizenship Consultants — Canada</p>
-                  </div>
-                </li>
-                <li class="credential-item">
-                  <span class="credential-icon" aria-hidden="true">🇦🇺</span>
-                  <div>
-                    <strong>MARA Registered</strong>
-                    <p>Migration Agents Registration Authority — Australia</p>
-                  </div>
-                </li>
-                <li class="credential-item">
-                  <span class="credential-icon" aria-hidden="true">✈️</span>
-                  <div>
-                    <strong>IATA Approved</strong>
-                    <p>Required paid-up capital and IATA approvals maintained</p>
-                  </div>
-                </li>
-              </ul>
+        <!-- Content -->
+        <div class="about-content-right">
+          <div class="about-tag">Get About Us</div>
+          <h2 class="about-heading">Expert Travel Solutions For Every Global Journey</h2>
+          <p class="about-desc">
+            At GTS Travel Solutions, our mission is to simplify international travel for every Indian. We offer transparent, fast, and affordable visa and travel assistance services. Whether you're flying for leisure, business, or family, we're here to make your journey smooth and worry-free.
+          </p>
+          
+          <div class="about-features-list">
+            <div class="about-feature-item">
+              <div class="about-feat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div class="about-feat-text">
+                <div class="about-feat-title">Reliable Visa<br>Assistance</div>
+                <div class="about-feat-divider"></div>
+                <div class="about-feat-desc">We simplify tourist & business visa processes.</div>
+              </div>
             </div>
-
-            <div class="ethical-pledge">
-              <span class="pledge-icon" aria-hidden="true">🤝</span>
-              <div>
-                <strong>Our Ethical Pledge</strong>
-                <p>Proud signatories of the <em>Pledge for Commitment Towards Safe &amp; Honourable Tourism</em>. Zero
-                  tolerance for illicit activities, full respect for social and cultural norms.</p>
+            
+            <div class="about-feature-item">
+              <div class="about-feat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div class="about-feat-text">
+                <div class="about-feat-title">Fast &amp; Easy<br>Booking</div>
+                <div class="about-feat-divider"></div>
+                <div class="about-feat-desc">We make flights and hotel bookings fast and affordable.</div>
+              </div>
+            </div>
+            
+            <div class="about-feature-item">
+              <div class="about-feat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div class="about-feat-text">
+                <div class="about-feat-title">Shield Your<br>Journey</div>
+                <div class="about-feat-divider"></div>
+                <div class="about-feat-desc">We give smart insurance that keeps you safe and worry-free everywhere.</div>
               </div>
             </div>
           </div>
+          
+          <a href="#" class="btn-discover">Discover More <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
     </section>
 
-    <!-- ===== SECTION 4: OUR SERVICES ===== -->
-    <section id="services" class="services-section section-pad" aria-labelledby="services-heading">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-label">What We Offer</p>
-          <h2 id="services-heading" class="section-title">Comprehensive Travel &amp; Visa Solutions</h2>
-          <p class="section-subtitle">From visa processing to airport assistance — we handle every step of your journey.
-          </p>
+
+
+    <!-- ===== NEW VISA SECTION (Hassle-Free Visas) ===== -->
+    <section id="hassle-free" class="hassle-free-section section-pad">
+      <div class="hassle-container">
+        
+        <!-- Left Content -->
+        <div class="hassle-content">
+          <h2>Hassle-Free Visas, Worldwide</h2>
+          <p class="hassle-subtitle">We seamlessly handle all the intricate paperwork and embassy requirements so you don't have to. Real human support, clear guidance, and unmatched global coverage.</p>
+          
+          <div class="hassle-timeline">
+            <!-- Item 1 -->
+            <div class="timeline-item">
+              <div class="timeline-number-wrapper">
+                <div class="timeline-number">01</div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-text">
+                <h3>Registered &amp; Trusted Visa Services</h3>
+                <p>Legally established in 2022, we're a registered and reliable visa service provider with a clear commitment to security and professionalism.</p>
+              </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="timeline-item">
+              <div class="timeline-number-wrapper">
+                <div class="timeline-number">02</div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-text">
+                <h3>Global Visa Coverage</h3>
+                <p>From the UAE and Thailand to South Africa, Kenya, and beyond. Our team specializes in handling diverse visa requirements with ease and efficiency.</p>
+              </div>
+            </div>
+            
+            <!-- Item 3 -->
+            <div class="timeline-item">
+              <div class="timeline-number-wrapper">
+                <div class="timeline-number">03</div>
+              </div>
+              <div class="timeline-text" style="padding-bottom:0;">
+                <h3>Fast &amp; Personalized Service</h3>
+                <p>We value your time. Our quick processing, real human support, and customer-first approach ensure a smooth, stress-free experience from start to finish.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="services-grid">
 
-          <article class="service-card" aria-label="Visa Processing">
-            <div class="service-icon s1" aria-hidden="true">🛂</div>
-            <h3 class="service-title">Visa Processing</h3>
-            <p class="service-desc">Comprehensive assistance for Tourist, Business, Student, Transit, and Job Seeker
-              visas.</p>
-            <ul class="service-destinations" aria-label="Destinations">
-              <li>🇨🇦 Canada</li>
-              <li>🇦🇺 Australia</li>
-              <li>🇬🇧 UK</li>
-              <li>🇪🇺 Schengen</li>
-              <li>🇦🇪 UAE</li>
-            </ul>
-            <button class="service-learn-btn" onclick="openModal('visa-modal')" aria-haspopup="dialog">Learn More
-              →</button>
-          </article>
-
-          <article class="service-card" aria-label="OK To Board UAE">
-            <div class="service-icon s2" aria-hidden="true">📋</div>
-            <h3 class="service-title">OK To Board (UAE)</h3>
-            <p class="service-desc">Seamless airline verification processes for your UAE travel, handled swiftly and
-              accurately.</p>
-            <button class="service-learn-btn" onclick="openModal('otb-modal')" aria-haspopup="dialog">Learn More
-              →</button>
-          </article>
-
-          <article class="service-card" aria-label="Marhaba Meet and Greet">
-            <div class="service-icon s3" aria-hidden="true">🤝</div>
-            <h3 class="service-title">Marhaba (Meet &amp; Greet)</h3>
-            <p class="service-desc">Exclusive airport assistance services — be welcomed and guided through every
-              terminal procedure.</p>
-            <button class="service-learn-btn" onclick="openModal('marhaba-modal')" aria-haspopup="dialog">Learn More
-              →</button>
-          </article>
-
-          <article class="service-card" aria-label="Air Tickets and Hotels">
-            <div class="service-icon s4" aria-hidden="true">🏨</div>
-            <h3 class="service-title">Air Tickets &amp; Hotels</h3>
-            <p class="service-desc">Comprehensive booking solutions matching your budget and itinerary — flights,
-              hotels, and more.</p>
-            <button class="service-learn-btn" onclick="openModal('booking-modal')" aria-haspopup="dialog">Learn More
-              →</button>
-          </article>
-
-          <article class="service-card" aria-label="Travel Insurance">
-            <div class="service-icon s5" aria-hidden="true">🛡️</div>
-            <h3 class="service-title">Travel Insurance</h3>
-            <p class="service-desc">Policies to secure your trip against cashless medical emergencies, baggage loss, or
-              flight delays.</p>
-            <button class="service-learn-btn" onclick="openModal('insurance-modal')" aria-haspopup="dialog">Learn More
-              →</button>
-          </article>
-
+        <!-- Right Visual -->
+        <div class="hassle-visual" aria-hidden="true">
+          <img src="img/new_gts.webp" alt="GTS Travel Illustration" class="hassle-img" />
         </div>
       </div>
     </section>
@@ -505,6 +721,102 @@
             </p>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 4: ROLES (CTA BLOCKS) ===== -->
+    <section id="roles" class="cta-blocks-section section-pad" style="background: var(--gradient-sky); position: relative; overflow: hidden;">
+      
+      <!-- Subtle Ambient Flight Animation -->
+      <div class="ambient-flight flight-path-2" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+      </div>
+
+      <div class="cta-block-container">
+        
+        <!-- Block 1 -->
+        <div class="cta-row">
+          <div class="cta-ill" aria-hidden="true">
+            <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" class="line-art-svg">
+              <!-- Decorative elements -->
+              <circle cx="100" cy="50" r="15" fill="var(--clr-accent)" />
+              <path d="M120 40 Q130 30 140 50" stroke="var(--clr-primary)" fill="none" stroke-width="2" />
+              <path d="M280 60 L300 60 M290 50 L290 70" stroke="var(--clr-primary)" fill="none" stroke-width="2" />
+              <circle cx="320" cy="80" r="5" fill="none" stroke="var(--clr-primary)" stroke-width="2" />
+              <circle cx="200" cy="140" r="8" fill="none" stroke="var(--clr-primary)" stroke-width="2" />
+
+              <!-- Suitcase / Travel Bag base -->
+              <rect x="150" y="80" width="100" height="70" rx="8" fill="none" stroke="var(--clr-primary)" stroke-width="3" />
+              <!-- Handle -->
+              <path d="M175 80 V60 Q175 50 185 50 H215 Q225 50 225 60 V80" fill="none" stroke="var(--clr-primary)" stroke-width="3" stroke-linecap="round" />
+              <!-- Straps -->
+              <line x1="175" y1="80" x2="175" y2="150" stroke="var(--clr-primary)" stroke-width="3" />
+              <line x1="225" y1="80" x2="225" y2="150" stroke="var(--clr-primary)" stroke-width="3" />
+              <!-- Tags / details -->
+              <rect x="185" y="100" width="30" height="20" rx="4" fill="none" stroke="var(--clr-primary)" stroke-width="2.5" />
+              <circle cx="200" cy="110" r="3" fill="var(--clr-accent)" />
+              
+              <!-- Flight Path / Plane -->
+              <path d="M40 100 Q 90 130 130 90" stroke="var(--clr-primary)" stroke-width="2" stroke-dasharray="4" fill="none" />
+              <polygon points="125 95, 137 90, 125 85, 128 90" fill="var(--clr-primary)" />
+
+              <!-- Ground line -->
+              <line x1="50" y1="160" x2="350" y2="160" stroke="var(--clr-primary)" stroke-width="4" stroke-linecap="round" />
+              <!-- Speed lines -->
+              <line x1="60" y1="140" x2="90" y2="140" stroke="var(--clr-primary)" stroke-width="2" stroke-linecap="round" />
+              <line x1="310" y1="90" x2="340" y2="90" stroke="var(--clr-primary)" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="cta-content">
+            <h3>As an individual</h3>
+            <p>Start planning your vacation or immigration process seamlessly. All you need is your destination and we handle the paperwork and logistics.</p>
+            <button class="cta-btn-outline" onclick="openModal('visa-modal')" aria-haspopup="dialog">Start your journey</button>
+          </div>
+        </div>
+
+        <div class="cta-divider"></div>
+
+        <!-- Block 2 -->
+        <div class="cta-row">
+          <div class="cta-ill" aria-hidden="true">
+            <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" class="line-art-svg">
+              <!-- Decorative elements -->
+              <circle cx="80" cy="120" r="5" fill="none" stroke="var(--clr-primary)" stroke-width="2" />
+              <path d="M90 60 L110 40 M110 60 L90 40" stroke="var(--clr-primary)" fill="none" stroke-width="2" />
+              <circle cx="340" cy="60" r="10" fill="var(--clr-accent)" />
+              <path d="M300 130 Q310 120 320 140" stroke="var(--clr-primary)" fill="none" stroke-width="2" />
+
+              <!-- Office Building / Storefront -->
+              <rect x="140" y="80" width="120" height="80" fill="none" stroke="var(--clr-primary)" stroke-width="3" />
+              
+              <!-- Awning / Sign Main Box -->
+              <rect x="130" y="50" width="140" height="25" rx="12.5" fill="none" stroke="var(--clr-accent)" stroke-width="3" />
+              <text x="200" y="66" font-family="sans-serif" font-weight="800" font-size="11" fill="var(--clr-primary)" text-anchor="middle" letter-spacing="2">CORPORATE</text>
+              
+              <!-- Divider line beneath sign -->
+              <line x1="140" y1="120" x2="260" y2="120" stroke="var(--clr-primary)" stroke-width="3" />
+
+              <!-- Door -->
+              <rect x="220" y="120" width="20" height="40" fill="none" stroke="var(--clr-primary)" stroke-width="3" />
+              
+              <!-- Desk/Counter inside window -->
+              <rect x="150" y="130" width="60" height="30" fill="none" stroke="var(--clr-primary)" stroke-width="3" />
+              <line x1="160" y1="130" x2="160" y2="160" stroke="var(--clr-primary)" stroke-width="2" />
+              <line x1="200" y1="130" x2="200" y2="160" stroke="var(--clr-primary)" stroke-width="2" />
+              
+              <!-- Small plant or detail in window -->
+              <circle cx="180" cy="110" r="4" fill="var(--clr-accent)" />
+
+              <!-- Ground line -->
+              <line x1="50" y1="160" x2="350" y2="160" stroke="var(--clr-primary)" stroke-width="4" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="cta-content">
+            <h3>As a partner</h3>
+            <p>GTS helps businesses navigate international corporate travel, work permits, and employee relocation. Grow globally with confidence.</p>
+            <button class="cta-btn-outline" onclick="openModal('consultation-modal')" aria-haspopup="dialog">Partner with us</button>
+          </div>
         </div>
       </div>
     </section>
@@ -811,7 +1123,8 @@
       <div id="consult-success-view" style="display:none; text-align:center; padding: 20px;">
         <h3 style="color: #10b981; margin-bottom: 10px;">✅ Success!</h3>
         <p style="margin-bottom: 20px;">Your request has been received. We'll contact you shortly.</p>
-        <button id="close-success-btn" style="width:100%; padding:12px; background:var(--gradient-primary); color:#fff; border:none; border-radius:8px; font-weight:700; cursor:pointer;">Close</button>
+        <button id="close-success-btn"
+          style="width:100%; padding:12px; background:var(--gradient-primary); color:#fff; border:none; border-radius:8px; font-weight:700; cursor:pointer;">Close</button>
       </div>
       <div id="consult-form-header" style="display:none;"></div>
       <p id="modal-status"></p>
