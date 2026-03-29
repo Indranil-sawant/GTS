@@ -298,24 +298,17 @@
           <script>
             function handleHeroSubmit(e) {
               e.preventDefault();
-
               const destSelect = document.getElementById('hero-dest-select');
               const svcSelect = document.getElementById('hero-svc-select');
+              const travelersSelect = document.getElementById('hero-travelers-select');
 
-              if (!destSelect.value || !svcSelect.value) {
-                alert("Please select destination and dates");
-                return;
+              const dest = destSelect.options[destSelect.selectedIndex].text;
+              const svc = svcSelect.options[svcSelect.selectedIndex].text;
+              const travelers = travelersSelect.value;
+              
+              if (window.selectDestination) {
+                window.selectDestination(`${dest} (${svc}) for ${travelers} traveler(s)`);
               }
-
-              const typeField = document.getElementById('modal-type');
-              if (typeField) typeField.value = 'visa';
-
-              const modal = document.getElementById('consultation-modal');
-              modal.classList.remove('hidden');
-
-              document.getElementById('modal-destination').value = destSelect.options[destSelect.selectedIndex].text;
-              document.getElementById('modal-service').value = svcSelect.options[svcSelect.selectedIndex].text;
-              document.getElementById('modal-page').value = window.location.href;
             }
           </script>
         </div>
@@ -532,6 +525,20 @@
               return map[tag] || '#64748b';
             }
 
+            window.selectDestination = function(country) {
+              const contactSec = document.getElementById('contact');
+              const messageBox = document.getElementById('form-message');
+              if (messageBox) {
+                messageBox.value = `I am interested in travelling to ${country}. Please provide more details.`;
+                messageBox.focus();
+              }
+              if (contactSec) {
+                const navHeight = document.getElementById('site-header').offsetHeight || 70;
+                const targetTop = contactSec.getBoundingClientRect().top + window.scrollY - navHeight;
+                window.scrollTo({ top: targetTop, behavior: 'smooth' });
+              }
+            };
+
             function renderGrid() {
               const start = (currentPage - 1) * PER_PAGE;
               const page = filtered.slice(start, start + PER_PAGE);
@@ -541,7 +548,7 @@
                 return;
               }
               grid.innerHTML = page.map((c, i) => `
-                <div class="dest-country-card" style="animation-delay:${i * 40}ms" onclick="openModal('consultation-modal')" tabindex="0" role="button" aria-label="Enquire about ${c.name}">
+                <div class="dest-country-card" style="animation-delay:${i * 40}ms" onclick="selectDestination('${c.name}')" tabindex="0" role="button" aria-label="Enquire about ${c.name}">
                   <div class="dcc-flag">
                     <img src="img/flags/${c.flag}.webp" alt="${c.name} flag" loading="lazy" width="40" height="28" />
                   </div>
