@@ -11,28 +11,28 @@
   /* Color Palette - Match new GTS Logo */
   --clr-primary:       hsl(214, 53%, 26%);
   --clr-primary-dark:  hsl(214, 60%, 18%);
-  --clr-primary-light: hsl(214, 30%, 94%);
+  --clr-primary-light: hsl(214, 60%, 95%);
   --clr-accent:        hsl(18, 45%, 60%);
   --clr-accent-dark:   hsl(18, 50%, 45%);
 
-  /* Neutrals */
-  --clr-bg:            hsl(216, 33%, 97%);
-  --clr-surface:       hsl(0, 0%, 100%);
-  --clr-surface-alt:   hsl(216, 30%, 95%);
-  --clr-border:        hsl(216, 20%, 88%);
-  --clr-text:          hsl(220, 25%, 12%);
-  --clr-text-muted:    hsl(220, 15%, 45%);
-  --clr-text-subtle:   hsl(220, 10%, 65%);
+  /* Neutrals — fresh white palette */
+  --clr-bg:            hsl(0, 0%, 100%);          /* pure white */
+  --clr-surface:       hsl(0, 0%, 100%);          /* pure white */
+  --clr-surface-alt:   hsl(210, 40%, 98%);        /* barely-there cool tint */
+  --clr-border:        hsl(214, 20%, 91%);        /* soft, light border */
+  --clr-text:          hsl(220, 25%, 10%);        /* near-black for readability */
+  --clr-text-muted:    hsl(220, 15%, 42%);
+  --clr-text-subtle:   hsl(220, 10%, 62%);
 
   /* Gradients */
   --gradient-hero: linear-gradient(135deg, var(--clr-primary-dark) 0%, var(--clr-primary) 50%, hsl(214, 65%, 15%) 100%);
   --gradient-primary: linear-gradient(135deg, var(--clr-primary) 0%, hsl(214, 50%, 36%) 100%);
   --gradient-accent: linear-gradient(135deg, var(--clr-accent) 0%, hsl(18, 50%, 68%) 100%);
   
-  /* Premium Travel Gradients */
-  --gradient-sky: linear-gradient(135deg, hsl(210, 60%, 96%) 0%, hsl(200, 50%, 92%) 100%);
-  --gradient-dawn: radial-gradient(circle at top right, hsl(35, 60%, 96%) 0%, hsl(210, 60%, 97%) 40%, var(--clr-bg) 100%);
-  --gradient-horizon: linear-gradient(to bottom, hsl(214, 30%, 96%) 0%, hsl(216, 30%, 98%) 100%);
+  /* Premium Travel Gradients — fresh & light */
+  --gradient-sky:     linear-gradient(135deg, hsl(200, 50%, 98%) 0%, hsl(210, 40%, 96%) 100%);
+  --gradient-dawn:    radial-gradient(circle at top right, hsl(35, 70%, 98%) 0%, hsl(0, 0%, 100%) 60%, hsl(210, 40%, 98%) 100%);
+  --gradient-horizon: linear-gradient(to bottom, hsl(0, 0%, 100%) 0%, hsl(210, 40%, 98%) 100%);
 
   /* Typography */
   --font-heading: 'Outfit', 'Inter', sans-serif;
@@ -55,12 +55,12 @@
   --radius-xl: 1.5rem;
   --radius-pill: 50rem;
 
-  /* Shadows */
-  --shadow-sm:  0 1px 3px 0 rgba(0,0,0,.07), 0 1px 2px -1px rgba(0,0,0,.07);
-  --shadow-md:  0 4px 12px -1px rgba(0,0,0,.10), 0 2px 6px -2px rgba(0,0,0,.08);
-  --shadow-lg:  0 10px 30px -3px rgba(0,0,0,.12), 0 4px 12px -4px rgba(0,0,0,.10);
-  --shadow-xl:  0 20px 50px -10px rgba(0,0,0,.18);
-  --shadow-glow: 0 0 30px rgba(31, 120, 229, 0.35);
+  /* Shadows — softer for white backgrounds */
+  --shadow-sm:  0 1px 3px 0 rgba(0,0,0,.06), 0 1px 2px -1px rgba(0,0,0,.05);
+  --shadow-md:  0 4px 14px -1px rgba(0,0,0,.09), 0 2px 6px -2px rgba(0,0,0,.06);
+  --shadow-lg:  0 10px 32px -3px rgba(0,0,0,.10), 0 4px 12px -4px rgba(0,0,0,.08);
+  --shadow-xl:  0 20px 55px -10px rgba(0,0,0,.14);
+  --shadow-glow: 0 0 30px rgba(31, 120, 229, 0.28);
 
   /* Transitions */
   --transition-fast: 150ms ease;

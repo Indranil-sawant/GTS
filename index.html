@@ -180,11 +180,41 @@
                 </svg>
                 <select name="destination" id="hero-dest-select" class="search-input" required aria-required="true">
                   <option value="" disabled selected>City, region, country</option>
+                  <option value="egypt">Egypt</option>
+                  <option value="azerbaijan">Azerbaijan</option>
+                  <option value="sri-lanka">Sri Lanka</option>
+                  <option value="malaysia">Malaysia (MDAC)</option>
+                  <option value="thailand">Thailand (TDAC)</option>
+                  <option value="oman">Oman</option>
+                  <option value="vietnam">Vietnam</option>
+                  <option value="turkey">Turkey (eVisa)</option>
+                  <option value="russia">Russia (eVisa)</option>
+                  <option value="indonesia">Indonesia</option>
+                  <option value="qatar">Qatar</option>
+                  <option value="kenya">Kenya ETA</option>
+                  <option value="tanzania">Tanzania</option>
+                  <option value="bahrain">Bahrain</option>
+                  <option value="saudi">Saudi Arabia</option>
+                  <option value="uae">UAE</option>
+                  <option value="georgia-online">Georgia – Online (50% approval)</option>
+                  <option value="georgia-vendor">Georgia – Vendor Online (80% approval)</option>
+                  <option value="taiwan">Taiwan</option>
+                  <option value="cambodia">Cambodia</option>
+                  <option value="myanmar">Myanmar Approval Letter</option>
+                  <option value="ethiopia">Ethiopia</option>
+                  <option value="uzbekistan">Uzbekistan</option>
+                  <option value="armenia">Armenia</option>
+                  <option value="botswana">Botswana</option>
+                  <option value="hong-kong">Hong Kong PAR</option>
+                  <option value="india">India</option>
+                  <option value="jordan">Jordan</option>
+                  <option value="morocco">Morocco</option>
+                  <option value="zambia">Zambia</option>
+                  <option value="zimbabwe">Zimbabwe</option>
+                  <option value="usa">USA</option>
+                  <option value="uk">United Kingdom (UK)</option>
+                  <option value="schengen">Schengen (Europe)</option>
                   <option value="canada">Canada</option>
-                  <option value="uk">United Kingdom</option>
-                  <option value="uae">UAE / Dubai</option>
-                  <option value="aus">Australia</option>
-                  <option value="schengen">Schengen Europe</option>
                 </select>
               </div>
             </div>
@@ -401,80 +431,130 @@
       </div>
 
       <!-- TOP DESTINATIONS -->
-      <div class="destinations-section">
+      <div class="destinations-section" id="destinations-section">
         <div class="dest-header">
           <div>
-            <h2>Top Destinations</h2>
+            <h2>Destinations We Serve</h2>
+            <p>From island escapes to cultural hotspots — discover where your next visa journey takes you.</p>
           </div>
-          <div>
-            <p>From island escapes to cool mountain towns, discover where your next journey will take you.</p>
-          </div>
-        </div>
-
-        <div class="dest-slider" id="dest-slider">
-          <div class="dest-card">
-            <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&q=80&w=400"
-              alt="El Nido" class="dest-card-img" />
-            <div class="dest-price-pill">starts at ₹4,999</div>
-            <div class="dest-info">
-              <h3>El Nido</h3>
-              <div class="dest-subinfo"><span>Beach paradise</span> | <span class="rating">⭐ 4.8 (1.2k)</span></div>
-              <div class="dest-location">📍 Palawan, Region</div>
-            </div>
-          </div>
-          <div class="dest-card">
-            <img src="https://images.unsplash.com/photo-1542158097-9e797ebafb94?auto=format&fit=crop&q=80&w=400"
-              alt="Baguio City" class="dest-card-img" />
-            <div class="dest-price-pill">starts at ₹3,200</div>
-            <div class="dest-info">
-              <h3>Baguio City</h3>
-              <div class="dest-subinfo"><span>Mount Getaway</span> | <span class="rating">⭐ 4.6 (950)</span></div>
-              <div class="dest-location">📍 Benguet, Region</div>
-            </div>
-          </div>
-          <div class="dest-card">
-            <img src="https://images.unsplash.com/photo-1513251461937-29bdc5dc8ee7?auto=format&fit=crop&q=80&w=400"
-              alt="Siargao" class="dest-card-img" />
-            <div class="dest-price-pill">starts at ₹5,500</div>
-            <div class="dest-info">
-              <h3>Siargao</h3>
-              <div class="dest-subinfo"><span>Surf &amp; Chill</span> | <span class="rating">⭐ 4.9 (2k)</span></div>
-              <div class="dest-location">📍 Surigao del Norte</div>
-            </div>
-          </div>
-          <div class="dest-card">
-            <img src="https://images.unsplash.com/photo-1506744626753-1fa28f6e80b4?auto=format&fit=crop&q=80&w=400"
-              alt="Vigan" class="dest-card-img" />
-            <div class="dest-price-pill">starts at ₹4,250</div>
-            <div class="dest-info">
-              <h3>Vigan</h3>
-              <div class="dest-subinfo"><span>Heritage City</span> | <span class="rating">⭐ 4.7 (780)</span></div>
-              <div class="dest-location">📍 Ilocos Sur, Region</div>
+          <!-- Search Bar -->
+          <div class="dest-search-wrap">
+            <div class="dest-search-bar">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text" id="dest-search" class="dest-search-input" placeholder="Search a destination…" aria-label="Search destinations" />
             </div>
           </div>
         </div>
 
-        <div class="dest-footer">
-          <a href="#" class="btn-dark">View more</a>
-          <div class="slider-controls">
-            <button class="slider-btn"
-              onclick="document.getElementById('dest-slider').scrollBy({left: -300, behavior: 'smooth'})"
-              aria-label="Previous Destination">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="15 18 9 12 15 6"></polyline>
-              </svg>
-            </button>
-            <button class="slider-btn"
-              onclick="document.getElementById('dest-slider').scrollBy({left: 300, behavior: 'smooth'})"
-              aria-label="Next Destination">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </button>
-          </div>
-        </div>
+        <!-- Country Grid -->
+        <div class="dest-country-grid" id="dest-country-grid" aria-live="polite" aria-label="Destination list"></div>
+
+        <!-- Pagination -->
+        <div class="dest-pagination" id="dest-pagination"></div>
+
+        <!-- Javascript for grid + search + pagination -->
+        <script>
+          (function() {
+            const COUNTRIES = [
+              { name: 'Egypt',                      flag: '🇪🇬', tag: 'eVisa',         region: 'Africa' },
+              { name: 'Azerbaijan',                 flag: '🇦🇿', tag: 'eVisa',         region: 'Asia' },
+              { name: 'Sri Lanka',                  flag: '🇱🇰', tag: 'eVisa',         region: 'Asia' },
+              { name: 'Malaysia (MDAC)',             flag: '🇲🇾', tag: 'eVisa',         region: 'Asia' },
+              { name: 'Thailand (TDAC)',             flag: '🇹🇭', tag: 'eVisa',         region: 'Asia' },
+              { name: 'Oman',                       flag: '🇴🇲', tag: 'eVisa',         region: 'Middle East' },
+              { name: 'Vietnam',                    flag: '🇻🇳', tag: 'eVisa',         region: 'Asia' },
+              { name: 'Turkey',                     flag: '🇹🇷', tag: 'eVisa',         region: 'Europe' },
+              { name: 'Russia',                     flag: '🇷🇺', tag: 'eVisa',         region: 'Europe' },
+              { name: 'Indonesia',                  flag: '🇮🇩', tag: 'Visa on Arrival',region: 'Asia' },
+              { name: 'Qatar',                      flag: '🇶🇦', tag: 'eVisa',         region: 'Middle East' },
+              { name: 'Kenya ETA',                  flag: '🇰🇪', tag: 'ETA',           region: 'Africa' },
+              { name: 'Tanzania',                   flag: '🇹🇿', tag: 'eVisa',         region: 'Africa' },
+              { name: 'Bahrain',                    flag: '🇧🇭', tag: 'eVisa',         region: 'Middle East' },
+              { name: 'Saudi Arabia',               flag: '🇸🇦', tag: 'eVisa',         region: 'Middle East' },
+              { name: 'UAE',                        flag: '🇦🇪', tag: 'eVisa',         region: 'Middle East' },
+              { name: 'Georgia (Online – 50%)',      flag: '🇬🇪', tag: 'Online',        region: 'Europe' },
+              { name: 'Georgia (Vendor – 80%)',      flag: '🇬🇪', tag: 'Online',        region: 'Europe' },
+              { name: 'Taiwan',                     flag: '🇹🇼', tag: 'eVisa',         region: 'Asia' },
+              { name: 'Cambodia',                   flag: '🇰🇭', tag: 'eVisa',         region: 'Asia' },
+              { name: 'Myanmar (Approval Letter)',   flag: '🇲🇲', tag: 'Letter',        region: 'Asia' },
+              { name: 'Ethiopia',                   flag: '🇪🇹', tag: 'eVisa',         region: 'Africa' },
+              { name: 'Uzbekistan',                 flag: '🇺🇿', tag: 'eVisa',         region: 'Asia' },
+              { name: 'Armenia',                    flag: '🇦🇲', tag: 'eVisa',         region: 'Asia' },
+              { name: 'Botswana',                   flag: '🇧🇼', tag: 'eVisa',         region: 'Africa' },
+              { name: 'Hong Kong PAR',              flag: '🇭🇰', tag: 'Permit',        region: 'Asia' },
+              { name: 'India',                      flag: '🇮🇳', tag: 'eVisa',         region: 'Asia' },
+              { name: 'Jordan',                     flag: '🇯🇴', tag: 'eVisa',         region: 'Middle East' },
+              { name: 'Morocco',                    flag: '🇲🇦', tag: 'eVisa',         region: 'Africa' },
+              { name: 'Zambia',                     flag: '🇿🇲', tag: 'eVisa',         region: 'Africa' },
+              { name: 'Zimbabwe',                   flag: '🇿🇼', tag: 'eVisa',         region: 'Africa' },
+              { name: 'USA',                        flag: '🇺🇸', tag: 'Visa',          region: 'Americas' },
+              { name: 'United Kingdom (UK)',         flag: '🇬🇧', tag: 'Visa',          region: 'Europe' },
+              { name: 'Schengen (Europe)',           flag: '🇪🇺', tag: 'Schengen',      region: 'Europe' },
+              { name: 'Canada',                     flag: '🇨🇦', tag: 'Visa',          region: 'Americas' },
+            ];
+            const PER_PAGE = 12;
+            let currentPage = 1;
+            let filtered = [...COUNTRIES];
+
+            const grid = document.getElementById('dest-country-grid');
+            const pagination = document.getElementById('dest-pagination');
+            const searchInput = document.getElementById('dest-search');
+
+            function getTagColor(tag) {
+              const map = { 'eVisa':'#0ea5e9', 'ETA':'#10b981', 'Visa':'#6366f1', 'Online':'#f59e0b', 'Schengen':'#3b82f6', 'Letter':'#f97316', 'Permit':'#8b5cf6', 'Visa on Arrival':'#14b8a6' };
+              return map[tag] || '#64748b';
+            }
+
+            function renderGrid() {
+              const start = (currentPage - 1) * PER_PAGE;
+              const page = filtered.slice(start, start + PER_PAGE);
+              if (filtered.length === 0) {
+                grid.innerHTML = '<p class="dest-no-results">No destinations found. Try a different search.</p>';
+                pagination.innerHTML = '';
+                return;
+              }
+              grid.innerHTML = page.map((c, i) => `
+                <div class="dest-country-card" style="animation-delay:${i * 40}ms" onclick="openModal('consultation-modal')" tabindex="0" role="button" aria-label="Enquire about ${c.name}">
+                  <div class="dcc-flag">${c.flag}</div>
+                  <div class="dcc-info">
+                    <div class="dcc-name">${c.name}</div>
+                    <div class="dcc-region">${c.region}</div>
+                  </div>
+                  <span class="dcc-tag" style="background:${getTagColor(c.tag)}20; color:${getTagColor(c.tag)}; border:1px solid ${getTagColor(c.tag)}40">${c.tag}</span>
+                </div>`).join('');
+              renderPagination();
+            }
+
+            function renderPagination() {
+              const total = Math.ceil(filtered.length / PER_PAGE);
+              if (total <= 1) { pagination.innerHTML = ''; return; }
+              let html = '';
+              html += `<button class="dest-page-btn" onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''} aria-label="Previous page">&#8592;</button>`;
+              for (let i = 1; i <= total; i++) {
+                html += `<button class="dest-page-btn ${i === currentPage ? 'active' : ''}" onclick="changePage(${i})" aria-label="Page ${i}">${i}</button>`;
+              }
+              html += `<button class="dest-page-btn" onclick="changePage(${currentPage + 1})" ${currentPage === total ? 'disabled' : ''} aria-label="Next page">&#8594;</button>`;
+              pagination.innerHTML = html;
+            }
+
+            window.changePage = function(p) {
+              const total = Math.ceil(filtered.length / PER_PAGE);
+              if (p < 1 || p > total) return;
+              currentPage = p;
+              renderGrid();
+              document.getElementById('destinations-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            };
+
+            searchInput.addEventListener('input', function() {
+              const q = this.value.trim().toLowerCase();
+              filtered = COUNTRIES.filter(c => c.name.toLowerCase().includes(q) || c.region.toLowerCase().includes(q) || c.tag.toLowerCase().includes(q));
+              currentPage = 1;
+              renderGrid();
+            });
+
+            renderGrid();
+          })();
+        </script>
       </div>
     </section>
 
@@ -990,12 +1070,41 @@
                   aria-label="required">*</span></label>
               <select id="form-visa" name="visa_type" class="form-input form-select" required aria-required="true">
                 <option value="" disabled selected>Select destination / visa type</option>
+                <option value="egypt">Egypt</option>
+                <option value="azerbaijan">Azerbaijan</option>
+                <option value="sri-lanka">Sri Lanka</option>
+                <option value="malaysia">Malaysia (MDAC)</option>
+                <option value="thailand">Thailand (TDAC)</option>
+                <option value="oman">Oman</option>
+                <option value="vietnam">Vietnam</option>
+                <option value="turkey">Turkey (eVisa)</option>
+                <option value="russia">Russia (eVisa)</option>
+                <option value="indonesia">Indonesia</option>
+                <option value="qatar">Qatar</option>
+                <option value="kenya">Kenya ETA</option>
+                <option value="tanzania">Tanzania</option>
+                <option value="bahrain">Bahrain</option>
+                <option value="saudi">Saudi Arabia</option>
+                <option value="uae">UAE</option>
+                <option value="georgia-online">Georgia – Online (50% approval)</option>
+                <option value="georgia-vendor">Georgia – Vendor Online (80% approval)</option>
+                <option value="taiwan">Taiwan</option>
+                <option value="cambodia">Cambodia</option>
+                <option value="myanmar">Myanmar Approval Letter</option>
+                <option value="ethiopia">Ethiopia</option>
+                <option value="uzbekistan">Uzbekistan</option>
+                <option value="armenia">Armenia</option>
+                <option value="botswana">Botswana</option>
+                <option value="hong-kong">Hong Kong PAR</option>
+                <option value="india">India</option>
+                <option value="jordan">Jordan</option>
+                <option value="morocco">Morocco</option>
+                <option value="zambia">Zambia</option>
+                <option value="zimbabwe">Zimbabwe</option>
+                <option value="usa">USA</option>
+                <option value="uk">United Kingdom (UK)</option>
+                <option value="schengen">Schengen (Europe)</option>
                 <option value="canada">Canada</option>
-                <option value="australia">Australia</option>
-                <option value="uk">UK</option>
-                <option value="schengen">Schengen / Europe</option>
-                <option value="uae">UAE / Dubai</option>
-                <option value="singapore">Singapore</option>
                 <option value="other">Other</option>
               </select>
               <span class="form-error" id="visa-error" role="alert" aria-live="polite"></span>

@@ -237,7 +237,7 @@
 /* --- Services Cards Section --- */
 .new-services-section {
   padding: 80px 0;
-  background: linear-gradient(180deg, var(--clr-surface-alt) 0%, #f8fafc 100%);
+  background: var(--clr-surface-alt);
   overflow: hidden;
 }
 
@@ -248,7 +248,7 @@
 }
 
 [data-theme="dark"] .new-services-section {
-  background: linear-gradient(180deg, var(--clr-surface-alt) 0%, var(--clr-bg) 100%);
+  background: var(--clr-surface-alt);
 }
 
 .services-wrapper {
