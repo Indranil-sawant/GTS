@@ -1040,40 +1040,46 @@
           
           <!-- Left Content -->
           <div class="contact-modern-left">
-            <div class="contact-modern-pattern" aria-hidden="true">
+            <div class="contact-modern-pattern" aria-hidden="true" style="color: #ea580c; opacity: 0.6;">
               <svg width="180" height="15" viewBox="0 0 180 15" fill="currentColor">
-                <path d="M5 7.5L0 2.5h10L5 7.5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5z" fill="#000" opacity="0.8"/>
-                <path d="M165 7.5l-3-3h6l-3 3zm10 0l-3-3h6l-3 3z" fill="none" stroke="#000" stroke-width="1.5" opacity="0.5"/>
+                <path d="M5 7.5L0 2.5h10L5 7.5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5z" fill="currentColor" opacity="0.8"/>
               </svg>
             </div>
             
-            <h2 id="contact-heading" class="contact-modern-title">Manage customers across the Lifetime of the product cycle</h2>
+            <p class="section-label" style="align-self: flex-start; margin-bottom: 0.5rem; background: var(--gradient-sky); color: var(--clr-primary-dark);">Trips designed by real travel experts</p>
+            <h2 id="contact-heading" class="contact-modern-title">Go Where the Journey Feels Effortless</h2>
             <p class="contact-modern-desc">
-              Build rich, unified profiles with purchase history, preferences, support interactions, and more so you can personalize experiences and boost retention at every touchpoint.
+              From flights to experiences, every detail is handled with care—giving you more time to explore, relax, and create unforgettable memories.
             </p>
             
-            <a href="#" class="btn-modern-dark">Learn More</a>
+            <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+              <a href="#services" class="btn-modern-dark" style="background: var(--gradient-primary); margin-top: 0; box-shadow: 0 4px 15px rgba(31, 120, 229, 0.2);">Explore Destinations</a>
+              <span style="font-size: 0.95rem; font-weight: 500; color: #555; display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Hassle-free planning. Transparent pricing.
+              </span>
+            </div>
           </div>
 
           <!-- Right Form -->
           <div class="contact-modern-right">
-            <form id="contact-form" class="contact-modern-form" novalidate aria-label="Contact form">
+            <form id="contact-form" class="contact-modern-form travel-form-elevated" novalidate aria-label="Travel enquiry form">
               
               <div class="form-modern-row">
                 <div class="form-modern-group">
                   <label for="form-fname" class="form-modern-label">First Name</label>
-                  <input type="text" id="form-fname" name="name" class="form-modern-input" placeholder="James..." required />
+                  <input type="text" id="form-fname" name="name" class="form-modern-input" placeholder="Enter first name" required />
                 </div>
                 <div class="form-modern-group">
                   <label for="form-lname" class="form-modern-label">Last Name</label>
-                  <input type="text" id="form-lname" name="lname" class="form-modern-input" placeholder="Smith..." required />
+                  <input type="text" id="form-lname" name="lname" class="form-modern-input" placeholder="Enter last name" required />
                 </div>
               </div>
 
               <div class="form-modern-row">
                 <div class="form-modern-group">
                   <label for="form-email" class="form-modern-label">Email</label>
-                  <input type="email" id="form-email" name="email" class="form-modern-input" placeholder="robertapouros@gmail.com" required />
+                  <input type="email" id="form-email" name="email" class="form-modern-input" placeholder="name@example.com" required />
                 </div>
                 <div class="form-modern-group">
                   <label for="form-country" class="form-modern-label">Country</label>
@@ -1082,30 +1088,35 @@
                       <option value="usa">🇺🇸 USA</option>
                       <option value="canada">🇨🇦 Canada</option>
                       <option value="uk">🇬🇧 UK</option>
+                      <option value="india">🇮🇳 India</option>
+                      <option value="uae">🇦🇪 UAE</option>
+                      <option value="other">Other</option>
                     </select>
                   </div>
                 </div>
               </div>
 
               <div class="form-modern-group">
-                <label for="form-role" class="form-modern-label">Your Role</label>
+                <label for="form-role" class="form-modern-label">Travel Type</label>
                 <div class="form-modern-select-wrapper">
-                  <select id="form-role" name="role" class="form-modern-input">
-                    <option value="" disabled selected>Select your role</option>
-                    <option value="management">Management</option>
-                    <option value="hr">HR</option>
-                    <option value="travelmgr">Travel Manager</option>
+                  <select id="form-role" name="role" class="form-modern-input select-icon">
+                    <option value="" disabled selected>Select Travel Type</option>
+                    <option value="leisure">Leisure Travel</option>
+                    <option value="honeymoon">Honeymoon</option>
+                    <option value="family">Family Vacation</option>
+                    <option value="business">Business Travel</option>
+                    <option value="group">Group Tour</option>
                   </select>
                 </div>
               </div>
 
               <div class="form-modern-group">
-                <label for="form-message" class="form-modern-label">Message</label>
-                <textarea id="form-message" name="message" class="form-modern-input textarea" placeholder="enter message...." rows="3"></textarea>
+                <label for="form-message" class="form-modern-label">Travel Details</label>
+                <textarea id="form-message" name="message" class="form-modern-input textarea" placeholder="Tell us your destination, travel dates, budget, and any special preferences..." rows="3"></textarea>
               </div>
 
               <div class="form-modern-submit-wrapper">
-                <button type="submit" id="form-submit" class="btn-modern-orange">Contact Us</button>
+                <button type="submit" id="form-submit" class="btn-modern-orange travel-btn-accent">Plan Your Trip</button>
               </div>
             </form>
           </div>
@@ -1113,28 +1124,28 @@
         </div>
 
         <!-- Middle Band: Testimonials -->
-        <div class="contact-modern-testimonials">
+        <div class="contact-modern-testimonials travel-testimonials">
           <div class="cmod-testimonial">
             <div class="cmod-test-avatar-wrapper">
-              <img src="https://i.pravatar.cc/100?img=11" alt="Avatar" class="cmod-test-avatar" />
+              <img src="https://i.pravatar.cc/100?img=33" alt="Client Avatar" class="cmod-test-avatar" />
               <div class="cmod-test-badge badge-blue">
-                <svg viewBox="0 0 24 24" fill="white" width="10" height="10"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="white" width="10" height="10"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
               </div>
             </div>
             <p class="cmod-test-text">
-              We've gained a 360-degree view of our customers. The unified profiles allow us to personalize interactions, resulting in higher customer satisfaction and increased loyalty.
+              "The team at Globus completely transformed our vacation. Every transfer and tour was flawlessly arranged. We didn't have to lift a finger—just showed up and made memories."
             </p>
           </div>
           
           <div class="cmod-testimonial">
             <div class="cmod-test-avatar-wrapper">
-              <img src="https://i.pravatar.cc/100?img=68" alt="Avatar" class="cmod-test-avatar" />
+              <img src="https://i.pravatar.cc/100?img=44" alt="Client Avatar" class="cmod-test-avatar" />
               <div class="cmod-test-badge badge-purple">
-                <svg viewBox="0 0 24 24" fill="white" width="10" height="10"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                <svg viewBox="0 0 24 24" fill="white" width="10" height="10"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
               </div>
             </div>
             <p class="cmod-test-text">
-              Now, we truly understand our customers. These unified profiles enable personalized interactions, boosting satisfaction and strengthening loyalty.
+              "They handled our complex multi-city European trip with incredible precision. Knowing their experts were available around the clock gave us total peace of mind."
             </p>
           </div>
         </div>
@@ -1143,38 +1154,38 @@
         <div class="contact-modern-features">
           <div class="cmod-feature">
             <div class="cmod-feat-icon">
-              <!-- Customer History Icon -->
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke="white" stroke-width="2" fill="none"/></svg>
+              <!-- Expert Guidance Icon -->
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
-            <h4>Customer History</h4>
-            <p>Analyze customer behavior across product lines</p>
+            <h4>Expert Guidance</h4>
+            <p>Destinations matched perfectly to your pace and style.</p>
           </div>
           
           <div class="cmod-feature">
             <div class="cmod-feat-icon">
-              <!-- Actionable Insights Icon -->
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="4" y="14" width="4" height="8"/><rect x="10" y="8" width="4" height="14"/><rect x="16" y="2" width="4" height="20"/></svg>
+              <!-- Global Network Icon -->
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             </div>
-            <h4>Actionable Insights</h4>
-            <p>Employ predictive analytics to optimize sales pipelines</p>
+            <h4>Global Network</h4>
+            <p>Exclusive access to premium hotels and local guides.</p>
           </div>
           
           <div class="cmod-feature">
             <div class="cmod-feat-icon">
-              <!-- Identify Patterns Icon -->
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              <!-- Custom Itineraries Icon -->
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
             </div>
-            <h4>Identify Patterns</h4>
-            <p>Utilize live data to improve conversion rates</p>
+            <h4>Custom Itineraries</h4>
+            <p>Every trip hand-crafted to your exact preferences.</p>
           </div>
           
           <div class="cmod-feature">
             <div class="cmod-feat-icon">
-              <!-- Predictive Analysis Icon -->
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="9" cy="9" r="6"/><path d="M21 21l-7.5-7.5" stroke="white" stroke-width="2" fill="none"/></svg>
+              <!-- 24/7 Support Icon -->
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </div>
-            <h4>Predictive Analysis</h4>
-            <p>Employ real-time data to refine marketing strategies</p>
+            <h4>24/7 Support</h4>
+            <p>Real human assistance before, during, and after travel.</p>
           </div>
         </div>
 

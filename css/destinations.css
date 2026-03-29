@@ -631,8 +631,14 @@
 
 @media (max-width: 600px) {
   .dest-country-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .dest-country-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -646,14 +652,15 @@
   align-items: center;
   gap: 12px;
   background: var(--clr-surface);
-  border: 1.5px solid var(--clr-border);
+  border: 1px solid var(--clr-border);
   border-radius: 14px;
-  padding: 14px 16px;
+  padding: 12px 14px;
   cursor: pointer;
   transition: all 0.25s ease;
   animation: dccFadeIn 0.35s ease both;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
 
 .dest-country-card::before {
@@ -669,7 +676,7 @@
 .dest-country-card:hover {
   border-color: var(--clr-primary);
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(var(--clr-primary-rgb, 0,80,200), 0.12);
+  box-shadow: 0 8px 24px rgba(0,80,200, 0.12);
 }
 
 .dest-country-card:hover .dcc-name {
@@ -686,12 +693,12 @@
 }
 
 .dcc-flag {
-  width: 44px;
-  height: 30px;
+  width: 36px;
+  height: 24px;
   flex-shrink: 0;
-  border-radius: 5px;
+  border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   background: var(--clr-surface-alt);
 }
 
@@ -705,11 +712,13 @@
 .dcc-info {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .dcc-name {
   font-family: var(--font-heading);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--clr-text);
   white-space: nowrap;
@@ -719,19 +728,20 @@
 }
 
 .dcc-region {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--clr-text-subtle);
-  margin-top: 2px;
+  margin-top: 1px;
 }
 
 .dcc-tag {
-  font-size: 0.68rem;
+  font-size: 0.64rem;
   font-weight: 700;
-  padding: 3px 9px;
-  border-radius: 20px;
+  padding: 2px 6px;
+  border-radius: 6px;
   white-space: nowrap;
   flex-shrink: 0;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
+  margin-left: auto;
 }
 
 .dest-no-results {
