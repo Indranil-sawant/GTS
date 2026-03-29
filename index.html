@@ -456,41 +456,41 @@
         <script>
           (function() {
             const COUNTRIES = [
-              { name: 'Egypt',                      flag: '🇪🇬', tag: 'eVisa',         region: 'Africa' },
-              { name: 'Azerbaijan',                 flag: '🇦🇿', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Sri Lanka',                  flag: '🇱🇰', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Malaysia (MDAC)',             flag: '🇲🇾', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Thailand (TDAC)',             flag: '🇹🇭', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Oman',                       flag: '🇴🇲', tag: 'eVisa',         region: 'Middle East' },
-              { name: 'Vietnam',                    flag: '🇻🇳', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Turkey',                     flag: '🇹🇷', tag: 'eVisa',         region: 'Europe' },
-              { name: 'Russia',                     flag: '🇷🇺', tag: 'eVisa',         region: 'Europe' },
-              { name: 'Indonesia',                  flag: '🇮🇩', tag: 'Visa on Arrival',region: 'Asia' },
-              { name: 'Qatar',                      flag: '🇶🇦', tag: 'eVisa',         region: 'Middle East' },
-              { name: 'Kenya ETA',                  flag: '🇰🇪', tag: 'ETA',           region: 'Africa' },
-              { name: 'Tanzania',                   flag: '🇹🇿', tag: 'eVisa',         region: 'Africa' },
-              { name: 'Bahrain',                    flag: '🇧🇭', tag: 'eVisa',         region: 'Middle East' },
-              { name: 'Saudi Arabia',               flag: '🇸🇦', tag: 'eVisa',         region: 'Middle East' },
-              { name: 'UAE',                        flag: '🇦🇪', tag: 'eVisa',         region: 'Middle East' },
-              { name: 'Georgia (Online – 50%)',      flag: '🇬🇪', tag: 'Online',        region: 'Europe' },
-              { name: 'Georgia (Vendor – 80%)',      flag: '🇬🇪', tag: 'Online',        region: 'Europe' },
-              { name: 'Taiwan',                     flag: '🇹🇼', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Cambodia',                   flag: '🇰🇭', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Myanmar (Approval Letter)',   flag: '🇲🇲', tag: 'Letter',        region: 'Asia' },
-              { name: 'Ethiopia',                   flag: '🇪🇹', tag: 'eVisa',         region: 'Africa' },
-              { name: 'Uzbekistan',                 flag: '🇺🇿', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Armenia',                    flag: '🇦🇲', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Botswana',                   flag: '🇧🇼', tag: 'eVisa',         region: 'Africa' },
-              { name: 'Hong Kong PAR',              flag: '🇭🇰', tag: 'Permit',        region: 'Asia' },
-              { name: 'India',                      flag: '🇮🇳', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Jordan',                     flag: '🇯🇴', tag: 'eVisa',         region: 'Middle East' },
-              { name: 'Morocco',                    flag: '🇲🇦', tag: 'eVisa',         region: 'Africa' },
-              { name: 'Zambia',                     flag: '🇿🇲', tag: 'eVisa',         region: 'Africa' },
-              { name: 'Zimbabwe',                   flag: '🇿🇼', tag: 'eVisa',         region: 'Africa' },
-              { name: 'USA',                        flag: '🇺🇸', tag: 'Visa',          region: 'Americas' },
-              { name: 'United Kingdom (UK)',         flag: '🇬🇧', tag: 'Visa',          region: 'Europe' },
-              { name: 'Schengen (Europe)',           flag: '🇪🇺', tag: 'Schengen',      region: 'Europe' },
-              { name: 'Canada',                     flag: '🇨🇦', tag: 'Visa',          region: 'Americas' },
+              { name: 'Egypt',                      flag: 'eg', tag: 'eVisa',         region: 'Africa' },
+              { name: 'Azerbaijan',                 flag: 'az', tag: 'eVisa',         region: 'Asia' },
+              { name: 'Sri Lanka',                  flag: 'lk', tag: 'eVisa',         region: 'Asia' },
+              { name: 'Malaysia (MDAC)',             flag: 'my', tag: 'eVisa',         region: 'Asia' },
+              { name: 'Thailand (TDAC)',             flag: 'th', tag: 'eVisa',         region: 'Asia' },
+              { name: 'Oman',                       flag: 'om', tag: 'eVisa',         region: 'Middle East' },
+              { name: 'Vietnam',                    flag: 'vn', tag: 'eVisa',         region: 'Asia' },
+              { name: 'Turkey',                     flag: 'tr', tag: 'eVisa',         region: 'Europe' },
+              { name: 'Russia',                     flag: 'ru', tag: 'eVisa',         region: 'Europe' },
+              { name: 'Indonesia',                  flag: 'id', tag: 'Visa on Arrival',region: 'Asia' },
+              { name: 'Qatar',                      flag: 'qa', tag: 'eVisa',         region: 'Middle East' },
+              { name: 'Kenya ETA',                  flag: 'ke', tag: 'ETA',           region: 'Africa' },
+              { name: 'Tanzania',                   flag: 'tz', tag: 'eVisa',         region: 'Africa' },
+              { name: 'Bahrain',                    flag: 'bh', tag: 'eVisa',         region: 'Middle East' },
+              { name: 'Saudi Arabia',               flag: 'sa', tag: 'eVisa',         region: 'Middle East' },
+              { name: 'UAE',                        flag: 'ae', tag: 'eVisa',         region: 'Middle East' },
+              { name: 'Georgia (Online \u2013 50%)',      flag: 'ge', tag: 'Online',        region: 'Europe' },
+              { name: 'Georgia (Vendor \u2013 80%)',      flag: 'ge', tag: 'Online',        region: 'Europe' },
+              { name: 'Taiwan',                     flag: 'tw', tag: 'eVisa',         region: 'Asia' },
+              { name: 'Cambodia',                   flag: 'kh', tag: 'eVisa',         region: 'Asia' },
+              { name: 'Myanmar (Approval Letter)',   flag: 'mm', tag: 'Letter',        region: 'Asia' },
+              { name: 'Ethiopia',                   flag: 'et', tag: 'eVisa',         region: 'Africa' },
+              { name: 'Uzbekistan',                 flag: 'uz', tag: 'eVisa',         region: 'Asia' },
+              { name: 'Armenia',                    flag: 'am', tag: 'eVisa',         region: 'Asia' },
+              { name: 'Botswana',                   flag: 'bw', tag: 'eVisa',         region: 'Africa' },
+              { name: 'Hong Kong PAR',              flag: 'hk', tag: 'Permit',        region: 'Asia' },
+              { name: 'India',                      flag: 'in', tag: 'eVisa',         region: 'Asia' },
+              { name: 'Jordan',                     flag: 'jo', tag: 'eVisa',         region: 'Middle East' },
+              { name: 'Morocco',                    flag: 'ma', tag: 'eVisa',         region: 'Africa' },
+              { name: 'Zambia',                     flag: 'zm', tag: 'eVisa',         region: 'Africa' },
+              { name: 'Zimbabwe',                   flag: 'zw', tag: 'eVisa',         region: 'Africa' },
+              { name: 'USA',                        flag: 'us', tag: 'Visa',          region: 'Americas' },
+              { name: 'United Kingdom (UK)',         flag: 'gb', tag: 'Visa',          region: 'Europe' },
+              { name: 'Schengen (Europe)',           flag: 'fr', tag: 'Schengen',      region: 'Europe' },
+              { name: 'Canada',                     flag: 'ca', tag: 'Visa',          region: 'Americas' },
             ];
             const PER_PAGE = 12;
             let currentPage = 1;
@@ -515,7 +515,9 @@
               }
               grid.innerHTML = page.map((c, i) => `
                 <div class="dest-country-card" style="animation-delay:${i * 40}ms" onclick="openModal('consultation-modal')" tabindex="0" role="button" aria-label="Enquire about ${c.name}">
-                  <div class="dcc-flag">${c.flag}</div>
+                  <div class="dcc-flag">
+                    <img src="img/flags/${c.flag}.webp" alt="${c.name} flag" loading="lazy" width="40" height="28" />
+                  </div>
                   <div class="dcc-info">
                     <div class="dcc-name">${c.name}</div>
                     <div class="dcc-region">${c.region}</div>
