@@ -93,6 +93,20 @@ html, body {
   display: none;
 }
 
+<<<<<<< HEAD
+=======
+/* Force Light Mode Color Scheme */
+html {
+  color-scheme: light !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: var(--clr-bg) !important;
+    color: var(--clr-text) !important;
+  }
+}
+>>>>>>> 13ad526 (Live 2nd draft)
 
 
 /* --------------------------------------------------------------------------

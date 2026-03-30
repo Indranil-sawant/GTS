@@ -6,11 +6,25 @@
 
 'use strict';
 
+<<<<<<< HEAD
 /* Force Light Mode Cleanup */
 localStorage.removeItem('gts-theme');
 document.documentElement.classList.remove('dark');
 document.documentElement.setAttribute('data-theme', 'light');
 
+=======
+/* ==========================================================================
+   1. DARK MODE TOGGLE
+   ========================================================================== */
+/* ==========================================================================
+   1. THEME ENFORCEMENT (Force Light Mode)
+   ========================================================================== */
+(function enforceLightTheme() {
+  document.documentElement.setAttribute('data-theme', 'light');
+  document.documentElement.classList.remove('dark');
+  localStorage.setItem('gts-theme', 'light');
+})();
+>>>>>>> 13ad526 (Live 2nd draft)
 
 /* ==========================================================================
    2. MOBILE MENU TOGGLE
