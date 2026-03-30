@@ -10,8 +10,8 @@
    1. DARK MODE TOGGLE
    ========================================================================== */
 (function initDarkMode() {
-  const root    = document.documentElement; // <html data-theme="...">
-  const btn     = document.getElementById('dark-mode-toggle');
+  const root = document.documentElement; // <html data-theme="...">
+  const btn = document.getElementById('dark-mode-toggle');
   const PREF_KEY = 'gts-theme';
 
   // Respect OS preference as default, then stored preference
@@ -42,7 +42,7 @@
    2. MOBILE MENU TOGGLE
    ========================================================================== */
 const hamburgerBtn = document.getElementById('mobile-menu-toggle');
-const mobileMenu   = document.getElementById('mobile-menu');
+const mobileMenu = document.getElementById('mobile-menu');
 
 function openMobileMenu() {
   mobileMenu.classList.add('open');
@@ -108,9 +108,9 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 /* ==========================================================================
    4. HEADER SCROLL EFFECT + ACTIVE NAV LINK
    ========================================================================== */
-const header      = document.getElementById('site-header');
-const navLinks    = document.querySelectorAll('.nav-links .nav-link:not(.nav-cta)');
-const sections    = document.querySelectorAll('main section[id]');
+const header = document.getElementById('site-header');
+const navLinks = document.querySelectorAll('.nav-links .nav-link:not(.nav-cta)');
+const sections = document.querySelectorAll('main section[id]');
 
 function onScroll() {
   // Sticky header shadow
@@ -211,14 +211,14 @@ scrollTopBtn.addEventListener('click', () => {
    ========================================================================== */
 document.querySelectorAll('.faq-question').forEach((btn) => {
   btn.addEventListener('click', function () {
-    const expanded  = this.getAttribute('aria-expanded') === 'true';
-    const answerId  = this.getAttribute('aria-controls');
-    const answerEl  = document.getElementById(answerId);
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    const answerId = this.getAttribute('aria-controls');
+    const answerEl = document.getElementById(answerId);
 
     // Close all others first
     document.querySelectorAll('.faq-question').forEach((otherBtn) => {
       const otherAnswerId = otherBtn.getAttribute('aria-controls');
-      const otherAnswer   = document.getElementById(otherAnswerId);
+      const otherAnswer = document.getElementById(otherAnswerId);
       otherBtn.setAttribute('aria-expanded', 'false');
       if (otherAnswer) otherAnswer.hidden = true;
     });
@@ -287,126 +287,13 @@ document.querySelectorAll('.modal-overlay').forEach((overlay) => {
 });
 
 // Expose globally (used in inline onclick)
-window.openModal  = openModal;
+window.openModal = openModal;
 window.closeModal = closeModal;
 window.closeAllModals = closeAllModals;
 
 
-/* ==========================================================================
-   9. CONTACT FORM VALIDATION
-   ========================================================================== */
-(function initContactForm() {
-  const form        = document.getElementById('contact-form');
-  const successMsg  = document.getElementById('form-success');
-  const submitBtn   = document.getElementById('form-submit');
-  const btnText     = form.querySelector('.btn-text');
-  const btnLoader   = form.querySelector('.btn-loader');
 
-  /** Show an error message on a field */
-  function showError(fieldId, errorId, message) {
-    const field = document.getElementById(fieldId);
-    const error = document.getElementById(errorId);
-    if (field)  field.classList.add('error');
-    if (error) { error.textContent = message; }
-  }
 
-  /** Clear error on a field */
-  function clearError(fieldId, errorId) {
-    const field = document.getElementById(fieldId);
-    const error = document.getElementById(errorId);
-    if (field)  field.classList.remove('error');
-    if (error) { error.textContent = ''; }
-  }
-
-  /** Simple email regex */
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  /** Validate a single field and return true if valid */
-  function validateField(fieldId, errorId, validatorFn) {
-    const field = document.getElementById(fieldId);
-    if (!field) return true;
-    const result = validatorFn(field.value.trim());
-    if (result !== true) {
-      showError(fieldId, errorId, result);
-      return false;
-    }
-    clearError(fieldId, errorId);
-    return true;
-  }
-
-  // Live validation — clear errors as user types/changes
-  [
-    ['form-name',  'name-error'],
-    ['form-email', 'email-error'],
-    ['form-visa',  'visa-error'],
-  ].forEach(([fId, eId]) => {
-    const el = document.getElementById(fId);
-    if (el) el.addEventListener('input', () => clearError(fId, eId));
-  });
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    let valid = true;
-
-    // --- Name ---
-    valid = validateField('form-name', 'name-error', (v) => {
-      if (!v) return 'Please enter your full name.';
-      if (v.length < 2) return 'Name must be at least 2 characters.';
-      return true;
-    }) && valid;
-
-    // --- Email ---
-    valid = validateField('form-email', 'email-error', (v) => {
-      if (!v) return 'Please enter your email address.';
-      if (!emailRegex.test(v)) return 'Please enter a valid email address.';
-      return true;
-    }) && valid;
-
-    // --- Visa type ---
-    valid = validateField('form-visa', 'visa-error', (v) => {
-      if (!v) return 'Please select a destination or visa type.';
-      return true;
-    }) && valid;
-
-    if (!valid) return;
-
-    // --- Real submission to Google Sheets ---
-    submitBtn.disabled = true;
-    btnText.hidden     = true;
-    btnLoader.hidden   = false;
-
-    const data = {
-      name: document.getElementById('form-name').value,
-      email: document.getElementById('form-email').value,
-      phone: document.getElementById('form-phone').value,
-      service: document.getElementById('form-visa').value, // Mapping visa_type to service
-      message: document.getElementById('form-message').value,
-      page: window.location.href
-    };
-
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzcPwNsL8XW0qWpWVsipIIN75pVp1ZzVnxh_xepIR2osT9HjJbThC2ztNzocw7kaJw/exec';
-
-    fetch(SCRIPT_URL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    }).catch(err => console.error("Background error:", err));
-
-    // Show success after 600ms (Optimistic UI)
-    setTimeout(() => {
-      submitBtn.disabled = false;
-      btnText.hidden     = false;
-      btnLoader.hidden   = true;
-      form.reset();
-      successMsg.hidden = false;
-      successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      setTimeout(() => { successMsg.hidden = true; }, 8000);
-    }, 600);
-  });
-})();
 
 
 /* ==========================================================================
@@ -433,7 +320,7 @@ document.addEventListener('keydown', (e) => {
   if (!focusable.length) return;
 
   const first = focusable[0];
-  const last  = focusable[focusable.length - 1];
+  const last = focusable[focusable.length - 1];
 
   if (e.shiftKey) {
     if (document.activeElement === first) {
@@ -463,7 +350,7 @@ document.addEventListener('keydown', (e) => {
 
   function switchSlide() {
     const currentSlide = slides[currentIndex];
-    
+
     // Move to next index
     currentIndex = (currentIndex + 1) % slides.length;
     const nextSlide = slides[currentIndex];
@@ -472,34 +359,107 @@ document.addEventListener('keydown', (e) => {
     currentSlide.classList.remove('active');
     currentSlide.classList.add('exit');
 
-    // Clean up exit class after transition completes (0.5s transition + some buffer)
+    // Clean up exit class after transition completes (1.2s transition + buffer)
     setTimeout(() => {
       if (currentSlide.classList.contains('exit')) {
         currentSlide.classList.remove('exit');
       }
-    }, 600);
+    }, 1300);
 
     // In with the new
     nextSlide.classList.remove('exit');
     nextSlide.classList.add('active');
   }
 
-  // Start interval using the user's requested 2 seconds (2000ms)
+  // Start interval using the user's requested 3.2 seconds (3200ms)
   function startInterval() {
-    intervalId = setInterval(switchSlide, 2000);
+    intervalId = setInterval(switchSlide, 3200);
   }
 
-  function pauseInterval() {
-    clearInterval(intervalId);
-  }
-
-  // Bonus: Add pause on hover
-  switcher.addEventListener('mouseenter', pauseInterval);
-  switcher.addEventListener('mouseleave', startInterval);
-
-  // Bonus/A11y: Pause when focused inside
-  switcher.addEventListener('focusin', pauseInterval);
-  switcher.addEventListener('focusout', startInterval);
-
+  // Initialise
   startInterval();
+})();
+
+/* ==========================================================================
+   11. HERO SEARCH TO MODAL INTEGRATION
+   ========================================================================== */
+(function initHeroForm() {
+  const exploreBtn = document.getElementById('hero-explore-btn');
+  if (!exploreBtn) return;
+
+  exploreBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const destSelect = document.getElementById('hero-dest-select');
+    const svcSelect = document.getElementById('hero-svc-select');
+    const pplSelect = document.getElementById('hero-travelers-select');
+
+    // Get display texts
+    const selectedDest = destSelect.selectedIndex > 0 ? destSelect.options[destSelect.selectedIndex].text : 'Anywhere';
+    const selectedSvc = svcSelect.selectedIndex > 0 ? svcSelect.options[svcSelect.selectedIndex].text : 'Visa Services';
+    const selectedPpl = pplSelect.options[pplSelect.selectedIndex].text;
+
+    // Target modal fields
+    const popupCity = document.getElementById('popupCity');
+    const popupType = document.getElementById('popupType');
+    const popupPeople = document.getElementById('popupPeople');
+
+    if (popupCity) popupCity.value = selectedDest;
+    if (popupType) popupType.value = selectedSvc;
+    if (popupPeople) popupPeople.value = selectedPpl;
+    
+    // Open the modal
+    if (typeof openModal === 'function') {
+      openModal('leadPopup');
+    }
+  });
+})();
+
+/* ==========================================================================
+   12. FORM SUBMISSION & SUCCESS HANDLER
+   ========================================================================== */
+(function initFormHandlers() {
+  const forms = ['contact-form', 'popupForm'];
+  
+  forms.forEach(formId => {
+    const form = document.getElementById(formId);
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const submitBtn = this.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.classList.add('btn-loading');
+        submitBtn.disabled = true;
+      }
+
+      // Simulation - normally you'd use fetch() here
+      setTimeout(() => {
+        const successTemplate = `
+          <div class="form-success-container">
+            <div class="success-icon-anim" aria-hidden="true" style="width: 64px; height: 64px; background: #22c55e; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width: 32px; height: 32px;">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+            <h3>Thank You!</h3>
+            <p>Your journey is about to begin. One of our travel experts will reach out to you within 24 hours.</p>
+          </div>
+        `;
+        
+        // Premium transition: Replaces the form content with the success UI
+        form.innerHTML = successTemplate;
+        
+        // Auto-close modal if it's the popup
+        if (formId === 'popupForm') {
+          setTimeout(() => {
+            if (typeof closeModal === 'function') {
+              closeModal('leadPopup');
+            }
+          }, 3500);
+        }
+      }, 1500);
+    });
+  });
 })();

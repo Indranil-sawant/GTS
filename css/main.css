@@ -2593,10 +2593,10 @@ textarea.form-modern-input {
   width: 100%;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(20px);
-  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
-              transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
-              visibility 0.5s;
+  transform: translateY(30px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
+              visibility 1.2s;
   pointer-events: none;
   z-index: 1;
 }
@@ -2612,27 +2612,27 @@ textarea.form-modern-input {
 .hero-slide.exit {
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-20px);
+  transform: translateY(-30px);
   z-index: 1;
 }
 
 /* Stagger the subtitle slightly for an elegant feel */
 .hero-slide .hero-subheadline {
-  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
-              transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
   opacity: 0;
-  transform: translateY(15px);
+  transform: translateY(20px);
 }
 
 .hero-slide.active .hero-subheadline {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 150ms; /* Delay relative to heading */
+  transition-delay: 200ms; /* Delay relative to heading for cinematic feel */
 }
 
 .hero-slide.exit .hero-subheadline {
   opacity: 0;
-  transform: translateY(-15px);
+  transform: translateY(-20px);
   transition-delay: 0ms;
 }
 
