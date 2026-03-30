@@ -6,33 +6,11 @@
 
 'use strict';
 
-/* ==========================================================================
-   1. DARK MODE TOGGLE
-   ========================================================================== */
-(function initDarkMode() {
-  const root = document.documentElement; // <html data-theme="...">
-  const btn = document.getElementById('dark-mode-toggle');
-  const PREF_KEY = 'gts-theme';
+/* Force Light Mode Cleanup */
+localStorage.removeItem('gts-theme');
+document.documentElement.classList.remove('dark');
+document.documentElement.setAttribute('data-theme', 'light');
 
-  const getPreferred = () => {
-    const stored = localStorage.getItem(PREF_KEY);
-    if (stored) return stored;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  };
-
-  const applyTheme = (theme) => {
-    root.setAttribute('data-theme', theme);
-    localStorage.setItem(PREF_KEY, theme);
-    btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-  };
-
-  applyTheme(getPreferred());
-
-  btn.addEventListener('click', () => {
-    const current = root.getAttribute('data-theme');
-    applyTheme(current === 'dark' ? 'light' : 'dark');
-  });
-})();
 
 /* ==========================================================================
    2. MOBILE MENU TOGGLE

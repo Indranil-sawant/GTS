@@ -93,21 +93,6 @@ html, body {
   display: none;
 }
 
-/* Dark Mode */
-[data-theme="dark"] {
-  --clr-bg:          hsl(220, 25%, 9%);
-  --clr-surface:     hsl(220, 22%, 14%);
-  --clr-surface-alt: hsl(220, 20%, 11%);
-  --clr-border:      hsl(220, 18%, 22%);
-  --clr-text:        hsl(216, 20%, 93%);
-  --clr-text-muted:  hsl(216, 15%, 65%);
-  --clr-text-subtle: hsl(216, 10%, 45%);
-  --clr-primary-light: hsl(214, 89%, 12%);
-  --gradient-hero: linear-gradient(135deg, hsl(220, 40%, 7%) 0%, hsl(220, 30%, 11%) 50%, hsl(214, 50%, 8%) 100%);
-  --shadow-sm:  0 1px 3px 0 rgba(0,0,0,.3), 0 1px 2px -1px rgba(0,0,0,.3);
-  --shadow-md:  0 4px 12px -1px rgba(0,0,0,.4), 0 2px 6px -2px rgba(0,0,0,.3);
-  --shadow-lg:  0 10px 30px -3px rgba(0,0,0,.5), 0 4px 12px -4px rgba(0,0,0,.4);
-}
 
 
 /* --------------------------------------------------------------------------
@@ -1854,27 +1839,33 @@ button {
    -------------------------------------------------------------------------- */
 .scroll-top-btn {
   position: fixed;
-  bottom: var(--space-xl);
-  right: var(--space-xl);
-  z-index: 999;
-  width: 46px;
-  height: 46px;
+  bottom: 30px;
+  right: 30px;
+  z-index: 998; /* Lower than WhatsApp */
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  background: var(--gradient-primary);
+  background: var(--clr-primary);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  box-shadow: var(--shadow-lg);
   border: none;
   cursor: pointer;
   transition: all var(--transition-base);
-  animation: fadeInUp var(--transition-base) ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .scroll-top-btn:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-xl), var(--shadow-glow);
+  background: var(--clr-primary-dark);
 }
 
 
@@ -2644,13 +2635,12 @@ textarea.form-modern-input {
   position: fixed;
   width: 60px;
   height: 60px;
-  bottom: 25px;
+  bottom: 95px; /* Positioned above the scroll button */
   right: 25px;
   background-color: #25d366;
   color: #FFF;
   border-radius: 50px;
   text-align: center;
-  font-size: 30px;
   box-shadow: 2px 5px 15px rgba(0,0,0,0.3);
   z-index: 9999;
   display: flex;
@@ -2676,11 +2666,13 @@ textarea.form-modern-input {
   .whatsapp-float {
     width: 50px;
     height: 50px;
-    bottom: 20px;
+    bottom: 85px; /* Stacked above the arrow on mobile */
     right: 20px;
   }
-  .whatsapp-float svg {
-    width: 26px;
-    height: 26px;
+  .scroll-top-btn {
+    width: 40px;
+    height: 40px;
+    bottom: 25px;
+    right: 25px;
   }
 }

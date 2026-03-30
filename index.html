@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8" />
@@ -52,26 +52,8 @@
           <li><a href="#contact" class="nav-link nav-cta">Contact Us</a></li>
         </ul>
 
-        <!-- Controls: dark mode + mobile toggle -->
+        <!-- Controls: mobile toggle -->
         <div class="nav-controls">
-          <button id="dark-mode-toggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
-            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <circle cx="12" cy="12" r="5" />
-              <line x1="12" y1="1" x2="12" y2="3" />
-              <line x1="12" y1="21" x2="12" y2="23" />
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-              <line x1="1" y1="12" x2="3" y2="12" />
-              <line x1="21" y1="12" x2="23" y2="12" />
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-            </svg>
-            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-            </svg>
-          </button>
           <button id="mobile-menu-toggle" class="icon-btn hamburger" aria-label="Open mobile menu" aria-expanded="false"
             aria-controls="mobile-menu">
             <span class="hamburger-bar"></span>
@@ -107,7 +89,10 @@
 
         <!-- Subtle Ambient Flight Animation -->
         <div class="ambient-flight flight-path-3" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" />
+          </svg>
         </div>
 
         <!-- Floating Destination Cards -->
@@ -169,7 +154,7 @@
                 boarding.
               </p>
             </div>
-            
+
             <div class="hero-slide">
               <h1 class="hero-headline new-hero-headline"
                 style="font-family: Georgia, serif; font-size: clamp(3.5rem, 6vw, 5.5rem); margin-bottom: 20px;">
@@ -180,7 +165,7 @@
                 Curated journeys crafted for unforgettable moments and seamless experiences.
               </p>
             </div>
-            
+
             <div class="hero-slide">
               <h1 class="hero-headline new-hero-headline"
                 style="font-family: Georgia, serif; font-size: clamp(3.5rem, 6vw, 5.5rem); margin-bottom: 20px;">
@@ -444,8 +429,13 @@
           <!-- Search Bar -->
           <div class="dest-search-wrap">
             <div class="dest-search-bar">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-              <input type="text" id="dest-search" class="dest-search-input" placeholder="Search a destination…" aria-label="Search destinations" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="dest-search" class="dest-search-input" placeholder="Search a destination…"
+                aria-label="Search destinations" />
             </div>
           </div>
         </div>
@@ -458,50 +448,50 @@
 
         <!-- Javascript for grid + search + pagination -->
         <script>
-          (function() {
+          (function () {
             // Share countries globally for the search input
             window.GTS_COUNTRIES = [
               // Asia & Middle East
-              { name: 'UAE',                        flag: 'ae', tag: 'eVisa',         region: 'Middle East' },
-              { name: 'Oman',                       flag: 'om', tag: 'eVisa',         region: 'Middle East' },
-              { name: 'Qatar',                      flag: 'qa', tag: 'eVisa',         region: 'Middle East' },
-              { name: 'Bahrain',                    flag: 'bh', tag: 'eVisa',         region: 'Middle East' },
-              { name: 'Saudi Arabia',               flag: 'sa', tag: 'eVisa',         region: 'Middle East' },
-              { name: 'Turkey eVisa',               flag: 'tr', tag: 'eVisa',         region: 'Europe' },
-              { name: 'Georgia',                    flag: 'ge', tag: 'eVisa',         region: 'Europe' },
-              { name: 'Armenia',                    flag: 'am', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Azerbaijan',                 flag: 'az', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Jordan',                     flag: 'jo', tag: 'eVisa',         region: 'Middle East' },
-              { name: 'Vietnam',                    flag: 'vn', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Indonesia',                  flag: 'id', tag: 'Visa',          region: 'Asia' },
-              { name: 'Cambodia',                   flag: 'kh', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Laos',                       flag: 'la', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Myanmar',                    flag: 'mm', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Thailand TDAC',               flag: 'th', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Malaysia MDAC',               flag: 'my', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Sri Lanka',                  flag: 'lk', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Uzbekistan',                 flag: 'uz', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Taiwan',                     flag: 'tw', tag: 'eVisa',         region: 'Asia' },
-              { name: 'Hong Kong PAR',              flag: 'hk', tag: 'Permit',        region: 'Asia' },
-              
+              { name: 'UAE', flag: 'ae', tag: 'eVisa', region: 'Middle East' },
+              { name: 'Oman', flag: 'om', tag: 'eVisa', region: 'Middle East' },
+              { name: 'Qatar', flag: 'qa', tag: 'eVisa', region: 'Middle East' },
+              { name: 'Bahrain', flag: 'bh', tag: 'eVisa', region: 'Middle East' },
+              { name: 'Saudi Arabia', flag: 'sa', tag: 'eVisa', region: 'Middle East' },
+              { name: 'Turkey eVisa', flag: 'tr', tag: 'eVisa', region: 'Europe' },
+              { name: 'Georgia', flag: 'ge', tag: 'eVisa', region: 'Europe' },
+              { name: 'Armenia', flag: 'am', tag: 'eVisa', region: 'Asia' },
+              { name: 'Azerbaijan', flag: 'az', tag: 'eVisa', region: 'Asia' },
+              { name: 'Jordan', flag: 'jo', tag: 'eVisa', region: 'Middle East' },
+              { name: 'Vietnam', flag: 'vn', tag: 'eVisa', region: 'Asia' },
+              { name: 'Indonesia', flag: 'id', tag: 'Visa', region: 'Asia' },
+              { name: 'Cambodia', flag: 'kh', tag: 'eVisa', region: 'Asia' },
+              { name: 'Laos', flag: 'la', tag: 'eVisa', region: 'Asia' },
+              { name: 'Myanmar', flag: 'mm', tag: 'eVisa', region: 'Asia' },
+              { name: 'Thailand TDAC', flag: 'th', tag: 'eVisa', region: 'Asia' },
+              { name: 'Malaysia MDAC', flag: 'my', tag: 'eVisa', region: 'Asia' },
+              { name: 'Sri Lanka', flag: 'lk', tag: 'eVisa', region: 'Asia' },
+              { name: 'Uzbekistan', flag: 'uz', tag: 'eVisa', region: 'Asia' },
+              { name: 'Taiwan', flag: 'tw', tag: 'eVisa', region: 'Asia' },
+              { name: 'Hong Kong PAR', flag: 'hk', tag: 'Permit', region: 'Asia' },
+
               // Africa
-              { name: 'South Africa',               flag: 'za', tag: 'Visa',          region: 'Africa' },
-              { name: 'Kenya',                      flag: 'ke', tag: 'ETA',           region: 'Africa' },
-              { name: 'Tanzania',                   flag: 'tz', tag: 'eVisa',         region: 'Africa' },
-              { name: 'Ethiopia',                   flag: 'et', tag: 'eVisa',         region: 'Africa' },
-              { name: 'Uganda',                     flag: 'ug', tag: 'eVisa',         region: 'Africa' },
-              { name: 'Zambia',                     flag: 'zm', tag: 'eVisa',         region: 'Africa' },
-              { name: 'Zimbabwe',                   flag: 'zw', tag: 'eVisa',         region: 'Africa' },
-              { name: 'Botswana',                   flag: 'bw', tag: 'eVisa',         region: 'Africa' },
-              { name: 'Morocco',                    flag: 'ma', tag: 'eVisa',         region: 'Africa' },
-              { name: 'Egypt',                      flag: 'eg', tag: 'eVisa',         region: 'Africa' },
-              { name: 'Ivory Coast',                 flag: 'ci', tag: 'eVisa',         region: 'Africa' },
+              { name: 'South Africa', flag: 'za', tag: 'Visa', region: 'Africa' },
+              { name: 'Kenya', flag: 'ke', tag: 'ETA', region: 'Africa' },
+              { name: 'Tanzania', flag: 'tz', tag: 'eVisa', region: 'Africa' },
+              { name: 'Ethiopia', flag: 'et', tag: 'eVisa', region: 'Africa' },
+              { name: 'Uganda', flag: 'ug', tag: 'eVisa', region: 'Africa' },
+              { name: 'Zambia', flag: 'zm', tag: 'eVisa', region: 'Africa' },
+              { name: 'Zimbabwe', flag: 'zw', tag: 'eVisa', region: 'Africa' },
+              { name: 'Botswana', flag: 'bw', tag: 'eVisa', region: 'Africa' },
+              { name: 'Morocco', flag: 'ma', tag: 'eVisa', region: 'Africa' },
+              { name: 'Egypt', flag: 'eg', tag: 'eVisa', region: 'Africa' },
+              { name: 'Ivory Coast', flag: 'ci', tag: 'eVisa', region: 'Africa' },
 
               // Europe & Americas
-              { name: 'USA',                        flag: 'us', tag: 'Visa',          region: 'Americas' },
-              { name: 'UK',                         flag: 'gb', tag: 'Visa',          region: 'Europe' },
-              { name: 'Russia',                     flag: 'ru', tag: 'eVisa',         region: 'Europe' },
-              { name: 'Schengen Countries',          flag: 'fr', tag: 'Schengen',      region: 'Europe' },
+              { name: 'USA', flag: 'us', tag: 'Visa', region: 'Americas' },
+              { name: 'UK', flag: 'gb', tag: 'Visa', region: 'Europe' },
+              { name: 'Russia', flag: 'ru', tag: 'eVisa', region: 'Europe' },
+              { name: 'Schengen Countries', flag: 'fr', tag: 'Schengen', region: 'Europe' },
             ];
             const COUNTRIES = window.GTS_COUNTRIES;
             const PER_PAGE = 12;
@@ -513,11 +503,11 @@
             const searchInput = document.getElementById('dest-search');
 
             function getTagColor(tag) {
-              const map = { 'eVisa':'#0ea5e9', 'ETA':'#10b981', 'Visa':'#6366f1', 'Online':'#f59e0b', 'Schengen':'#3b82f6', 'Letter':'#f97316', 'Permit':'#8b5cf6', 'Visa on Arrival':'#14b8a6' };
+              const map = { 'eVisa': '#0ea5e9', 'ETA': '#10b981', 'Visa': '#6366f1', 'Online': '#f59e0b', 'Schengen': '#3b82f6', 'Letter': '#f97316', 'Permit': '#8b5cf6', 'Visa on Arrival': '#14b8a6' };
               return map[tag] || '#64748b';
             }
 
-            window.selectDestination = function(country) {
+            window.selectDestination = function (country) {
               const contactSec = document.getElementById('contact');
               if (contactSec) {
                 const navHeight = document.getElementById('site-header').offsetHeight || 70;
@@ -560,7 +550,7 @@
               pagination.innerHTML = html;
             }
 
-            window.changePage = function(p) {
+            window.changePage = function (p) {
               const total = Math.ceil(filtered.length / PER_PAGE);
               if (p < 1 || p > total) return;
               currentPage = p;
@@ -568,7 +558,7 @@
               document.getElementById('destinations-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
             };
 
-            searchInput.addEventListener('input', function() {
+            searchInput.addEventListener('input', function () {
               const q = this.value.trim().toLowerCase();
               filtered = COUNTRIES.filter(c => c.name.toLowerCase().includes(q) || c.region.toLowerCase().includes(q) || c.tag.toLowerCase().includes(q));
               currentPage = 1;
@@ -647,10 +637,13 @@
 
     <!-- ===== SECTION 2: NEW FEATURE & DESTINATIONS ===== -->
     <section id="feature" class="new-feature-section" style="background: var(--gradient-dawn); position: relative;">
-      
+
       <!-- Subtle Ambient Flight Animation -->
       <div class="ambient-flight flight-path-1" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" />
+        </svg>
       </div>
 
       <div class="feature-container">
@@ -658,13 +651,14 @@
         <div class="about-images-wrapper">
           <div class="about-decoration" aria-hidden="true">
             <svg viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 120 Q 50 150 100 100 T 150 20" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6" fill="none"/>
-              <path d="M140 10 L 160 30 L 155 40 Z" fill="currentColor"/>
+              <path d="M10 120 Q 50 150 100 100 T 150 20" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6"
+                fill="none" />
+              <path d="M140 10 L 160 30 L 155 40 Z" fill="currentColor" />
             </svg>
           </div>
           <img src="img/slides/dxb.jpg" alt="Dubai Skyline" class="img-tall" />
           <img src="img/slides/egypt.jpg" alt="Sphinx and Pyramids" class="img-wide" />
-          <img src="img/slides/1.jpg" alt="Travel Destinations" class="img-float" />
+          <img src="img/slides/thai1.jpg" alt="Travel Destinations" class="img-float" />
         </div>
 
         <!-- Content -->
@@ -672,13 +666,18 @@
           <div class="about-tag">Get About Us</div>
           <h2 class="about-heading">Expert Travel Solutions For Every Global Journey</h2>
           <p class="about-desc">
-            At GTS Travel Solutions, our mission is to simplify international travel for every Indian. We offer transparent, fast, and affordable visa and travel assistance services. Whether you're flying for leisure, business, or family, we're here to make your journey smooth and worry-free.
+            At GTS Travel Solutions, our mission is to simplify international travel for every Indian. We offer
+            transparent, fast, and affordable visa and travel assistance services. Whether you're flying for leisure,
+            business, or family, we're here to make your journey smooth and worry-free.
           </p>
-          
+
           <div class="about-features-list">
             <div class="about-feature-item">
               <div class="about-feat-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
               </div>
               <div class="about-feat-text">
                 <div class="about-feat-title">Reliable Visa<br>Assistance</div>
@@ -686,10 +685,13 @@
                 <div class="about-feat-desc">We simplify tourist & business visa processes.</div>
               </div>
             </div>
-            
+
             <div class="about-feature-item">
               <div class="about-feat-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
               </div>
               <div class="about-feat-text">
                 <div class="about-feat-title">Fast &amp; Easy<br>Booking</div>
@@ -697,19 +699,23 @@
                 <div class="about-feat-desc">We make flights and hotel bookings fast and affordable.</div>
               </div>
             </div>
-            
+
             <div class="about-feature-item">
               <div class="about-feat-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
               </div>
               <div class="about-feat-text">
                 <div class="about-feat-title">Shield Your<br>Journey</div>
                 <div class="about-feat-divider"></div>
-                <div class="about-feat-desc">We give smart insurance that keeps you safe and worry-free everywhere.</div>
+                <div class="about-feat-desc">We give smart insurance that keeps you safe and worry-free everywhere.
+                </div>
               </div>
             </div>
           </div>
-          
+
           <a href="#" class="btn-discover">Discover More <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
@@ -720,12 +726,13 @@
     <!-- ===== NEW VISA SECTION (Hassle-Free Visas) ===== -->
     <section id="hassle-free" class="hassle-free-section section-pad">
       <div class="hassle-container">
-        
+
         <!-- Left Content -->
         <div class="hassle-content">
           <h2>Hassle-Free Visas, Worldwide</h2>
-          <p class="hassle-subtitle">We seamlessly handle all the intricate paperwork and embassy requirements so you don't have to. Real human support, clear guidance, and unmatched global coverage.</p>
-          
+          <p class="hassle-subtitle">We seamlessly handle all the intricate paperwork and embassy requirements so you
+            don't have to. Real human support, clear guidance, and unmatched global coverage.</p>
+
           <div class="hassle-timeline">
             <!-- Item 1 -->
             <div class="timeline-item">
@@ -735,10 +742,11 @@
               </div>
               <div class="timeline-text">
                 <h3>Registered &amp; Trusted Visa Services</h3>
-                <p>Legally established in 2022, we're a registered and reliable visa service provider with a clear commitment to security and professionalism.</p>
+                <p>Legally established in 2022, we're a registered and reliable visa service provider with a clear
+                  commitment to security and professionalism.</p>
               </div>
             </div>
-            
+
             <!-- Item 2 -->
             <div class="timeline-item">
               <div class="timeline-number-wrapper">
@@ -747,10 +755,11 @@
               </div>
               <div class="timeline-text">
                 <h3>Global Visa Coverage</h3>
-                <p>From the UAE and Thailand to South Africa, Kenya, and beyond. Our team specializes in handling diverse visa requirements with ease and efficiency.</p>
+                <p>From the UAE and Thailand to South Africa, Kenya, and beyond. Our team specializes in handling
+                  diverse visa requirements with ease and efficiency.</p>
               </div>
             </div>
-            
+
             <!-- Item 3 -->
             <div class="timeline-item">
               <div class="timeline-number-wrapper">
@@ -758,7 +767,8 @@
               </div>
               <div class="timeline-text" style="padding-bottom:0;">
                 <h3>Fast &amp; Personalized Service</h3>
-                <p>We value your time. Our quick processing, real human support, and customer-first approach ensure a smooth, stress-free experience from start to finish.</p>
+                <p>We value your time. Our quick processing, real human support, and customer-first approach ensure a
+                  smooth, stress-free experience from start to finish.</p>
               </div>
             </div>
           </div>
@@ -829,15 +839,19 @@
     </section>
 
     <!-- ===== SECTION 4: ROLES (CTA BLOCKS) ===== -->
-    <section id="roles" class="cta-blocks-section section-pad" style="background: var(--gradient-sky); position: relative; overflow: hidden;">
-      
+    <section id="roles" class="cta-blocks-section section-pad"
+      style="background: var(--gradient-sky); position: relative; overflow: hidden;">
+
       <!-- Subtle Ambient Flight Animation -->
       <div class="ambient-flight flight-path-2" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" />
+        </svg>
       </div>
 
       <div class="cta-block-container">
-        
+
         <!-- Block 1 -->
         <div class="cta-row">
           <div class="cta-ill" aria-hidden="true">
@@ -850,31 +864,40 @@
               <circle cx="200" cy="140" r="8" fill="none" stroke="var(--clr-primary)" stroke-width="2" />
 
               <!-- Suitcase / Travel Bag base -->
-              <rect x="150" y="80" width="100" height="70" rx="8" fill="none" stroke="var(--clr-primary)" stroke-width="3" />
+              <rect x="150" y="80" width="100" height="70" rx="8" fill="none" stroke="var(--clr-primary)"
+                stroke-width="3" />
               <!-- Handle -->
-              <path d="M175 80 V60 Q175 50 185 50 H215 Q225 50 225 60 V80" fill="none" stroke="var(--clr-primary)" stroke-width="3" stroke-linecap="round" />
+              <path d="M175 80 V60 Q175 50 185 50 H215 Q225 50 225 60 V80" fill="none" stroke="var(--clr-primary)"
+                stroke-width="3" stroke-linecap="round" />
               <!-- Straps -->
               <line x1="175" y1="80" x2="175" y2="150" stroke="var(--clr-primary)" stroke-width="3" />
               <line x1="225" y1="80" x2="225" y2="150" stroke="var(--clr-primary)" stroke-width="3" />
               <!-- Tags / details -->
-              <rect x="185" y="100" width="30" height="20" rx="4" fill="none" stroke="var(--clr-primary)" stroke-width="2.5" />
+              <rect x="185" y="100" width="30" height="20" rx="4" fill="none" stroke="var(--clr-primary)"
+                stroke-width="2.5" />
               <circle cx="200" cy="110" r="3" fill="var(--clr-accent)" />
-              
+
               <!-- Flight Path / Plane -->
-              <path d="M40 100 Q 90 130 130 90" stroke="var(--clr-primary)" stroke-width="2" stroke-dasharray="4" fill="none" />
+              <path d="M40 100 Q 90 130 130 90" stroke="var(--clr-primary)" stroke-width="2" stroke-dasharray="4"
+                fill="none" />
               <polygon points="125 95, 137 90, 125 85, 128 90" fill="var(--clr-primary)" />
 
               <!-- Ground line -->
-              <line x1="50" y1="160" x2="350" y2="160" stroke="var(--clr-primary)" stroke-width="4" stroke-linecap="round" />
+              <line x1="50" y1="160" x2="350" y2="160" stroke="var(--clr-primary)" stroke-width="4"
+                stroke-linecap="round" />
               <!-- Speed lines -->
-              <line x1="60" y1="140" x2="90" y2="140" stroke="var(--clr-primary)" stroke-width="2" stroke-linecap="round" />
-              <line x1="310" y1="90" x2="340" y2="90" stroke="var(--clr-primary)" stroke-width="1.5" stroke-linecap="round" />
+              <line x1="60" y1="140" x2="90" y2="140" stroke="var(--clr-primary)" stroke-width="2"
+                stroke-linecap="round" />
+              <line x1="310" y1="90" x2="340" y2="90" stroke="var(--clr-primary)" stroke-width="1.5"
+                stroke-linecap="round" />
             </svg>
           </div>
           <div class="cta-content">
             <h3>As an individual</h3>
-            <p>Start planning your vacation or immigration process seamlessly. All you need is your destination and we handle the paperwork and logistics.</p>
-            <button class="cta-btn-outline" onclick="openModal('visa-modal')" aria-haspopup="dialog">Start your journey</button>
+            <p>Start planning your vacation or immigration process seamlessly. All you need is your destination and we
+              handle the paperwork and logistics.</p>
+            <button class="cta-btn-outline" onclick="openModal('visa-modal')" aria-haspopup="dialog">Start your
+              journey</button>
           </div>
         </div>
 
@@ -892,33 +915,38 @@
 
               <!-- Office Building / Storefront -->
               <rect x="140" y="80" width="120" height="80" fill="none" stroke="var(--clr-primary)" stroke-width="3" />
-              
+
               <!-- Awning / Sign Main Box -->
-              <rect x="130" y="50" width="140" height="25" rx="12.5" fill="none" stroke="var(--clr-accent)" stroke-width="3" />
-              <text x="200" y="66" font-family="sans-serif" font-weight="800" font-size="11" fill="var(--clr-primary)" text-anchor="middle" letter-spacing="2">CORPORATE</text>
-              
+              <rect x="130" y="50" width="140" height="25" rx="12.5" fill="none" stroke="var(--clr-accent)"
+                stroke-width="3" />
+              <text x="200" y="66" font-family="sans-serif" font-weight="800" font-size="11" fill="var(--clr-primary)"
+                text-anchor="middle" letter-spacing="2">CORPORATE</text>
+
               <!-- Divider line beneath sign -->
               <line x1="140" y1="120" x2="260" y2="120" stroke="var(--clr-primary)" stroke-width="3" />
 
               <!-- Door -->
               <rect x="220" y="120" width="20" height="40" fill="none" stroke="var(--clr-primary)" stroke-width="3" />
-              
+
               <!-- Desk/Counter inside window -->
               <rect x="150" y="130" width="60" height="30" fill="none" stroke="var(--clr-primary)" stroke-width="3" />
               <line x1="160" y1="130" x2="160" y2="160" stroke="var(--clr-primary)" stroke-width="2" />
               <line x1="200" y1="130" x2="200" y2="160" stroke="var(--clr-primary)" stroke-width="2" />
-              
+
               <!-- Small plant or detail in window -->
               <circle cx="180" cy="110" r="4" fill="var(--clr-accent)" />
 
               <!-- Ground line -->
-              <line x1="50" y1="160" x2="350" y2="160" stroke="var(--clr-primary)" stroke-width="4" stroke-linecap="round" />
+              <line x1="50" y1="160" x2="350" y2="160" stroke="var(--clr-primary)" stroke-width="4"
+                stroke-linecap="round" />
             </svg>
           </div>
           <div class="cta-content">
             <h3>As a partner</h3>
-            <p>GTS helps businesses navigate international corporate travel, work permits, and employee relocation. Grow globally with confidence.</p>
-            <button class="cta-btn-outline" onclick="openModal('consultation-modal')" aria-haspopup="dialog">Partner with us</button>
+            <p>GTS helps businesses navigate international corporate travel, work permits, and employee relocation. Grow
+              globally with confidence.</p>
+            <button class="cta-btn-outline" onclick="openModal('consultation-modal')" aria-haspopup="dialog">Partner
+              with us</button>
           </div>
         </div>
       </div>
@@ -1031,25 +1059,36 @@
       <div class="contact-modern-container">
         <!-- Main Top Area -->
         <div class="contact-modern-grid">
-          
+
           <!-- Left Content -->
           <div class="contact-modern-left">
             <div class="contact-modern-pattern" aria-hidden="true" style="color: #ea580c; opacity: 0.6;">
               <svg width="180" height="15" viewBox="0 0 180 15" fill="currentColor">
-                <path d="M5 7.5L0 2.5h10L5 7.5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5z" fill="currentColor" opacity="0.8"/>
+                <path
+                  d="M5 7.5L0 2.5h10L5 7.5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5zm20 0l-5-5h10l-5 5z"
+                  fill="currentColor" opacity="0.8" />
               </svg>
             </div>
-            
-            <p class="section-label" style="align-self: flex-start; margin-bottom: 0.5rem; background: var(--gradient-sky); color: var(--clr-primary-dark);">Trips designed by real travel experts</p>
+
+            <p class="section-label"
+              style="align-self: flex-start; margin-bottom: 0.5rem; background: var(--gradient-sky); color: var(--clr-primary-dark);">
+              Trips designed by real travel experts</p>
             <h2 id="contact-heading" class="contact-modern-title">Go Where the Journey Feels Effortless</h2>
             <p class="contact-modern-desc">
-              From flights to experiences, every detail is handled with care—giving you more time to explore, relax, and create unforgettable memories.
+              From flights to experiences, every detail is handled with care—giving you more time to explore, relax, and
+              create unforgettable memories.
             </p>
-            
+
             <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
-              <a href="#services" class="btn-modern-dark" style="background: var(--gradient-primary); margin-top: 0; box-shadow: 0 4px 15px rgba(31, 120, 229, 0.2);">Explore Destinations</a>
-              <span style="font-size: 0.95rem; font-weight: 500; color: #555; display: flex; align-items: center; gap: 0.5rem;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <a href="#services" class="btn-modern-dark"
+                style="background: var(--gradient-primary); margin-top: 0; box-shadow: 0 4px 15px rgba(31, 120, 229, 0.2);">Explore
+                Destinations</a>
+              <span
+                style="font-size: 0.95rem; font-weight: 500; color: #555; display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
                 Hassle-free planning. Transparent pricing.
               </span>
             </div>
@@ -1057,34 +1096,40 @@
 
           <!-- Right Form -->
           <div class="contact-modern-right">
-            <form id="contact-form" class="contact-modern-form travel-form-elevated" novalidate aria-label="Travel enquiry form">
-              
+            <form id="contact-form" class="contact-modern-form travel-form-elevated" novalidate
+              aria-label="Travel enquiry form">
+
               <div class="form-modern-row">
                 <div class="form-modern-group">
                   <label for="form-fname" class="form-modern-label">First Name</label>
-                  <input type="text" id="form-fname" name="name" class="form-modern-input" placeholder="Enter first name" required />
+                  <input type="text" id="form-fname" name="name" class="form-modern-input"
+                    placeholder="Enter first name" required />
                 </div>
                 <div class="form-modern-group">
                   <label for="form-lname" class="form-modern-label">Last Name</label>
-                  <input type="text" id="form-lname" name="lname" class="form-modern-input" placeholder="Enter last name" required />
+                  <input type="text" id="form-lname" name="lname" class="form-modern-input"
+                    placeholder="Enter last name" required />
                 </div>
               </div>
 
               <div class="form-modern-row">
                 <div class="form-modern-group">
                   <label for="form-email" class="form-modern-label">Email</label>
-                  <input type="email" id="form-email" name="email" class="form-modern-input" placeholder="name@example.com" required />
+                  <input type="email" id="form-email" name="email" class="form-modern-input"
+                    placeholder="name@example.com" required />
                 </div>
                 <div class="form-modern-group">
                   <label for="form-phone" class="form-modern-label">Phone Number</label>
-                  <input type="tel" id="form-phone" name="phone" class="form-modern-input" placeholder="+91 00000 00000" required />
+                  <input type="tel" id="form-phone" name="phone" class="form-modern-input" placeholder="+91 00000 00000"
+                    required />
                 </div>
               </div>
 
               <div class="form-modern-group">
                 <label for="form-country" class="form-modern-label">Country/Destination</label>
                 <div class="custom-select-wrapper" style="width: 100%;">
-                  <input type="text" id="contact-country-input" class="form-modern-input" placeholder="Select destination country" autocomplete="off" required />
+                  <input type="text" id="contact-country-input" class="form-modern-input"
+                    placeholder="Select destination country" autocomplete="off" required />
                   <input type="hidden" name="destination" id="contact-country-hidden" />
                   <div id="contact-country-results" class="search-results-dropdown hidden"></div>
                 </div>
@@ -1106,15 +1151,18 @@
 
               <div class="form-modern-group">
                 <label for="form-message" class="form-modern-label">Travel Details</label>
-                <textarea id="form-message" name="message" class="form-modern-input textarea" placeholder="Tell us your destination, travel dates, budget, and any special preferences..." rows="3"></textarea>
+                <textarea id="form-message" name="message" class="form-modern-input textarea"
+                  placeholder="Tell us your destination, travel dates, budget, and any special preferences..."
+                  rows="3"></textarea>
               </div>
 
               <div class="form-modern-submit-wrapper">
-                <button type="submit" id="form-submit" class="btn-modern-orange travel-btn-accent">Plan Your Trip</button>
+                <button type="submit" id="form-submit" class="btn-modern-orange travel-btn-accent">Plan Your
+                  Trip</button>
               </div>
             </form>
           </div>
-          
+
         </div>
 
         <!-- Middle Band: Testimonials -->
@@ -1123,23 +1171,29 @@
             <div class="cmod-test-avatar-wrapper">
               <img src="https://i.pravatar.cc/100?img=33" alt="Client Avatar" class="cmod-test-avatar" />
               <div class="cmod-test-badge badge-blue">
-                <svg viewBox="0 0 24 24" fill="white" width="10" height="10"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24" fill="white" width="10" height="10">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                </svg>
               </div>
             </div>
             <p class="cmod-test-text">
-              "The team at Globus completely transformed our vacation. Every transfer and tour was flawlessly arranged. We didn't have to lift a finger—just showed up and made memories."
+              "The team at Globus completely transformed our vacation. Every transfer and tour was flawlessly arranged.
+              We didn't have to lift a finger—just showed up and made memories."
             </p>
           </div>
-          
+
           <div class="cmod-testimonial">
             <div class="cmod-test-avatar-wrapper">
               <img src="https://i.pravatar.cc/100?img=44" alt="Client Avatar" class="cmod-test-avatar" />
               <div class="cmod-test-badge badge-purple">
-                <svg viewBox="0 0 24 24" fill="white" width="10" height="10"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg viewBox="0 0 24 24" fill="white" width="10" height="10">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                </svg>
               </div>
             </div>
             <p class="cmod-test-text">
-              "They handled our complex multi-city European trip with incredible precision. Knowing their experts were available around the clock gave us total peace of mind."
+              "They handled our complex multi-city European trip with incredible precision. Knowing their experts were
+              available around the clock gave us total peace of mind."
             </p>
           </div>
         </div>
@@ -1149,34 +1203,53 @@
           <div class="cmod-feature">
             <div class="cmod-feat-icon">
               <!-- Expert Guidance Icon -->
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
             </div>
             <h4>Expert Guidance</h4>
             <p>Destinations matched perfectly to your pace and style.</p>
           </div>
-          
+
           <div class="cmod-feature">
             <div class="cmod-feat-icon">
               <!-- Global Network Icon -->
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
             </div>
             <h4>Global Network</h4>
             <p>Exclusive access to premium hotels and local guides.</p>
           </div>
-          
+
           <div class="cmod-feature">
             <div class="cmod-feat-icon">
               <!-- Custom Itineraries Icon -->
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+                <polyline points="10 9 9 9 8 9" />
+              </svg>
             </div>
             <h4>Custom Itineraries</h4>
             <p>Every trip hand-crafted to your exact preferences.</p>
           </div>
-          
+
           <div class="cmod-feature">
             <div class="cmod-feat-icon">
               <!-- 24/7 Support Icon -->
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
             </div>
             <h4>24/7 Support</h4>
             <p>Real human assistance before, during, and after travel.</p>
@@ -1394,7 +1467,7 @@
   <div id="leadPopup" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="modal-box premium-modal-box">
       <button class="modal-close" id="closePopup" aria-label="Close modal">&times;</button>
-      
+
       <div class="modal-header-centered">
         <div class="modal-icon-pill">🛂</div>
         <h2 class="modal-title">Finalize Your Journey</h2>
@@ -1417,21 +1490,25 @@
           </div>
           <div class="form-modern-group">
             <label class="form-modern-label">Destination</label>
-            <input type="text" id="popupCity" name="destination" class="form-modern-input" placeholder="Destination" readonly />
+            <input type="text" id="popupCity" name="destination" class="form-modern-input" placeholder="Destination"
+              readonly />
           </div>
           <div class="form-modern-group">
             <label class="form-modern-label">Service Type</label>
-            <input type="text" id="popupType" name="service" class="form-modern-input" placeholder="Service Type" readonly />
+            <input type="text" id="popupType" name="service" class="form-modern-input" placeholder="Service Type"
+              readonly />
           </div>
           <div class="form-modern-group">
             <label class="form-modern-label">Travelers</label>
-            <input type="text" id="popupPeople" name="travelers" class="form-modern-input" placeholder="Travelers" readonly />
+            <input type="text" id="popupPeople" name="travelers" class="form-modern-input" placeholder="Travelers"
+              readonly />
           </div>
         </div>
-        
+
         <div class="form-modern-group">
           <label class="form-modern-label">Your Message (Optional)</label>
-          <textarea id="popupMessage" name="message" class="form-modern-input textarea" placeholder="Your Message" rows="2"></textarea>
+          <textarea id="popupMessage" name="message" class="form-modern-input textarea" placeholder="Your Message"
+            rows="2"></textarea>
         </div>
 
         <div class="modal-footer-btn">
@@ -1458,14 +1535,14 @@
   </button>
 
   <script src="js/main.js"></script>
-  
+
   <!-- Custom Autocomplete Logic -->
   <script>
     (function initAutocomplete() {
       const input = document.getElementById('contact-country-input');
       const hiddenInput = document.getElementById('contact-country-hidden');
       const resultsDiv = document.getElementById('contact-country-results');
-      
+
       if (!input || !resultsDiv) return;
 
       let highlightedIndex = -1;
@@ -1492,35 +1569,35 @@
         highlightedIndex = -1;
       }
 
-      input.addEventListener('input', function() {
+      input.addEventListener('input', function () {
         const val = this.value.trim().toLowerCase();
         if (val.length < 1) {
           resultsDiv.classList.add('hidden');
           return;
         }
 
-        const filtered = window.GTS_COUNTRIES.filter(c => 
-          c.name.toLowerCase().includes(val) || 
+        const filtered = window.GTS_COUNTRIES.filter(c =>
+          c.name.toLowerCase().includes(val) ||
           c.region.toLowerCase().includes(val)
         );
         renderResults(filtered);
       });
 
-      input.addEventListener('focus', function() {
+      input.addEventListener('focus', function () {
         if (this.value.trim().length > 0) {
           const val = this.value.trim().toLowerCase();
-          const filtered = window.GTS_COUNTRIES.filter(c => 
-            c.name.toLowerCase().includes(val) || 
+          const filtered = window.GTS_COUNTRIES.filter(c =>
+            c.name.toLowerCase().includes(val) ||
             c.region.toLowerCase().includes(val)
           );
           renderResults(filtered);
         }
       });
 
-      resultsDiv.addEventListener('click', function(e) {
+      resultsDiv.addEventListener('click', function (e) {
         const item = e.target.closest('.search-result-item');
         if (!item || !item.dataset.index) return;
-        
+
         const country = currentResults[parseInt(item.dataset.index)];
         selectCountry(country);
       });
@@ -1532,14 +1609,14 @@
       }
 
       // Close on click outside
-      document.addEventListener('click', function(e) {
+      document.addEventListener('click', function (e) {
         if (!input.contains(e.target) && !resultsDiv.contains(e.target)) {
           resultsDiv.classList.add('hidden');
         }
       });
 
       // Keyboard navigation
-      input.addEventListener('keydown', function(e) {
+      input.addEventListener('keydown', function (e) {
         const items = resultsDiv.querySelectorAll('.search-result-item');
         if (resultsDiv.classList.contains('hidden')) return;
 
@@ -1568,7 +1645,7 @@
             const containerHeight = resultsDiv.clientHeight;
             const itemTop = item.offsetTop;
             const itemHeight = item.clientHeight;
-            
+
             if (itemTop < resultsDiv.scrollTop) {
               resultsDiv.scrollTop = itemTop;
             } else if (itemTop + itemHeight > resultsDiv.scrollTop + containerHeight) {
@@ -1580,9 +1657,11 @@
     })();
   </script>
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/919004462226" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <a href="https://wa.me/919004462226" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+    aria-label="Chat with us on WhatsApp">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.393 0 12.03a11.848 11.848 0 001.592 5.92L0 24l6.117-1.605a11.794 11.794 0 005.926 1.583h.005c6.632 0 12.028-5.391 12.03-12.029a11.85 11.85 0 00-3.527-8.483"/>
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.393 0 12.03a11.848 11.848 0 001.592 5.92L0 24l6.117-1.605a11.794 11.794 0 005.926 1.583h.005c6.632 0 12.028-5.391 12.03-12.029a11.85 11.85 0 00-3.527-8.483" />
     </svg>
   </a>
 
