@@ -1076,19 +1076,24 @@
                   <input type="email" id="form-email" name="email" class="form-modern-input" placeholder="name@example.com" required />
                 </div>
                 <div class="form-modern-group">
-                  <label for="form-country" class="form-modern-label">Country</label>
-                  <div class="custom-select-wrapper" style="width: 100%;">
-                    <input type="text" id="contact-country-input" class="form-modern-input" placeholder="Select destination country" autocomplete="off" required />
-                    <input type="hidden" name="country" id="contact-country-hidden" />
-                    <div id="contact-country-results" class="search-results-dropdown hidden"></div>
-                  </div>
+                  <label for="form-phone" class="form-modern-label">Phone Number</label>
+                  <input type="tel" id="form-phone" name="phone" class="form-modern-input" placeholder="+91 00000 00000" required />
                 </div>
               </div>
 
               <div class="form-modern-group">
-                <label for="form-role" class="form-modern-label">Travel Type</label>
+                <label for="form-country" class="form-modern-label">Country/Destination</label>
+                <div class="custom-select-wrapper" style="width: 100%;">
+                  <input type="text" id="contact-country-input" class="form-modern-input" placeholder="Select destination country" autocomplete="off" required />
+                  <input type="hidden" name="destination" id="contact-country-hidden" />
+                  <div id="contact-country-results" class="search-results-dropdown hidden"></div>
+                </div>
+              </div>
+
+              <div class="form-modern-group">
+                <label for="form-role" class="form-modern-label">Service Type</label>
                 <div class="form-modern-select-wrapper">
-                  <select id="form-role" name="role" class="form-modern-input select-icon">
+                  <select id="form-role" name="service" class="form-modern-input select-icon">
                     <option value="" disabled selected>Select Travel Type</option>
                     <option value="leisure">Leisure Travel</option>
                     <option value="honeymoon">Honeymoon</option>
