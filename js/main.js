@@ -6,16 +6,6 @@
 
 'use strict';
 
-<<<<<<< HEAD
-/* Force Light Mode Cleanup */
-localStorage.removeItem('gts-theme');
-document.documentElement.classList.remove('dark');
-document.documentElement.setAttribute('data-theme', 'light');
-
-=======
-/* ==========================================================================
-   1. DARK MODE TOGGLE
-   ========================================================================== */
 /* ==========================================================================
    1. THEME ENFORCEMENT (Force Light Mode)
    ========================================================================== */
@@ -24,7 +14,6 @@ document.documentElement.setAttribute('data-theme', 'light');
   document.documentElement.classList.remove('dark');
   localStorage.setItem('gts-theme', 'light');
 })();
->>>>>>> 13ad526 (Live 2nd draft)
 
 /* ==========================================================================
    2. MOBILE MENU TOGGLE
@@ -329,7 +318,7 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
    12. PRODUCTION FORM HANDLER - GTS
    ========================================================================== */
 (function initFormHandlers() {
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzVHRdPXTprBSshtLj5AZwf5mMWd7No_1zGb0GbzkdNeUoSvFtKcLVO64SZ-AK8O2tI/exec';
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzLWeBKg4sTjgtUQZox1_lrBqF4uZVEmqPRhHP7fGZScjZ8_Uz1kcalxqC0No-ya9r_nQ/exec';
   const forms = [
     { id: 'contact-form', type: 'contact' },
     { id: 'popupForm', type: 'popup' }
