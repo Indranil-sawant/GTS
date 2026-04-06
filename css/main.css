@@ -1,7 +1,7 @@
 /* ==========================================================================
-   GTS – Global Travel & Visa Consultancy
+   Globus Travel Services – Global Travel & Visa Consultancy
    Main Stylesheet
-   Author: GTS Team
+   Author: Globus Team
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -93,8 +93,6 @@ html, body {
   display: none;
 }
 
-<<<<<<< HEAD
-=======
 /* Force Light Mode Color Scheme */
 html {
   color-scheme: light !important;
@@ -106,7 +104,6 @@ html {
     color: var(--clr-text) !important;
   }
 }
->>>>>>> 13ad526 (Live 2nd draft)
 
 
 /* --------------------------------------------------------------------------
@@ -375,9 +372,128 @@ button {
   text-decoration: none;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover, .nav-item.dropdown:hover > .nav-link, .nav-link.active {
   color: var(--clr-primary);
   background: var(--clr-primary-light);
+}
+
+/* Dropdown Menu Styles */
+.nav-item.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.dropdown-caret {
+  transition: transform var(--transition-fast);
+}
+
+.nav-item.dropdown:hover .dropdown-caret {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: #fff;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all var(--transition-base);
+  z-index: 100;
+  margin-top: 10px;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--clr-text-muted);
+  text-align: left;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: var(--clr-primary-light);
+  color: var(--clr-primary);
+  padding-left: 1.25rem;
+}
+
+/* Mobile Dropdown */
+.mobile-dropdown-menu {
+  display: none;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.mobile-dropdown.open .mobile-dropdown-menu {
+  display: flex;
+}
+
+.mobile-dropdown.open .dropdown-caret {
+  transform: rotate(180deg);
+}
+
+.mobile-dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--clr-text-muted);
+  text-align: left;
+  border-radius: var(--radius-md);
+  background: transparent;
+  border: none;
+}
+
+.mobile-dropdown-item:active {
+  background: var(--clr-primary-light);
+  color: var(--clr-primary);
+}
+
+.nav-link.nav-highlight {
+  color: var(--clr-primary);
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-link.nav-highlight::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--clr-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--clr-accent);
 }
 
 .nav-link.nav-cta {
@@ -1718,15 +1834,76 @@ button {
   gap: var(--space-sm);
 }
 
-.footer-links a {
+.footer-links a, .footer-btn {
   font-size: 0.88rem;
   color: hsl(220, 15%, 60%);
   transition: color var(--transition-fast);
   text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  cursor: pointer;
+  text-align: left;
 }
 
-.footer-links a:hover { color: var(--clr-accent); }
+.footer-links a:hover, .footer-btn:hover { color: var(--clr-accent); }
 
+/* Footer Destination Mini-Cards */
+.footer-dest-group {
+  flex: 2; /* Make it wider */
+}
+.footer-dest-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.footer-mini-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  text-decoration: none;
+}
+.footer-mini-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+.fmc-flag {
+  width: 32px;
+  height: 22px;
+  border-radius: 3px;
+  object-fit: cover;
+}
+.fmc-info {
+  display: flex;
+  flex-direction: column;
+}
+.fmc-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+}
+.fmc-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: hsl(200, 100%, 75%);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 480px) {
+  .footer-dest-grid { grid-template-columns: 1fr; }
+}
+
+/* --------------------------------------------------------------------------
+   Footer Bottom
+   -------------------------------------------------------------------------- */
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.07);
   padding-block: var(--space-xl);

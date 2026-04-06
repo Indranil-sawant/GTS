@@ -1,5 +1,5 @@
 /**
- * GTS – Global Travel & Visa Consultancy
+ * Globus Travel Services – Global Travel & Visa Consultancy
  * Main JavaScript
  * Vanilla JS only — no dependencies
  */
@@ -12,11 +12,11 @@
 (function enforceLightTheme() {
   document.documentElement.setAttribute('data-theme', 'light');
   document.documentElement.classList.remove('dark');
-  localStorage.setItem('gts-theme', 'light');
+  localStorage.setItem('globus-theme', 'light');
 })();
 
 /* ==========================================================================
-   2. MOBILE MENU TOGGLE
+   2. MOBILE MENU & DROPDOWN TOGGLE
    ========================================================================== */
 const hamburgerBtn = document.getElementById('mobile-menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
@@ -43,6 +43,34 @@ if (hamburgerBtn) {
     if (isOpen) { closeMobileMenu(); } else { openMobileMenu(); }
   });
 }
+
+// Mobile Dropdown Toggle
+const mobileDroptoggle = document.querySelector('.mobile-dropdown-toggle');
+if (mobileDroptoggle) {
+  mobileDroptoggle.addEventListener('click', () => {
+    const parent = mobileDroptoggle.closest('.mobile-dropdown');
+    const expanded = mobileDroptoggle.getAttribute('aria-expanded') === 'true';
+    mobileDroptoggle.setAttribute('aria-expanded', !expanded);
+    parent.classList.toggle('open');
+  });
+}
+
+// Dropdown item click handlers (Desktop & Mobile)
+document.querySelectorAll('.dropdown-item, .mobile-dropdown-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const serviceName = item.getAttribute('data-service');
+    const popupType = document.getElementById('popupType');
+    const popupCity = document.getElementById('popupCity');
+    const popupPeople = document.getElementById('popupPeople');
+    
+    if (popupType) popupType.value = serviceName;
+    if (popupCity) popupCity.value = 'TBD';
+    if (popupPeople) popupPeople.value = 'N/A';
+    
+    closeMobileMenu();
+    openModal('leadPopup');
+  });
+});
 
 document.addEventListener('click', (e) => {
   if (mobileMenu && !mobileMenu.contains(e.target) && hamburgerBtn && !hamburgerBtn.contains(e.target)) {

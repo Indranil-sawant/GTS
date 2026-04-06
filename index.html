@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="GTS – Expert Visa & Travel Guidance You Can Trust. Certified immigration consultancy offering transparent, ethical visa processing for Canada, Australia, UK, Schengen, UAE and more." />
-  <meta name="author" content="GTS Travel Consultancy" />
-  <title>GTS – Expert Visa &amp; Travel Guidance You Can Trust</title>
+    content="Globus Travel Services – Expert Visa & Travel Guidance You Can Trust. Certified immigration consultancy offering transparent, ethical visa processing for Canada, Australia, UK, Schengen, UAE and more." />
+  <meta name="author" content="Globus Travel Services" />
+  <title>Globus Travel Services – Expert Visa &amp; Travel Guidance You Can Trust</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,15 +37,31 @@
       <div class="nav-container">
 
         <!-- Logo -->
-        <a href="index.html" class="nav-logo" aria-label="GTS Home">
-          <img src="img/gts_main.png" alt="GTS - Globus Travel Services" class="logo-img" />
+        <a href="index.html" class="nav-logo" aria-label="Globus Travel Services Home">
+          <img src="img/gts_main.png" alt="Globus Travel Services" class="logo-img" />
         </a>
 
         <!-- Desktop Nav Links -->
         <ul class="nav-links" role="list">
           <li><a href="#hero" class="nav-link active" aria-current="page">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#services" class="nav-link">Services</a></li>
+          <li class="nav-item dropdown">
+            <button class="nav-link dropdown-toggle nav-highlight" aria-expanded="false" aria-haspopup="true">
+              Services <svg class="dropdown-caret" width="10" height="6" viewBox="0 0 10 6" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li><button class="dropdown-item" data-service="Tourist Visa">Tourist Visa</button></li>
+              <li><button class="dropdown-item" data-service="PR Consultation">PR Consultation</button></li>
+              <li><button class="dropdown-item" data-service="Study Visa">Study Visa</button></li>
+              <li><button class="dropdown-item" data-service="Work Permit">Work Permit</button></li>
+              <li><button class="dropdown-item" data-service="Flight Booking">Flight Booking</button></li>
+              <li><button class="dropdown-item" data-service="Travel Insurance">Travel Insurance</button></li>
+            </ul>
+          </li>
           <li><a href="#process" class="nav-link">Process</a></li>
           <li><a href="#promise" class="nav-link">Our Promise</a></li>
           <li><a href="#faq" class="nav-link">FAQs</a></li>
@@ -68,7 +84,23 @@
         <ul class="mobile-nav-links" role="list">
           <li><a href="#hero" class="nav-link" onclick="closeMobileMenu()">Home</a></li>
           <li><a href="#about" class="nav-link" onclick="closeMobileMenu()">About</a></li>
-          <li><a href="#services" class="nav-link" onclick="closeMobileMenu()">Services</a></li>
+          <li class="mobile-dropdown">
+            <button class="nav-link mobile-dropdown-toggle nav-highlight" aria-expanded="false">
+              Services <svg class="dropdown-caret" width="10" height="6" viewBox="0 0 10 6" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <ul class="mobile-dropdown-menu">
+              <li><button class="mobile-dropdown-item" data-service="Tourist Visa">Tourist Visa</button></li>
+              <li><button class="mobile-dropdown-item" data-service="PR Consultation">PR Consultation</button></li>
+              <li><button class="mobile-dropdown-item" data-service="Study Visa">Study Visa</button></li>
+              <li><button class="mobile-dropdown-item" data-service="Work Permit">Work Permit</button></li>
+              <li><button class="mobile-dropdown-item" data-service="Flight Booking">Flight Booking</button></li>
+              <li><button class="mobile-dropdown-item" data-service="Travel Insurance">Travel Insurance</button></li>
+            </ul>
+          </li>
           <li><a href="#process" class="nav-link" onclick="closeMobileMenu()">Process</a></li>
           <li><a href="#promise" class="nav-link" onclick="closeMobileMenu()">Our Promise</a></li>
           <li><a href="#faq" class="nav-link" onclick="closeMobileMenu()">FAQs</a></li>
@@ -98,10 +130,9 @@
         <!-- Floating Destination Cards -->
         <div class="floating-cards">
           <div class="float-card card-left">
-            <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&q=80&w=200"
-              alt="New York" />
+            <img src="img/slides/muscat.jpg" alt="Muscat, Oman" />
             <div class="card-info">
-              <h4>New York, USA</h4>
+              <h4>Muscat, Oman</h4>
               <p>⭐⭐⭐⭐⭐</p>
             </div>
           </div>
@@ -292,7 +323,7 @@
         <div class="feature-left">
           <h2 id="why-wander-heading" class="feature-heading">
             Why Thousands of Travelers Choose <br>
-            <span class="light">GTS for Their Global Adventures</span>
+            <span class="light">Globus Travel Services for Their Global Adventures</span>
           </h2>
           <p class="feature-desc">
             From pristine beaches to cultural hotspots, we make exploring the world easier, safer, and more exciting
@@ -575,7 +606,7 @@
     <section id="why-us" class="why-us-section section-pad" aria-labelledby="why-heading">
       <div class="container">
         <div class="section-header">
-          <p class="section-label">Why GTS?</p>
+          <p class="section-label">Why Globus?</p>
           <h2 id="why-heading" class="section-title">Why Choose Us?</h2>
           <p class="section-subtitle">We put your interests first — always.</p>
         </div>
@@ -666,7 +697,7 @@
           <div class="about-tag">Get About Us</div>
           <h2 class="about-heading">Expert Travel Solutions For Every Global Journey</h2>
           <p class="about-desc">
-            At GTS Travel Solutions, our mission is to simplify international travel for every Indian. We offer
+            At Globus Travel Services, our mission is to simplify international travel for every Indian. We offer
             transparent, fast, and affordable visa and travel assistance services. Whether you're flying for leisure,
             business, or family, we're here to make your journey smooth and worry-free.
           </p>
@@ -776,7 +807,7 @@
 
         <!-- Right Visual -->
         <div class="hassle-visual" aria-hidden="true">
-          <img src="img/new_gts.webp" alt="GTS Travel Illustration" class="hassle-img" />
+          <img src="img/new_gts.webp" alt="Globus Travel Services Illustration" class="hassle-img" />
         </div>
       </div>
     </section>
@@ -943,7 +974,8 @@
           </div>
           <div class="cta-content">
             <h3>As a partner</h3>
-            <p>GTS helps businesses navigate international corporate travel, work permits, and employee relocation. Grow
+            <p>Globus travel services helps businesses navigate international corporate travel, work permits, and
+              employee relocation. Grow
               globally with confidence.</p>
             <button class="cta-btn-outline" onclick="openModal('consultation-modal')" aria-haspopup="dialog">Partner
               with us</button>
@@ -1267,8 +1299,8 @@
       <div class="footer-grid">
 
         <div class="footer-brand">
-          <a href="index.html" class="nav-logo" aria-label="GTS Home">
-            <img src="img/gts_main.png" alt="GTS - Globus Travel Services" class="footer-logo-img" />
+          <a href="index.html" class="nav-logo" aria-label="Globus Travel Services Home">
+            <img src="img/gts_main.png" alt="Globus Travel Services" class="footer-logo-img" />
           </a>
           <p class="footer-tagline">Expert Visa &amp; Travel Guidance You Can Trust. Operating with 100% transparency
             and ethical integrity.</p>
@@ -1283,7 +1315,7 @@
           <ul class="footer-links" role="list">
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><button class="footer-btn" onclick="openModal('leadPopup')">Services</button></li>
             <li><a href="#process">Our Process</a></li>
             <li><a href="#promise">Our Promise</a></li>
             <li><a href="#faq">FAQs</a></li>
@@ -1294,30 +1326,67 @@
         <div class="footer-links-group">
           <h4 class="footer-heading">Our Services</h4>
           <ul class="footer-links" role="list">
-            <li><a href="#services">Visa Processing</a></li>
-            <li><a href="#services">OK To Board (UAE)</a></li>
-            <li><a href="#services">Marhaba Meet &amp; Greet</a></li>
-            <li><a href="#services">Air Tickets &amp; Hotels</a></li>
-            <li><a href="#services">Travel Insurance</a></li>
+            <li><button class="footer-btn" onclick="openModal('visa-modal')">Visa Processing</button></li>
+            <li><button class="footer-btn" onclick="openModal('otb-modal')">OK To Board (UAE)</button></li>
+            <li><button class="footer-btn" onclick="openModal('marhaba-modal')">Marhaba Meet &amp; Greet</button></li>
+            <li><button class="footer-btn" onclick="openModal('booking-modal')">Air Tickets &amp; Hotels</button></li>
+            <li><button class="footer-btn" onclick="openModal('insurance-modal')">Travel Insurance</button></li>
           </ul>
         </div>
 
-        <div class="footer-links-group">
-          <h4 class="footer-heading">Destinations</h4>
-          <ul class="footer-links" role="list">
-            <li><a href="#services">🇨🇦 Canada</a></li>
-            <li><a href="#services">🇦🇺 Australia</a></li>
-            <li><a href="#services">🇬🇧 United Kingdom</a></li>
-            <li><a href="#services">🇪🇺 Schengen / Europe</a></li>
-            <li><a href="#services">🇦🇪 UAE / Dubai</a></li>
-          </ul>
+        <div class="footer-links-group footer-dest-group">
+          <h4 class="footer-heading">Destinations We Serve</h4>
+          <div class="footer-dest-grid">
+            <a href="#destinations-section" class="footer-mini-card">
+              <img src="img/flags/us.webp" alt="" class="fmc-flag">
+              <div class="fmc-info">
+                <span class="fmc-name">USA</span>
+                <span class="fmc-tag">Visa</span>
+              </div>
+            </a>
+            <a href="#destinations-section" class="footer-mini-card">
+              <img src="img/flags/gb.webp" alt="" class="fmc-flag">
+              <div class="fmc-info">
+                <span class="fmc-name">UK</span>
+                <span class="fmc-tag">Visa</span>
+              </div>
+            </a>
+            <a href="#destinations-section" class="footer-mini-card">
+              <img src="img/flags/ae.webp" alt="" class="fmc-flag">
+              <div class="fmc-info">
+                <span class="fmc-name">UAE</span>
+                <span class="fmc-tag">eVisa</span>
+              </div>
+            </a>
+            <a href="#destinations-section" class="footer-mini-card">
+              <img src="img/flags/om.webp" alt="" class="fmc-flag">
+              <div class="fmc-info">
+                <span class="fmc-name">Oman</span>
+                <span class="fmc-tag">eVisa</span>
+              </div>
+            </a>
+            <a href="#destinations-section" class="footer-mini-card">
+              <img src="img/flags/sa.webp" alt="" class="fmc-flag">
+              <div class="fmc-info">
+                <span class="fmc-name">Saudi</span>
+                <span class="fmc-tag">eVisa</span>
+              </div>
+            </a>
+            <a href="#destinations-section" class="footer-mini-card">
+              <img src="img/flags/fr.webp" alt="" class="fmc-flag">
+              <div class="fmc-info">
+                <span class="fmc-name">Europe</span>
+                <span class="fmc-tag">Schengen</span>
+              </div>
+            </a>
+          </div>
         </div>
 
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
-        <p class="footer-copy">&copy; <span id="footer-year"></span> GTS Travel &amp; Visa Consultancy. All rights
+        <p class="footer-copy">&copy; <span id="footer-year"></span> Globus Travel Services. All rights
           reserved.</p>
         <p class="footer-legal">Mira Road, Mumbai, Maharashtra 401107 &nbsp;|&nbsp; <a
             href="mailto:globustravelsops1@gmail.com">globustravelsops1@gmail.com</a></p>
