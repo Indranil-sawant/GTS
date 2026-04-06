@@ -1,0 +1,16 @@
+{
+  "name": "Globus Travel Services",
+  "short_name": "GTS",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#163e6d",
+  "icons": [
+    {
+      "src": "img/gts_main.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
+

@@ -304,7 +304,7 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   }
 
   function startInterval() {
-    intervalId = setInterval(switchSlide, 3200);
+    intervalId = setInterval(switchSlide, 5200);
   }
 
   startInterval();

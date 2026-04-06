@@ -678,10 +678,16 @@ button {
   right: 5%;
   animation: floatCardRight 7s ease-in-out infinite;
 }
+.card-top-right {
+  top: 15%;
+  right: 18%;
+  animation: floatCardTopRight 8s ease-in-out infinite;
+}
 
 @media (max-width: 768px) {
-  .card-left, .card-right {
+  .card-left, .card-right, .card-top-right {
     animation: none;
+    display: none;
   }
   .hero-bg-image {
     min-height: auto;
@@ -698,6 +704,10 @@ button {
 @keyframes floatCardRight {
   0%, 100% { transform: translateY(0) rotate(6deg); }
   50% { transform: translateY(-12px) rotate(10deg); }
+}
+@keyframes floatCardTopRight {
+  0%, 100% { transform: translateY(0) rotate(2deg); }
+  50% { transform: translateY(-10px) rotate(-3deg); }
 }
 
 .hero-content {
