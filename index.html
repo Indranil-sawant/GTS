@@ -27,6 +27,7 @@
       display: inline-block;
       margin-bottom: 2rem !important;
     }
+
     .footer-heading-contact::after {
       content: '';
       position: absolute;
@@ -37,16 +38,19 @@
       background: var(--clr-accent);
       border-radius: 2px;
     }
+
     .footer-contact-items {
       display: flex;
       flex-direction: column;
       gap: 1.25rem;
     }
+
     .footer-contact-item {
       display: flex;
       align-items: center;
       gap: 1rem;
     }
+
     .fci-icon-box {
       width: 40px;
       height: 40px;
@@ -58,19 +62,23 @@
       border-radius: 6px;
       flex-shrink: 0;
     }
+
     .fci-text {
       font-size: 0.95rem;
       line-height: 1.4;
       color: hsl(220, 15%, 75%);
     }
+
     .fci-text a {
       color: inherit;
       text-decoration: none;
       transition: color 0.2s ease;
     }
+
     .fci-text a:hover {
       color: #fff;
     }
+
     .footer-contact-group {
       flex: 2;
     }
@@ -99,7 +107,7 @@
         <!-- Desktop Nav Links -->
         <ul class="nav-links" role="list">
           <li><a href="#hero" class="nav-link active" aria-current="page">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#feature" class="nav-link">About</a></li>
           <li class="nav-item dropdown">
             <button class="nav-link dropdown-toggle nav-highlight" aria-expanded="false" aria-haspopup="true">
               Services <svg class="dropdown-caret" width="10" height="6" viewBox="0 0 10 6" fill="none"
@@ -138,7 +146,7 @@
       <div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
         <ul class="mobile-nav-links" role="list">
           <li><a href="#hero" class="nav-link" onclick="closeMobileMenu()">Home</a></li>
-          <li><a href="#about" class="nav-link" onclick="closeMobileMenu()">About</a></li>
+          <li><a href="#feature" class="nav-link" onclick="closeMobileMenu()">About</a></li>
           <li class="mobile-dropdown">
             <button class="nav-link mobile-dropdown-toggle nav-highlight" aria-expanded="false">
               Services <svg class="dropdown-caret" width="10" height="6" viewBox="0 0 10 6" fill="none"
@@ -374,7 +382,8 @@
           </p>
 
           <div class="social-icons">
-            <a href="#" aria-label="Instagram">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+              aria-label="Follow us on Instagram">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -382,18 +391,20 @@
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
               </svg>
             </a>
-            <a href="#" aria-label="Twitter">
+            <a href="https://wa.me/919004462226" target="_blank" rel="noopener noreferrer"
+              aria-label="Chat with us on WhatsApp">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path
-                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
                 </path>
               </svg>
             </a>
-            <a href="#" aria-label="Facebook">
+            <a href="mailto:visa@globustravelservices.in" aria-label="Email us">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
             </a>
           </div>
@@ -790,7 +801,7 @@
             </div>
           </div>
 
-          <a href="#" class="btn-discover">Discover More <span aria-hidden="true">&rarr;</span></a>
+          <a href="#contact" class="btn-discover">Discover More <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
     </section>
@@ -1063,6 +1074,8 @@
       </div>
     </section>
 
+    <!-- ===== MEET THE TEAM ===== -->
+
     <!-- ===== SECTION 7: FAQs ===== -->
     <section id="faq" class="faq-section section-pad" aria-labelledby="faq-heading">
       <div class="container">
@@ -1073,55 +1086,95 @@
         </div>
         <div class="faq-list" role="list">
 
+          <!-- FAQ 1 -->
           <div class="faq-item" role="listitem">
             <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1" id="faq-btn-1">
-              <span>How much is the Schengen visa fee?</span>
+              <span>How long does visa processing take from Mumbai?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-btn-1" hidden>
-              <p>For short-term visas (Tourism, Business, Transit), the fee is typically:</p>
-              <ul>
-                <li><strong>Adults:</strong> ₹7,100 (80 Euro) or ₹8,200 (90 Euro) depending on current exchange rates
-                </li>
-                <li><strong>Children (6–12 years):</strong> ₹3,600</li>
-                <li><strong>Children (below 6):</strong> Free</li>
-              </ul>
+              <p>Visa processing time from Mumbai varies by country. Tourist visas for destinations like Dubai and
+                Southeast Asia are typically approved within <strong>2–5 working days</strong>. Schengen and UK visas
+                may take <strong>10–15 working days</strong> due to embassy appointment availability. As your trusted
+                Mumbai visa agent, Globus Travel Services ensures your application is filed accurately and on time to
+                avoid unnecessary delays.</p>
             </div>
           </div>
 
+          <!-- FAQ 2 -->
           <div class="faq-item" role="listitem">
             <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2" id="faq-btn-2">
-              <span>How much bank balance is required for a Singapore tourist visa?</span>
+              <span>What documents are required for a tourist visa from India?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-btn-2" hidden>
-              <p>For a 1-week trip, the minimum average bank balance requirement is approximately <strong>₹50,000 per
-                  person</strong>.</p>
+              <p>While requirements differ by country, most tourist visa applications from India require a <strong>valid
+                  passport</strong> (minimum 6 months validity), recent passport-size photographs, confirmed flight
+                itinerary, hotel booking, bank statements for the last 3–6 months, and an employment or business proof.
+                Our visa consultants in Miraroad, Mumbai will prepare and review your complete document checklist before
+                submission.</p>
             </div>
           </div>
 
+          <!-- FAQ 3 -->
           <div class="faq-item" role="listitem">
             <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3" id="faq-btn-3">
-              <span>What is the cost of a Dubai single entry tourist visa?</span>
+              <span>What is the cost of a Dubai tourist visa for Indian passport holders?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-btn-3" hidden>
-              <p>
-                <strong>30-day single entry:</strong> Approximately ₹7,300<br />
-                <strong>60-day single entry:</strong> Approximately ₹12,000
-              </p>
+              <p>Dubai tourist visa fees for Indian passport holders are approximately:</p>
+              <ul>
+                <li><strong>30-day single entry:</strong> ₹7,000 – ₹8,500 (including service charges)</li>
+                <li><strong>60-day single entry:</strong> ₹11,500 – ₹13,500</li>
+                <li><strong>Multi-entry 90-day:</strong> ₹18,000 – ₹22,000</li>
+              </ul>
+              <p>Fees may vary based on exchange rates. Contact Globus Travel Services for the latest Dubai visa price
+                from Mumbai.</p>
             </div>
           </div>
 
+          <!-- FAQ 4 -->
           <div class="faq-item" role="listitem">
             <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4" id="faq-btn-4">
-              <span>Do you guarantee visa approval?</span>
+              <span>Can you help me book cheap international flight tickets from Mumbai?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-btn-4" hidden>
-              <p>No — and that's a good thing. Any agent claiming 100% approval is being dishonest. Visa decisions rest
-                solely with foreign governments. We provide honest profile assessments and the best possible application
-                to maximize your chances.</p>
+              <p>Yes! Globus Travel Services offers competitive pricing on both domestic and international flight ticket
+                bookings from Mumbai. We have access to multiple airline inventories and can find you the best fares for
+                destinations like Dubai, UK, Europe, Southeast Asia, and more. Contact us early — <strong>booking 4–8
+                  weeks in advance</strong> typically offers the best prices on cheap flight tickets from Mumbai.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5" id="faq-btn-5">
+              <span>How much bank balance is needed for a Schengen visa from India?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-btn-5" hidden>
+              <p>Most Schengen embassies recommend a minimum of <strong>€50–€100 per day</strong> of your planned stay
+                in your bank account. For a 10-day trip, that is approximately <strong>₹45,000–₹90,000</strong>. Funds
+                should ideally be maintained consistently for the last 3–6 months and supported by updated bank
+                statements. Our Schengen visa consultants in Mumbai guide you to present your financial documents in the
+                strongest possible format.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6" id="faq-btn-6">
+              <span>Do you guarantee visa approval or 100% success?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-6" role="region" aria-labelledby="faq-btn-6" hidden>
+              <p>No — and we are proud of that honesty. Any visa agent in Mumbai claiming "100% guaranteed visa
+                approval" is misleading you. Final visa decisions rest entirely with the respective foreign embassies
+                and governments. What we <strong>do guarantee</strong> is an accurate application, complete
+                documentation, honest profile assessment, and dedicated support throughout the process — giving you the
+                strongest possible chance of approval.</p>
             </div>
           </div>
 
@@ -1155,7 +1208,7 @@
             </p>
 
             <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
-              <a href="#services" class="btn-modern-dark"
+              <a href="#destinations-section" class="btn-modern-dark"
                 style="background: var(--gradient-primary); margin-top: 0; box-shadow: 0 4px 15px rgba(31, 120, 229, 0.2);">Explore
                 Destinations</a>
               <span
@@ -1244,7 +1297,7 @@
         <div class="contact-modern-testimonials travel-testimonials">
           <div class="cmod-testimonial">
             <div class="cmod-test-avatar-wrapper">
-              <img src="https://i.pravatar.cc/100?img=33" alt="Client Avatar" class="cmod-test-avatar" />
+              <img src="img/man1.jpeg" alt="Happy client" class="cmod-test-avatar" />
               <div class="cmod-test-badge badge-blue">
                 <svg viewBox="0 0 24 24" fill="white" width="10" height="10">
                   <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
@@ -1259,7 +1312,7 @@
 
           <div class="cmod-testimonial">
             <div class="cmod-test-avatar-wrapper">
-              <img src="https://i.pravatar.cc/100?img=44" alt="Client Avatar" class="cmod-test-avatar" />
+              <img src="img/man2.jpeg" alt="Happy client" class="cmod-test-avatar" />
               <div class="cmod-test-badge badge-purple">
                 <svg viewBox="0 0 24 24" fill="white" width="10" height="10">
                   <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
@@ -1269,6 +1322,21 @@
             <p class="cmod-test-text">
               "They handled our complex multi-city European trip with incredible precision. Knowing their experts were
               available around the clock gave us total peace of mind."
+            </p>
+          </div>
+
+          <div class="cmod-testimonial">
+            <div class="cmod-test-avatar-wrapper">
+              <img src="img/man3.png" alt="Happy client" class="cmod-test-avatar" />
+              <div class="cmod-test-badge" style="background: #16a34a;">
+                <svg viewBox="0 0 24 24" fill="white" width="10" height="10">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                </svg>
+              </div>
+            </div>
+            <p class="cmod-test-text">
+              "Getting my Dubai visa approved in under 3 days felt like a miracle. Globus made every step crystal clear
+              and their doorstep document pickup saved me so much time!"
             </p>
           </div>
         </div>
@@ -1357,7 +1425,7 @@
           <h4 class="footer-heading">Quick Links</h4>
           <ul class="footer-links" role="list">
             <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About Us</a></li>
+            <li><a href="#feature">About Us</a></li>
             <li><button class="footer-btn" onclick="openModal('leadPopup')">Services</button></li>
             <li><a href="#process">Our Process</a></li>
             <li><a href="#promise">Our Promise</a></li>
@@ -1382,22 +1450,36 @@
           <div class="footer-contact-items">
             <div class="footer-contact-item">
               <div class="fci-icon-box">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
               </div>
-              <div class="fci-text">Near cinimax<br>,Miraroad,Thane<br>401105</div>
+              <div class="fci-text">E101, Reshmi Heatel Chs,<br>Near Cinemax, Miraroad,<br>Thane 401105</div>
             </div>
             <div class="footer-contact-item">
               <div class="fci-icon-box">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
               </div>
               <div class="fci-text">
                 <a href="mailto:visa@globustravelservices.in">visa@globustravelservices.in</a><br>
-                <a href="mailto:globustravelsops1@gmail.com" style="opacity: 0.8; font-size: 0.9em;">globustravelsops1@gmail.com</a>
+                <a href="mailto:globustravelsops1@gmail.com"
+                  style="opacity: 0.8; font-size: 0.9em;">globustravelsops1@gmail.com</a>
               </div>
             </div>
             <div class="footer-contact-item">
               <div class="fci-icon-box">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
               </div>
               <div class="fci-text"><a href="tel:+919004462226">+91 9004462226</a></div>
             </div>
@@ -1410,9 +1492,10 @@
       <div class="container footer-bottom-inner">
         <p class="footer-copy">&copy; <span id="footer-year"></span> Globus Travel Services. All rights
           reserved.</p>
-        <p class="footer-legal">Near cinimax, Miraroad, Thane 401105 &nbsp;|&nbsp; <a
+        <p class="footer-legal">E101, Reshmi Heatel Chs, Near Cinemax, Miraroad, Thane 401105 &nbsp;|&nbsp; <a
             href="mailto:visa@globustravelservices.in">visa@globustravelservices.in</a> / <a
-            href="mailto:globustravelsops1@gmail.com">globustravelsops1@gmail.com</a> &nbsp;|&nbsp; <a href="tel:+919004462226">+91 9004462226</a></p>
+            href="mailto:globustravelsops1@gmail.com">globustravelsops1@gmail.com</a> &nbsp;|&nbsp; <a
+            href="tel:+919004462226">+91 9004462226</a></p>
       </div>
     </div>
   </footer>
@@ -1423,7 +1506,7 @@
     <div class="modal-overlay"></div>
 
     <div class="modal-box">
-      <button class="modal-close">&times;</button>
+      <button class="modal-close" onclick="closeModal('consultation-modal')" aria-label="Close modal">&times;</button>
 
       <h2>Get Consultation</h2>
 
@@ -1615,7 +1698,8 @@
 
   <!-- Mobile Sticky CTA -->
   <div class="mobile-sticky-cta">
-    <a href="#hero" class="btn btn-primary btn-full">Get Consultation</a>
+    <button type="button" class="btn btn-primary btn-full" onclick="openModal('consultation-modal')">Get
+      Consultation</button>
   </div>
 
   <!-- ===== SCROLL TO TOP BUTTON ===== -->
